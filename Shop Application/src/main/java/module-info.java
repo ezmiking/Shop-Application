@@ -3,6 +3,6 @@ module com.example.shopapplication {
     requires javafx.fxml;
 
 
-    opens com.example.shopapplication to javafx.fxml;
-    exports com.example.shopapplication;
+    opens view.login to javafx.fxml;
+    exports view.login;
 }
