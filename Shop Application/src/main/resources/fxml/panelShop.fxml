@@ -1,14 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="view.main.PanelShopController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<ScrollPane maxHeight="-Infinity"
+            maxWidth="-Infinity"
+            prefHeight="800.0"
+            prefWidth="830.0"
+            stylesheets="@../css/style.css"
+            xmlns="http://javafx.com/javafx/20.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="view.main.PanelShopController">
+   <content>
+      <BorderPane prefHeight="3000.0" prefWidth="830.0">
+         <top>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="FUM kala">
+                     <font>
+                        <Font name="Wawati SC Regular" size="32.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="340.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button mnemonicParsing="false">
+                           <graphic>
+                              <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/IMG_7675.jpg" />
+                                 </image></ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <MenuButton mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="orders">
+                                 <graphic>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icon/IMG_7678.jpg" />
+                                       </image></ImageView>
+                                 </graphic></MenuItem>
+                            <MenuItem mnemonicParsing="false" text="lists">
+                                 <graphic>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icon/IMG_7682.jpg" />
+                                       </image></ImageView>
+                                 </graphic></MenuItem>
+                             <MenuItem mnemonicParsing="false" text="exit">
+                                 <graphic>
+                                    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                 </graphic></MenuItem>
+                          </items>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/avatar/avatar4.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="20.0" top="10.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <TextField prefHeight="32.0" prefWidth="354.0" promptText="search...">
+                           <HBox.margin>
+                              <Insets left="300.0" top="20.0" />
+                           </HBox.margin></TextField>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="46.0">
+                           <HBox.margin>
+                              <Insets left="2.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/search.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </top></BorderPane>
+   </content>
+</ScrollPane>
