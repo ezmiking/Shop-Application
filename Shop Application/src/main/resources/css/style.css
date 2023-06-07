@@ -11,7 +11,7 @@
 
 
 .button:hover {
-    -fx-background-color: linear-gradient(to bottom, rgba(111, 64, 42), #c89350);
+    -fx-background-color: linear-gradient(to bottom, rgb(243, 69, 69), #bb5353);
 }
 
 .toggle-button {
