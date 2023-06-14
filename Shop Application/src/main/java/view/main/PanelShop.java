@@ -15,7 +15,6 @@ public class PanelShop extends Application {
         ScrollPane scrollPane = FXMLLoader.load(urlShop);
         Scene scene = new Scene(scrollPane);
         stage.setScene(scene);
-        stage.setFullScreen(true);
         stage.show();
     }
 }

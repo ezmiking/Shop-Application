@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="808.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.login.LoginController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="808.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.login.LoginController">
    <top>
       <Label text="SHOP fum" textFill="#753809" BorderPane.alignment="CENTER">
          <font>
@@ -73,7 +73,7 @@
                   <Insets left="120.0" right="120.0" top="15.0" />
                </VBox.margin>
             </HBox>
-            <Button mnemonicParsing="false" onMouseClicked="#reset" text="reset" >
+            <Button mnemonicParsing="false" onMouseClicked="#reset" text="reset">
                <font>
                   <Font name="KoHo Regular" size="14.0" />
                </font>

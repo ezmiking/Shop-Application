@@ -1,0 +1,48 @@
+.root{
+    -fx-background-color: linear-gradient(rgb(131, 120, 106), rgb(84, 82, 76)),
+    radial-gradient(center 50% 50%, radius 50%, rgba(195, 164, 135, 0.22), rgba(193, 153, 105, 0));
+}
+
+.button{
+    -fx-alignment: center;
+    -fx-background-radius: 7;
+    -fx-background-color: linear-gradient(to left, #d8efaf, #7f9a9a);
+}
+.button:hover{
+    -fx-background-color: linear-gradient(to bottom, rgb(124, 138, 100), #69887d);
+}
+.menu-button {
+    -fx-alignment: center;
+    -fx-background-radius: 9;
+    -fx-background-color: linear-gradient(to left, #d8efaf, #7f9a9a);
+}
+
+.menu-button .label {
+    -fx-font-family: "Times New Roman", sans-serif;
+    -fx-font-size: 20;
+    -fx-text-fill: rgb(66, 63, 39);
+}
+
+.menu-button .context-menu {
+    -fx-background-radius: 5;
+    -fx-pref-width: 149;
+    -fx-background-color: radial-gradient(center 0px 0px, radius 100%, #d8efaf, #7f9a9a);
+    -fx-alignment: center;
+}
+
+.menu-button .menu {
+    -fx-text-alignment: center;
+}
+.toggle-button {
+    -fx-alignment: center;
+    -fx-background-radius: 9;
+    -fx-background-color: linear-gradient(to left, #d8efaf, #7f9a9a);
+}
+.toggle-button:focused {
+    -fx-background-color: linear-gradient(to bottom, rgba(111, 64, 42), #92724d);
+}
+.button-input1 {
+    -fx-alignment: center;
+    -fx-background-radius: 20;
+    -fx-background-color: #c9c0c0;
+}
