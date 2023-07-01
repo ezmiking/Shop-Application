@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="682.0" prefWidth="621.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.profile.ProfileMenuController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="682.0" prefWidth="621.0">
+         <children>
+            <Label text="profile">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="579.0" prefWidth="621.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="579.0" prefWidth="435.0">
+                     <children>
+                        <Label text="roll">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="136.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/avatar/avatar3.png" />
+                           </image>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </ImageView>
+                        <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="409.0">
+                           <children>
+                              <TextField alignment="CENTER" promptText="name" style="-fx-background-radius: 25;">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField alignment="CENTER" promptText="last name" style="-fx-background-radius: 25;">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="435.0">
+                           <children>
+                              <TextField alignment="CENTER" promptText="phone number" style="-fx-background-radius: 25;">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <TextField alignment="CENTER" promptText="password" style="-fx-background-radius: 25;">
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                           </children>
+                        </HBox>
+                        <TextField alignment="CENTER" prefHeight="26.0" prefWidth="392.0" promptText="xxxxxx@gmail.com" style="-fx-background-radius: 25;">
+                           <VBox.margin>
+                              <Insets left="52.0" right="52.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="579.0" prefWidth="187.0" style="-fx-background-color: rgba(173,173,173,0.63); -fx-background-radius: 20;">
+                     <HBox.margin>
+                        <Insets right="5.0" top="45.0" />
+                     </HBox.margin>
+                     <children>
+                        <Button alignment="TOP_LEFT" mnemonicParsing="false" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: rgba(80,80,80,0.68); -fx-background-radius: 25;">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/1686120943745.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: rgba(80,80,80,0.68); -fx-background-radius: 25;">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/1686121288661.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="57.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: rgba(80,80,80,0.68); -fx-background-radius: 25;">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/1686121058486.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="104.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: rgba(80,80,80,0.68); -fx-background-radius: 25;">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/1686121118019.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="151.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="187.0" style="-fx-background-color: rgba(80,80,80,0.68); -fx-background-radius: 25;">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/1686121002382.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <VBox.margin>
+                              <Insets left="5.0" right="5.0" top="7.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Label alignment="CENTER" text="wallet $$">
+                           <VBox.margin>
+                              <Insets left="40.0" top="60.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Hiragino Sans W3" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label text="__________________________" textFill="#575b59">
+                           <VBox.margin>
+                              <Insets left="4.0" top="-10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox prefHeight="45.0" prefWidth="184.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="10000 $" textFill="#229724">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin></Label>
+                              <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="38.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="+" textFill="#23750f">
+                                 <HBox.margin>
+                                    <Insets right="5.0" top="2.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="4.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

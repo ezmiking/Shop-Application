@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import view.main.PanelShop;
+import view.main.ShopPanel;
 
 public class LoginController {
     @FXML
@@ -22,7 +22,7 @@ public class LoginController {
             alert.showAndWait();
         }
         else {
-            new PanelShop().start(LoginMenu.stage);
+            new ShopPanel().start(LoginMenu.stage);
         }
     }
 

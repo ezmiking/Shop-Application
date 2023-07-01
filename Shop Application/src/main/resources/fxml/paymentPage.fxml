@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="584.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.pay.PaymentPageController">
+   <children>
+      <HBox layoutX="0" layoutY="0" prefHeight="582.0" prefWidth="780.0">
+         <children>
+            <VBox prefHeight="672.0" prefWidth="439.0">
+               <children>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Order delivery address" textAlignment="CENTER">
+                     <font>
+                        <Font name="Bodoni 72 Book" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="125.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <HBox prefHeight="17.0" prefWidth="439.0">
+                     <children>
+                        <Label fx:id="starcountry" prefHeight="18.0" prefWidth="12.0" text="*" textFill="#cd1616">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="‏country">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="countryE" text="You did not enter the name of the country!!" textFill="RED">
+                           <HBox.margin>
+                              <Insets left="10.0" top="7.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="country" onKeyReleased="#countryKy" prefHeight="26.0" prefWidth="396.0" promptText="country...">
+                     <VBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="23.0" prefWidth="439.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="12.0" text="*" textFill="#cd1616">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="province">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="provinceE" text="You did not enter the name of the province!!" textFill="RED">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="province" onKeyReleased="#provinceKy" promptText="province...">
+                     <VBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="23.0" prefWidth="439.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="12.0" text="*" textFill="#cd1616">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="city">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="cityE" text="You did not enter the name of the city!!" textFill="RED">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="city" onKeyReleased="#cityKy" promptText="city...">
+                     <VBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="23.0" prefWidth="439.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="12.0" text="*" textFill="#cd1616">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Exact address">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="exaxtE" text="You did not enter the name of the exact address!!" textFill="RED">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="exact" onKeyReleased="#exactKy" promptText="Exact address...">
+                     <VBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="23.0" prefWidth="439.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="12.0" text="*" textFill="#cd1616">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="phone number">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="phoneE" text="You did not enter the name of the phone number!!" textFill="#eb0404">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="7.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="phone" onKeyReleased="#phoneKy" promptText="phone number...">
+                     <VBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="23.0" prefWidth="439.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="12.0" text="*" textFill="#cd1616">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="postcode">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="postcodeE" text="You did not enter the name of the postcode!!" textFill="#f50606">
+                           <HBox.margin>
+                              <Insets left="5.0" top="7.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField fx:id="postcode" onKeyReleased="#postKy" promptText="postcode...">
+                     <VBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <HBox prefHeight="23.0" prefWidth="439.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="12.0" text="*" textFill="#cd1616">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Order description">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextArea prefHeight="104.0" prefWidth="414.0" promptText="Notes about your order, for example, important tips about how to deliver your order">
+                     <VBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </TextArea>
+                  <HBox prefHeight="26.0" prefWidth="439.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="12.0" text="*" textFill="#cd1616">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="12.0" text="*" textFill="#6b9a25">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label text="Discount code">
+                           <HBox.margin>
+                              <Insets top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <TextField promptText="discount code...">
+                     <VBox.margin>
+                        <Insets left="15.0" right="10.0" />
+                     </VBox.margin>
+                  </TextField>
+               </children></VBox>
+            <Pane prefHeight="509.0" prefWidth="333.0" style="-fx-background-color: rgba(227,227,227,0.68);">
+               <HBox.margin>
+                  <Insets bottom="200.0" left="5.0" right="10.0" top="60.0" />
+               </HBox.margin>
+               <children>
+                  <VBox prefHeight="322.0" prefWidth="333.0">
+                     <children>
+                        <Label text="Your order">
+                           <font>
+                              <Font name="Annai MN Regular" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="125.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <VBox prefHeight="170.0" prefWidth="313.0" style="-fx-background-color: #f3f2f2;">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="5.0" />
+                           </VBox.margin>
+                           <children>
+                              <SplitPane dividerPositions="0.5064308681672026" prefHeight="258.0" prefWidth="313.0">
+                                 <items>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label prefHeight="13.0" prefWidth="55.0" text="product" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <padding>
+                                                <Insets left="5.0" top="5.0" />
+                                             </padding>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox>
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <Label text="Product name" textFill="#00000075" />
+                                                <Label text="x" textFill="#b52020">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="number" textFill="#b52020">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="____________________" textFill="#0000003d">
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label text="grand total">
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="____________________" textFill="#0000002d">
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label text=" transportation">
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="20.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="____________________">
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="13.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <Label prefHeight="23.0" prefWidth="39.0" text="price " textAlignment="CENTER">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox prefHeight="22.0" prefWidth="152.0">
+                                             <children>
+                                                <Label text="price" textFill="#a48484">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="\$" textFill="#248006">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <Label text="____________________" textFill="#00000038">
+                                             <VBox.margin>
+                                                <Insets left="6.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label text="price total" textFill="#9a8f8f">
+                                             <VBox.margin>
+                                                <Insets left="5.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label text="____________________" textFill="#0000003b">
+                                             <VBox.margin>
+                                                <Insets left="6.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <CheckBox mnemonicParsing="false" text="post TNT">
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </CheckBox>
+                                          <CheckBox mnemonicParsing="false" text="post USP">
+                                             <VBox.margin>
+                                                <Insets left="5.0" top="10.0" />
+                                             </VBox.margin>
+                                          </CheckBox>
+                                          <Label prefHeight="17.0" prefWidth="147.0" text="____________________">
+                                             <VBox.margin>
+                                                <Insets left="6.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children></VBox>
+                                 </items>
+                              </SplitPane>
+                           </children></VBox>
+                        <HBox>
+                           <VBox.margin>
+                              <Insets left="12.0" />
+                           </VBox.margin>
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Bank Melat">
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <ImageView fitHeight="22.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/melat.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="4.0" top="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <CheckBox mnemonicParsing="false" text="Bank Melli">
+                                 <HBox.margin>
+                                    <Insets left="12.0" top="5.0" />
+                                 </HBox.margin>
+                              </CheckBox>
+                              <ImageView fitHeight="25.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/bankmelli.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="4.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <Button fx:id="toPay" disable="true" mnemonicParsing="false" onMouseClicked="#toPay" prefHeight="30.0" prefWidth="312.0" style="-fx-background-color: #0d6e0d;" text="to pay">
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="American Typewriter" size="16.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children></Pane>
+         </children></HBox>
+   </children>
+</AnchorPane>

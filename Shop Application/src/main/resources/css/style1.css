@@ -41,6 +41,11 @@
 .toggle-button:focused {
     -fx-background-color: linear-gradient(to bottom, rgba(111, 64, 42), #92724d);
 }
+
+.scroll-pane {
+    -fx-background-color: linear-gradient(rgb(131, 120, 106), rgb(84, 82, 76)),
+    radial-gradient(center 50% 50%, radius 50%, rgba(195, 164, 135, 0.22), rgba(193, 153, 105, 0));
+}
 .button-input1 {
     -fx-alignment: center;
     -fx-background-radius: 20;
