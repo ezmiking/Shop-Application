@@ -5,7 +5,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import view.main.ShopPanel;
+import view.shop.ShopPanel;
 
 public class LoginController {
     @FXML

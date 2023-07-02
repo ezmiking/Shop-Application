@@ -2,9 +2,19 @@ package view.pay;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
+import javafx.scene.effect.ImageInput;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
+
+import java.net.URL;
 
 public class PortalPageController {
+    public TextField capcha;
+    public ImageView imageCapcha;
+    public AnchorPane anccc;
     private CashPageController cashPageController;
     public TextField cardNumber;
     public TextField cvv2;
@@ -41,5 +51,12 @@ public class PortalPageController {
         else if (CashPageController.previousPage == 2) {
             new CashPage().start(Portalpage.stagePortal);
         }
+    }
+
+
+    public void reload(MouseEvent mouseEvent) {;
+    }
+
+    private void initialize() {
     }
 }

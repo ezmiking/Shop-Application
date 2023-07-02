@@ -6,8 +6,8 @@ module shopapplication {
 
     opens view.login to javafx.fxml;
     exports view.login;
-    opens view.main to javafx.fxml;
-    exports view.main;
+    opens view.shop to javafx.fxml;
+    exports view.shop;
     opens view.pay to javafx.fxml;
     exports view.pay;
     opens view.profile to javafx.fxml;
