@@ -10,7 +10,6 @@ import javafx.stage.Stage;
 import java.net.URL;
 
 public class PaymentPage extends Application {
-    public PaymentPageController paymentPageController;
     public static Stage stagePay;
     @Override
     public void start(Stage stage) throws Exception {

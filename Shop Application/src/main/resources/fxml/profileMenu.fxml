@@ -67,7 +67,7 @@
                                     <Insets right="5.0" />
                                  </HBox.margin>
                               </TextField>
-                              <TextField alignment="CENTER" promptText="ءءMM/DD/YYYY" style="-fx-background-radius: 25;">
+                              <TextField alignment="CENTER" promptText="ءءMM/DD/YYYY" style="-fx-background-radius: 25;" fx:id="data">
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
@@ -93,7 +93,7 @@
                               <Insets left="52.0" right="52.0" />
                            </VBox.margin>
                         </TextField>
-                        <Button mnemonicParsing="false" style="-fx-background-radius: 8; -fx-background-color: rgba(255,255,255,0.5);" text="save">
+                        <Button mnemonicParsing="false" style="-fx-background-radius: 8; -fx-background-color: rgba(255,255,255,0.5);" text="save" onMouseClicked="#saveInformation">
                            <VBox.margin>
                               <Insets top="15.0" />
                            </VBox.margin>
@@ -180,14 +180,14 @@
                         </Label>
                         <HBox prefHeight="45.0" prefWidth="184.0">
                            <children>
-                              <Label alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="10000 $" textFill="#229724">
+                              <Label alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="10000 $" textFill="#229724" fx:id="cash">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin></Label>
-                              <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="38.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="+" textFill="#23750f">
+                              <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="38.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="+" textFill="#23750f" onMouseClicked="#inventoryIncrease">
                                  <HBox.margin>
                                     <Insets right="5.0" top="2.0" />
                                  </HBox.margin>

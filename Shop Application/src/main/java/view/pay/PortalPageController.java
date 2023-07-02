@@ -5,6 +5,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class PortalPageController {
+    private CashPageController cashPageController;
     public TextField cardNumber;
     public TextField cvv2;
     public TextField year;
@@ -33,8 +34,12 @@ public class PortalPageController {
         }
     }
 
-    public void cancel(MouseEvent mouseEvent) {
-
-
+    public void cancel(MouseEvent mouseEvent) throws Exception {
+        if (CashPageController.previousPage == 1) {
+            new PaymentPage().start(Portalpage.stagePortal);
+        }
+        else if (CashPageController.previousPage == 2) {
+            new CashPage().start(Portalpage.stagePortal);
+        }
     }
 }

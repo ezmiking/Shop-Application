@@ -76,6 +76,7 @@ public class PaymentPageController {
             alert.showAndWait();
         }
         else {
+            CashPageController.previousPage = 1;
             new Portalpage().start(PaymentPage.stagePay);
         }
     }

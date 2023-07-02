@@ -9,8 +9,10 @@ import javafx.stage.Stage;
 import java.net.URL;
 
 public class Portalpage extends Application {
+    public static Stage stagePortal;
     @Override
     public void start(Stage stage) throws Exception {
+        Portalpage.stagePortal = stage;
         URL urlPortal = Portalpage.class.getResource("/fxml/portalPage.fxml");
         AnchorPane anchorPane = FXMLLoader.load(urlPortal);
         Scene scene = new Scene(anchorPane);
