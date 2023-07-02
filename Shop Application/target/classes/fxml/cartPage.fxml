@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="690.0" prefWidth="930.0" style="-fx-background-color: #606060;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.CartPageController">
+   <children>
+      <HBox layoutX="4.0" layoutY="4.0" prefHeight="683.0" prefWidth="924.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="652.0" prefWidth="305.0" style="-fx-background-radius: 15;">
+               <children>
+                  <HBox alignment="TOP_CENTER">
+                     <children>
+                        <Label text="Cart" textFill="#b9cd28">
+                           <font>
+                              <Font size="37.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="45.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/icon/1686120943745.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <AnchorPane prefHeight="387.0" prefWidth="287.0" style="-fx-background-radius: 15; -fx-background-color: #bbbbbb;">
+                     <VBox.margin>
+                        <Insets top="8.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox layoutX="9.0" layoutY="8.0" prefHeight="370.0" prefWidth="271.0" style="-fx-background-color: #e8e8e8; -fx-background-radius: 5;">
+                           <children>
+                              <SplitPane dividerPositions="0.6235521235521235" prefHeight="44.0" prefWidth="271.0" style="-fx-background-radius: 10;">
+                                <items>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="120.0">
+                                       <children>
+                                          <Label text="price">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label text="x num" textFill="#d73030">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="120.0">
+                                       <children>
+                                          <Label text="price" textFill="#119e39">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label text="\$" textFill="#159a2d">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                </items>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" top="10.0" />
+                                 </VBox.margin>
+                              </SplitPane>
+                              <SplitPane dividerPositions="0.638996138996139" layoutX="10.0" layoutY="20.0" prefHeight="44.0" prefWidth="271.0" style="-fx-background-radius: 10;">
+                                 <items>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="120.0">
+                                       <children>
+                                          <Label text="Total shopping cart">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="120.0">
+                                       <children>
+                                          <Label text="price" textFill="#119e39">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label text="\$" textFill="#159a2d">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </items>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </SplitPane>
+                              <SplitPane dividerPositions="0.666023166023166" layoutX="10.0" layoutY="64.0" prefHeight="49.0" prefWidth="261.0" style="-fx-background-radius: 10;">
+                                 <items>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="120.0">
+                                       <children>
+                                          <Label text="Your profit from the purchase">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="120.0">
+                                       <children>
+                                          <Label text="price" textFill="#119e39">
+                                             <HBox.margin>
+                                                <Insets left="8.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label text="\%" textFill="#991515">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </items>
+                                 <VBox.margin>
+                                    <Insets left="5.0" right="5.0" />
+                                 </VBox.margin>
+                              </SplitPane>
+                              <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="272.0" style="-fx-background-radius: 25; -fx-background-color: #035b03;" text="pay to" textFill="WHITE" onMouseClicked="#payTo">
+                                 <VBox.margin>
+                                    <Insets left="8.0" right="8.0" top="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children></VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></VBox>
+            <VBox prefHeight="683.0" prefWidth="645.0" style="-fx-background-radius: 20; -fx-background-color: rgb(217,217,217);">
+               <HBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

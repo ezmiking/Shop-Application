@@ -4,12 +4,13 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="458.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.pay.PortalPageController">
+<AnchorPane prefHeight="458.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.pay.PortalPageController" fx:id="anccc">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="0" layoutY="0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="464.0" prefWidth="584.0">
          <children>
@@ -118,9 +119,20 @@
                         <Label text="Enter the card's expiration date" textFill="#00000073" />
                      </children>
                      <HBox.margin>
-                        <Insets right="80.0" />
+                        <Insets />
                      </HBox.margin>
                   </VBox>
+                  <TextField fx:id="capcha" alignment="TOP_CENTER" prefHeight="26.0" prefWidth="82.0" promptText="capcha" style="-fx-background-radius: 20;">
+                     <HBox.margin>
+                        <Insets left="35.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <ImageView fitHeight="58.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" fx:id="imageCapcha">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="28.0" onMouseClicked="#reload"/>
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="59.0" prefWidth="599.0">

@@ -23,7 +23,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.main.ShopPanelController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.ShopPanelController">
    <content>
       <BorderPane prefHeight="3000.0" prefWidth="936.0">
          <top>
