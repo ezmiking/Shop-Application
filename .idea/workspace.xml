@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="testting git v02">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_24_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/SaveInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/ShopApplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/ShopApplication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/ClientServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/ClientServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/module-info.java" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="make send and receive info">
+      <change beforePath="$PROJECT_DIR$/.idea/Shop-Application.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Shop-Application.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688302072052</updated>
-      <workItem from="1688302073847" duration="2619000" />
+      <workItem from="1688302073847" duration="3417000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -67,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688302440225</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="make send and receive info">
+      <created>1688305301601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1688305301601</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -86,6 +86,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testting git v02" />
-    <option name="LAST_COMMIT_MESSAGE" value="testting git v02" />
+    <MESSAGE value="make send and receive info" />
+    <option name="LAST_COMMIT_MESSAGE" value="make send and receive info" />
   </component>
 </project>
