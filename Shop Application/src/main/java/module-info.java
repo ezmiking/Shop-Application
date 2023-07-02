@@ -1,6 +1,7 @@
 module shopapplication {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.jetbrains.annotations;
 
 
     opens view.login to javafx.fxml;

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="testting git v02">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_24_0_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/SaveInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/ShopApplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/ShopApplication.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/ClientServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/clientPKG/ClientServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/module-info.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2S178Aky5yR2xl5Plo75ueNkMHo" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/network",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.29310346"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="" />
+      <created>1688302072052</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688302072052</updated>
+      <workItem from="1688302073847" duration="2619000" />
+    </task>
+    <task id="LOCAL-00001" summary="testting git v02">
+      <created>1688302440225</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1688302440225</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="testting git v02" />
+    <option name="LAST_COMMIT_MESSAGE" value="testting git v02" />
+  </component>
+</project>

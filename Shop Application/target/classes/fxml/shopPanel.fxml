@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.main.ShopPanelController">
+   <content>
+      <BorderPane prefHeight="3000.0" prefWidth="936.0">
+         <top>
+            <VBox alignment="TOP_CENTER" prefHeight="152.0" prefWidth="937.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="FUM kala" textAlignment="CENTER">
+                     <font>
+                        <Font name="Wawati SC Regular" size="32.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <HBox alignment="TOP_CENTER" prefHeight="93.0" prefWidth="911.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="57.0" text="enter">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <MenuButton mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="orders">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icon/1686121288661.png" />
+                                       </image></ImageView>
+                                 </graphic></MenuItem>
+                            <MenuItem mnemonicParsing="false" text="lists">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icon/1686121002382.png" />
+                                       </image></ImageView>
+                                 </graphic></MenuItem>
+                             <MenuItem mnemonicParsing="false" text="exit">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/icon/1686122375517.png" />
+                                       </image></ImageView>
+                                 </graphic></MenuItem>
+                          </items>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/avatar/avatar1.png" />
+                                 </image></ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <TextField prefHeight="32.0" prefWidth="354.0" promptText="search...">
+                           <HBox.margin>
+                              <Insets left="110.0" top="20.0" />
+                           </HBox.margin></TextField>
+                        <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="46.0">
+                           <HBox.margin>
+                              <Insets left="2.0" top="20.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/1686120971210.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false">
+                           <graphic>
+                              <ImageView fitHeight="41.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/icon/1686121267598.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="90.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+         <center>
+            <GridPane alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="2758.0" prefWidth="706.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="20.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" valignment="BASELINE" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" valignment="BASELINE" vgrow="SOMETIMES" />
+                <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" valignment="BASELINE" vgrow="SOMETIMES" />
+                 <RowConstraints fillHeight="false" maxHeight="-Infinity" minHeight="10.0" valignment="BASELINE" vgrow="SOMETIMES" />
+<!--                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />-->
+<!--                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />-->
+<!--                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />-->
+              </rowConstraints>
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+                           <children>
+                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/kh1/chitoz.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Chalkboard SE Light" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+                                 <font>
+                                    <Font name="Gujarati Sangam MN" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="Brand :">
+                                       <font>
+                                          <Font name="Arial Narrow" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Chitoz">
+                                       <font>
+                                          <Font name="Gurmukhi MN" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" top="2.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="1.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="\$" />
+                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+                                       <font>
+                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="1.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="105.0" />
+                                       </HBox.margin></Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="1">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+                           <children>
+                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/kh1/chitoz.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Chalkboard SE Light" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+                                 <font>
+                                    <Font name="Gujarati Sangam MN" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="Brand :">
+                                       <font>
+                                          <Font name="Arial Narrow" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Chitoz">
+                                       <font>
+                                          <Font name="Gurmukhi MN" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" top="2.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="1.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="\$" />
+                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+                                       <font>
+                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="1.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="105.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="2">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+                           <children>
+                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/kh1/chitoz.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Chalkboard SE Light" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+                                 <font>
+                                    <Font name="Gujarati Sangam MN" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="Brand :">
+                                       <font>
+                                          <Font name="Arial Narrow" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Chitoz">
+                                       <font>
+                                          <Font name="Gurmukhi MN" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" top="2.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="1.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="\$" />
+                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+                                       <font>
+                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="1.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="105.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+                           <children>
+                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/kh1/chitoz.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Chalkboard SE Light" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+                                 <font>
+                                    <Font name="Gujarati Sangam MN" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="Brand :">
+                                       <font>
+                                          <Font name="Arial Narrow" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Chitoz">
+                                       <font>
+                                          <Font name="Gurmukhi MN" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" top="2.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="1.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="\$" />
+                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+                                       <font>
+                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="1.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="105.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+                           <children>
+                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/kh1/chitoz.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Chalkboard SE Light" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+                                 <font>
+                                    <Font name="Gujarati Sangam MN" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="Brand :">
+                                       <font>
+                                          <Font name="Arial Narrow" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Chitoz">
+                                       <font>
+                                          <Font name="Gurmukhi MN" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" top="2.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="1.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="\$" />
+                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+                                       <font>
+                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="1.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="105.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+                           <children>
+                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/kh1/chitoz.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Chalkboard SE Light" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+                                 <font>
+                                    <Font name="Gujarati Sangam MN" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="Brand :">
+                                       <font>
+                                          <Font name="Arial Narrow" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Chitoz">
+                                       <font>
+                                          <Font name="Gurmukhi MN" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" top="2.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="1.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="\$" />
+                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+                                       <font>
+                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="1.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="105.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <graphic>
+                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+                           <children>
+                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/kh1/chitoz.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Chalkboard SE Light" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+                                 <font>
+                                    <Font name="Gujarati Sangam MN" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="Brand :">
+                                       <font>
+                                          <Font name="Arial Narrow" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Chitoz">
+                                       <font>
+                                          <Font name="Gurmukhi MN" size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" top="2.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="3.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox prefHeight="1.0" prefWidth="225.0">
+                                 <children>
+                                    <Label text="\$" />
+                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+                                       <font>
+                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+                                       </font>
+                                    </Label>
+                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+                                       <font>
+                                          <Font name="System Bold" size="1.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="105.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+         </center>
+         <left>
+            <VBox prefHeight="2871.0" prefWidth="211.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <HBox prefHeight="51.0" prefWidth="211.0">
+                     <children>
+                        <Label prefHeight="40.0" prefWidth="129.0" text="Filters">
+                           <font>
+                              <Font name="Canela Text Regular" size="23.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Hyperlink text="reset" textFill="RED">
+                           <font>
+                              <Font name="Toppan Bunkyu Gothic Demibold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="15.0" />
+                           </HBox.margin>
+                        </Hyperlink>
+                     </children>
+                  </HBox>
+                  <Accordion>
+                    <panes>
+                      <TitledPane animated="false" prefHeight="247.0" prefWidth="211.0" text="Brands">
+                        <content>
+                              <VBox>
+                                 <children>
+                                    <HBox prefHeight="32.0" prefWidth="208.0">
+                                       <VBox.margin>
+                                          <Insets left="-10.0" right="-10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <TextField>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin></TextField>
+                                          <Button mnemonicParsing="false">
+                                             <graphic>
+                                                <ImageView fitHeight="18.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../image/icon/1686120971210.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                             <HBox.margin>
+                                                <Insets left="2.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <CheckBox mnemonicParsing="false" text="chitoz">
+                                       <VBox.margin>
+                                          <Insets top="5.0" />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font name="Farah Regular" size="14.0" />
+                                       </font>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="yamiyami">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="4.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="chakelz">
+                                       <font>
+                                          <Font name="Geneva" size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="4.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="CheckBox">
+                                       <VBox.margin>
+                                          <Insets top="4.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                    <CheckBox mnemonicParsing="false" text="CheckBox">
+                                       <VBox.margin>
+                                          <Insets top="4.0" />
+                                       </VBox.margin>
+                                    </CheckBox>
+                                 </children>
+                              </VBox>
+                        </content>
+                           <graphic>
+                              <Circle fill="DODGERBLUE" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           </graphic>
+                      </TitledPane>
+                      <TitledPane animated="false" prefHeight="110.0" prefWidth="211.0" text="Price range">
+                        <content>
+                              <VBox prefHeight="212.0" prefWidth="209.0">
+                                 <children>
+                                    <HBox prefHeight="34.0" prefWidth="188.0">
+                                       <children>
+                                          <TextField promptText="  min_price" style="-fx-border-width: 0 0 2 0;" />
+                                          <Label prefHeight="28.0" prefWidth="16.0" text="\$" textFill="#1bab25">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <Label prefHeight="28.0" prefWidth="26.0" text="to" textFill="#ab501f">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="7.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox prefHeight="46.0" prefWidth="188.0">
+                                       <children>
+                                          <TextField promptText="MAX_price" style="-fx-border-width: 0 0 2 0;" />
+                                          <Label text="\$" textFill="#1bab25">
+                                             <font>
+                                                <Font size="23.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="7.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="4.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <Slider prefHeight="76.0" prefWidth="188.0">
+                                       <VBox.margin>
+                                          <Insets top="7.0" />
+                                       </VBox.margin>
+                                    </Slider>
+                                 </children>
+                              </VBox>
+                        </content>
+                           <graphic>
+                              <Circle fill="#1bab25" radius="3.0" stroke="BLACK" strokeType="INSIDE" />
+                           </graphic>
+                      </TitledPane>
+                      <TitledPane animated="false" text="Customer Reviews">
+                           <content>
+                              <VBox prefHeight="200.0" prefWidth="100.0" />
+                           </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </VBox>
+         </left></BorderPane>
+   </content>
+</ScrollPane>
