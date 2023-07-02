@@ -3,11 +3,14 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -42,12 +45,12 @@
                         </ImageView>
                         <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="409.0">
                            <children>
-                              <TextField alignment="CENTER" promptText="name" style="-fx-background-radius: 25;">
+                              <TextField fx:id="name" alignment="CENTER" promptText="name" style="-fx-background-radius: 25;">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
                               </TextField>
-                              <TextField alignment="CENTER" promptText="last name" style="-fx-background-radius: 25;">
+                              <TextField fx:id="lastName" alignment="CENTER" promptText="last name" style="-fx-background-radius: 25;">
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
@@ -57,25 +60,44 @@
                               <Insets top="5.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="47.0" prefWidth="435.0">
+                        <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="432.0">
                            <children>
-                              <TextField alignment="CENTER" promptText="phone number" style="-fx-background-radius: 25;">
+                              <TextField fx:id="phoneNumber" alignment="CENTER" promptText="phone number" style="-fx-background-radius: 25;">
                                  <HBox.margin>
                                     <Insets right="5.0" />
                                  </HBox.margin>
                               </TextField>
-                              <TextField alignment="CENTER" promptText="password" style="-fx-background-radius: 25;">
+                              <TextField alignment="CENTER" promptText="ءءMM/DD/YYYY" style="-fx-background-radius: 25;">
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin>
                               </TextField>
                            </children>
                         </HBox>
-                        <TextField alignment="CENTER" prefHeight="26.0" prefWidth="392.0" promptText="xxxxxx@gmail.com" style="-fx-background-radius: 25;">
+                        <HBox alignment="CENTER" prefHeight="39.0" prefWidth="432.0">
+                           <children>
+                              <Pane>
+                                 <children>
+                                    <TextField fx:id="textFieldPassword" alignment="CENTER" style="-fx-background-radius: 25;" />
+                                    <PasswordField fx:id="passwordField" alignment="CENTER" layoutY="1.0" promptText="password" style="-fx-background-radius: 25;" />
+                                 </children>
+                              </Pane>
+                              <RadioButton fx:id="showPassword" mnemonicParsing="false" onMouseClicked="#showPassword" text="show password">
+                                 <HBox.margin>
+                                    <Insets bottom="12.0" left="40.0" right="23.0" />
+                                 </HBox.margin></RadioButton>
+                           </children>
+                        </HBox>
+                        <TextField fx:id="gmail" alignment="CENTER" prefHeight="26.0" prefWidth="392.0" promptText="xxxxxx@gmail.com" style="-fx-background-radius: 25;">
                            <VBox.margin>
                               <Insets left="52.0" right="52.0" />
                            </VBox.margin>
                         </TextField>
+                        <Button mnemonicParsing="false" style="-fx-background-radius: 8; -fx-background-color: rgba(255,255,255,0.5);" text="save">
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
+                        </Button>
                      </children>
                   </VBox>
                   <VBox prefHeight="579.0" prefWidth="187.0" style="-fx-background-color: rgba(173,173,173,0.63); -fx-background-radius: 20;">
