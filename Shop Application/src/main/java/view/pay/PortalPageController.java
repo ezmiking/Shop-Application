@@ -1,5 +1,7 @@
 package view.pay;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -13,6 +15,7 @@ import javafx.scene.layout.Background;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Random;
@@ -42,44 +45,48 @@ public class PortalPageController {
     private Image image10;
     private Image image11;
     private static int cap = 1181;
+    private  boolean checked = true;
     public ArrayList<Image> imageArrayLis = new ArrayList<>();
 
 
-    public void payTo(MouseEvent mouseEvent) {
+    public void payTo(MouseEvent mouseEvent) throws IOException {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("ERROR");
         alert.setHeaderText("Error in Information");
         if (cardNumber.getText().length() < 16) {
+            checked = false;
             alert.setContentText("The card number is invalid");
             System.out.println("The card number is invalid");
             alert.showAndWait();
         }
-        if (cvv2.getText().length() < 3 || cvv2.getText().length() > 4) {
+        else if (cvv2.getText().length() < 3 || cvv2.getText().length() > 4) {
+            checked = false;
             alert.setContentText("The cvv2 is invalid");
             System.out.println("The cvv2 is invalid");
             alert.showAndWait();
         }
 
         if (year.getText().length() < 4) {
+            checked = false;
             alert.setContentText("The year is invalid");
             System.out.println("The year is invalid");
             alert.showAndWait();
         }
         if (moth.getText().length() == 0) {
+            checked = false;
             alert.setContentText("The moth is invalid");
             System.out.println("The moth is invalid");
             alert.showAndWait();
         }
 
-
-        System.out.println("captch:" + capcha.getText());
-        System.out.println("cap:" + cap);
         if (capcha.getText().length() == 0) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("enter captcha");
             alert.showAndWait();
         }
-        else if (cap == 1181 && capcha.getText() != "1181") {
+        else if (cap == 1181 && capcha.getText().equals("1181") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -88,7 +95,8 @@ public class PortalPageController {
                     """);
             alert.showAndWait();
         }
-        else if (cap == 1381 && capcha.getText() != "1381") {
+        else if (cap == 1381 && capcha.getText().equals("1381") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -97,7 +105,8 @@ public class PortalPageController {
                     """);
             alert.showAndWait();
         }
-        else if (cap == 1491 && capcha.getText() != "1491") {
+        else if (cap == 1491 && capcha.getText().equals("1491") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -106,7 +115,8 @@ public class PortalPageController {
                     """);
             alert.showAndWait();
         }
-        else if (cap == 1722 && capcha.getText() != "1722") {
+        else if (cap == 1722 && capcha.getText().equals("1722") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -115,7 +125,8 @@ public class PortalPageController {
                     """);
             alert.showAndWait();
         }
-        else if (cap == 1959 && capcha.getText() != "1959") {
+        else if (cap == 1959 && capcha.getText().equals("1959") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -124,7 +135,8 @@ public class PortalPageController {
                     """);
             alert.showAndWait();
         }
-        else if (cap == 2163 && capcha.getText() != "2163") {
+        else if (cap == 2163 && capcha.getText().equals("2163") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -133,17 +145,8 @@ public class PortalPageController {
                     """);
             alert.showAndWait();
         }
-        else if (cap == 2177 && capcha.getText() != "2177") {
-            alert.setHeaderText("Error in captcha");
-            alert.setContentText("""
-                    Please enter the desired captcha
-                    v
-                    kh kh kh kh
-                    """);
-            System.out.println(2177);
-            alert.showAndWait();
-        }
-        else if (cap == 2723 && capcha.getText() != "2723") {
+        else if (cap == 2177 && capcha.getText().equals("2177") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -152,7 +155,8 @@ public class PortalPageController {
                     """);
             alert.showAndWait();
         }
-        else if (cap == 2785 && capcha.getText() != "2785") {
+        else if (cap == 2723 && capcha.getText().equals("2723") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -161,7 +165,8 @@ public class PortalPageController {
                     """);
             alert.showAndWait();
         }
-        else if (cap == 3541 && capcha.getText() != "3541") {
+        else if (cap == 2785 && capcha.getText().equals("2785") == false) {
+            checked = false;
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -169,17 +174,40 @@ public class PortalPageController {
                     kh kh kh kh
                     """);
             alert.showAndWait();
-        } else System.out.println("Payment was successful");
+        }
+        else if (cap == 3541 && capcha.getText().equals("3541") == false) {
+            checked = false;
+            alert.setHeaderText("Error in captcha");
+            alert.setContentText("""
+                    Please enter the desired captcha
+                    v
+                    kh kh kh kh
+                    """);
+            alert.showAndWait();
+        }
 
         if (password.getText().length() == 0) {
+            checked = false;
             alert.setContentText("The password is invalid");
             System.out.println("The password is invalid");
             alert.showAndWait();
         }
         if (gmail.getText().length() == 0) {
+            checked = false;
             alert.setContentText("The gmail is invalid");
             System.out.println("The gmail is invalid");
             alert.showAndWait();
+        }
+
+        if (checked == true) {
+            System.out.println("enter in end page");
+            URL urlEndPortal = PortalPageController.class.getResource("/fxml/endPortal.fxml");
+            AnchorPane anchorPane = FXMLLoader.load(urlEndPortal);
+            Scene sceneEnd = new Scene(anchorPane);
+            Portalpage.stagePortal.setTitle("The end of the portal");
+            Portalpage.stagePortal.setScene(sceneEnd);
+            Portalpage.stagePortal.show();
+
         }
     }
 
@@ -196,7 +224,6 @@ public class PortalPageController {
     public void reload(MouseEvent mouseEvent) {
         Random random = new Random();
         int n = random.nextInt(0, 9);
-        System.out.println(n);
         image0 = new Image(PortalPageController.class.getResourceAsStream("/captcha/1181.png"));
         image1 = new Image(PortalPageController.class.getResourceAsStream("/captcha/1381.png"));
         image2 = new Image(PortalPageController.class.getResourceAsStream("/captcha/1491.png"));
