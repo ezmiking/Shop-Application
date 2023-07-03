@@ -8,7 +8,7 @@ public class Admin{
         setPassword(password);
         setFirstName(firstName);
         setLastName(lastName);
-        setPhoneNumber(Integer.parseInt(phoneNumber));
+        setPhoneNumber(phoneNumber);
         setEmail(email);
     }
 
@@ -22,7 +22,7 @@ public class Admin{
     private String firstName;
     private String lastName;
     private String email;
-    private int phoneNumber;
+    private String phoneNumber;
 
     public String getUserName() {
         return userName;
@@ -61,11 +61,11 @@ public class Admin{
         this.email = email;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

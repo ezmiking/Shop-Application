@@ -1,6 +1,6 @@
 package dataBase;
 
-public class checkInfo {
+public class CheckInfo {
 
 
     DataBase dataBase = new DataBase();
@@ -16,7 +16,7 @@ public class checkInfo {
     }
     public boolean checkAdminInfo(String username,String password){
         if(checkAdminInfo(username)){
-            admin = dataBase.adminArrayList.get(dataBase.adminArrayList.indexOf(admin));
+            admin = dataBase.adminArrayList.get(dataBase.adminArrayList.indexOf(new Admin(username)));
             return admin.getPassword().equals(password);
         }
         return false;
@@ -27,7 +27,7 @@ public class checkInfo {
     }
     public boolean checkCustomerInfo(String username,String password){
         if(checkCustomerInfo(username)){
-            customer = dataBase.customerArrayList.get(dataBase.customerArrayList.indexOf(customer));
+            customer = dataBase.customerArrayList.get(dataBase.customerArrayList.indexOf(new Customer(username)));
             return customer.getPassword().equals(password);
         }
         return false;
