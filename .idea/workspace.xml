@@ -35,13 +35,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/uni/code 3/Shop-Application",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
-  }
-}]]></component>
   <component name="RunManager" selected="Application.CashPage">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
@@ -110,10 +103,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CashPage" />
         <item itemvalue="Application.ProfileMenu" />
         <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.PaymentPage" />
-        <item itemvalue="Application.CashPage" />
         <item itemvalue="Application.CartPage" />
       </list>
     </recent_temporary>
