@@ -97,6 +97,7 @@ public class PortalPageController {
         }
         else if (cap == 1381 && capcha.getText().equals("1381") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -107,6 +108,7 @@ public class PortalPageController {
         }
         else if (cap == 1491 && capcha.getText().equals("1491") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -117,6 +119,7 @@ public class PortalPageController {
         }
         else if (cap == 1722 && capcha.getText().equals("1722") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -127,6 +130,7 @@ public class PortalPageController {
         }
         else if (cap == 1959 && capcha.getText().equals("1959") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -137,6 +141,7 @@ public class PortalPageController {
         }
         else if (cap == 2163 && capcha.getText().equals("2163") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -147,6 +152,7 @@ public class PortalPageController {
         }
         else if (cap == 2177 && capcha.getText().equals("2177") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -157,6 +163,7 @@ public class PortalPageController {
         }
         else if (cap == 2723 && capcha.getText().equals("2723") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -167,6 +174,7 @@ public class PortalPageController {
         }
         else if (cap == 2785 && capcha.getText().equals("2785") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -177,6 +185,7 @@ public class PortalPageController {
         }
         else if (cap == 3541 && capcha.getText().equals("3541") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha
@@ -222,8 +231,13 @@ public class PortalPageController {
 
 
     public void reload(MouseEvent mouseEvent) {
+        captchaReload();
+    }
+
+    public void captchaReload() {
         Random random = new Random();
         int n = random.nextInt(0, 9);
+
         image0 = new Image(PortalPageController.class.getResourceAsStream("/captcha/1181.png"));
         image1 = new Image(PortalPageController.class.getResourceAsStream("/captcha/1381.png"));
         image2 = new Image(PortalPageController.class.getResourceAsStream("/captcha/1491.png"));
@@ -234,6 +248,7 @@ public class PortalPageController {
         image7 = new Image(PortalPageController.class.getResourceAsStream("/captcha/2723.png"));
         image8 = new Image(PortalPageController.class.getResourceAsStream("/captcha/2785.png"));
         image9 = new Image(PortalPageController.class.getResourceAsStream("/captcha/3541.png"));
+
         imageArrayLis.add(image0);
         imageArrayLis.add(image1);
         imageArrayLis.add(image2);
@@ -244,6 +259,7 @@ public class PortalPageController {
         imageArrayLis.add(image7);
         imageArrayLis.add(image8);
         imageArrayLis.add(image9);
+
         switch (n) {
             case 0:
                 cap = 1181;
@@ -276,7 +292,6 @@ public class PortalPageController {
                 cap = 3541;
                 break;
         }
-
 
         imageCapcha.setImage(imageArrayLis.get(n));
     }

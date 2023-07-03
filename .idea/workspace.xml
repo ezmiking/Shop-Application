@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="captcha003 + if moshkel dare">
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/endPortal.fxml" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="captcha004 + endPage">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/pay/PortalPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/pay/PortalPageController.class" afterDir="false" />
@@ -133,7 +132,7 @@
       <workItem from="1688369747715" duration="72000" />
       <workItem from="1688370905225" duration="505000" />
       <workItem from="1688379787476" duration="4464000" />
-      <workItem from="1688423858801" duration="801000" />
+      <workItem from="1688423858801" duration="1428000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -170,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688422255335</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="captcha004 + endPage">
+      <created>1688424743545</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688424743546</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -193,6 +199,7 @@
     <MESSAGE value="Cart" />
     <MESSAGE value="Cart + captch" />
     <MESSAGE value="captcha003 + if moshkel dare" />
-    <option name="LAST_COMMIT_MESSAGE" value="captcha003 + if moshkel dare" />
+    <MESSAGE value="captcha004 + endPage" />
+    <option name="LAST_COMMIT_MESSAGE" value="captcha004 + endPage" />
   </component>
 </project>
