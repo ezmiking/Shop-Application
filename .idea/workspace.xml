@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="Cart + captch">
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="creating DataBase v01">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/portalPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/portalPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,17 +35,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RunManager" selected="Application.ProfileMenu">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/uni/code 3/Shop-Application",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.CashPage">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
       <module name="ShopApplication" />
@@ -116,9 +112,9 @@
       <list>
         <item itemvalue="Application.ProfileMenu" />
         <item itemvalue="Application.Portalpage" />
-        <item itemvalue="Application.CartPage" />
-        <item itemvalue="Application.CashPage" />
         <item itemvalue="Application.PaymentPage" />
+        <item itemvalue="Application.CashPage" />
+        <item itemvalue="Application.CartPage" />
       </list>
     </recent_temporary>
   </component>
@@ -133,6 +129,7 @@
       <workItem from="1688302073847" duration="3417000" />
       <workItem from="1688305982524" duration="15017000" />
       <workItem from="1688360688441" duration="7902000" />
+      <workItem from="1688369747715" duration="72000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
