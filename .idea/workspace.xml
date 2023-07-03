@@ -4,32 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="make send and receive info">
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cartPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_mac_aarch64_17_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_mac_aarch64_17_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_aarch64_17_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_aarch64_17_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_17_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_18_0_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_mac_aarch64_18_0_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_aarch64_17_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_aarch64_17_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_1.xml" beforeDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="Cart + captch">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/ShopApplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/ShopApplication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/main/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/main/ShopPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/CashPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/CashPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cashPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cashPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/portalPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/portalPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/clientPKG/ClientServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/clientPKG/ClientServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/cashPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/cashPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/pay/CashPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/pay/CashPageController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +37,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -67,7 +46,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.CashPage">
+  <component name="RunManager" selected="Application.ProfileMenu">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
       <module name="ShopApplication" />
@@ -135,11 +114,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CashPage" />
+        <item itemvalue="Application.ProfileMenu" />
         <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.CartPage" />
+        <item itemvalue="Application.CashPage" />
         <item itemvalue="Application.PaymentPage" />
-        <item itemvalue="Application.ProfileMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -152,7 +131,8 @@
       <option name="presentableId" value="Default" />
       <updated>1688302072052</updated>
       <workItem from="1688302073847" duration="3417000" />
-      <workItem from="1688305982524" duration="13716000" />
+      <workItem from="1688305982524" duration="15017000" />
+      <workItem from="1688360688441" duration="7902000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -168,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688305301601</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Cart">
+      <created>1688333084738</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1688333084738</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Cart + captch">
+      <created>1688333231931</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1688333231931</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,6 +182,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testting git v02" />
     <MESSAGE value="make send and receive info" />
-    <option name="LAST_COMMIT_MESSAGE" value="make send and receive info" />
+    <MESSAGE value="Cart" />
+    <MESSAGE value="Cart + captch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cart + captch" />
   </component>
 </project>
