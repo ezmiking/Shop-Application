@@ -33,6 +33,7 @@ public class DataBase {
     {
         try {
             database = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdatabase", "root","");
+           // database = DriverManager.getConnection("jdbc:mysql://192.168.1.5:3306/shopdatabase", "root","");
             statement = database.createStatement();
         } catch (SQLException e) {
             throw new RuntimeException(e);

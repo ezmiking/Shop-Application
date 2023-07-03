@@ -11,8 +11,8 @@ import javafx.scene.input.MouseEvent;
 import view.shop.ShopPanel;
 
 public class LoginController {
-    DataBase dataBase = new DataBase();
-    CheckInfo checkInfo = new CheckInfo();
+   // DataBase dataBase = new DataBase();
+   // CheckInfo checkInfo = new CheckInfo();
     @FXML
     private PasswordField passwordField;
     @FXML
@@ -21,6 +21,7 @@ public class LoginController {
     public void singIn(MouseEvent mouseEvent) throws Exception {
         String userNameString = usernameField.getText();
         String passwordString = passwordField.getText();
+        /*
         //check admin is available
         if (checkInfo.checkAdminInfo(userNameString)){
             //check admin password
@@ -55,7 +56,7 @@ public class LoginController {
             alert.showAndWait();
         }
 
-
+*/
     }
 
     public void singUp(MouseEvent mouseEvent) {
