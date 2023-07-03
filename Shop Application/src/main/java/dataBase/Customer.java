@@ -1,14 +1,9 @@
-package clientPKG;
+package dataBase;
 
-import org.jetbrains.annotations.NotNull;
+public class Customer {
+    public Customer(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
 
-import java.io.Serializable;
-
-public class Admin implements Comparable, Serializable {
-
-    public Admin(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
-
-        this.userName=userName;
+       setUserName(userName);
         setPassword(password);
         setFirstName(firstName);
         setLastName(lastName);
@@ -16,12 +11,11 @@ public class Admin implements Comparable, Serializable {
         setEmail(email);
     }
 
-    public Admin(String userName){
+    public Customer(String userName){
 
-        this.userName=userName;
+       setUserName(userName);
     }
-
-    private final String userName;
+    private String userName;
     private String password;
     private String firstName;
     private String lastName;
@@ -74,17 +68,13 @@ public class Admin implements Comparable, Serializable {
     }
 
     @Override
-    public int compareTo(@NotNull Object o) {
-        Admin other =(Admin) o;
-        if(this.userName.equals(other.getUserName())){
-            return 1;
-        }
-        return -1;
-    }
-    @Override
     public boolean equals(Object obj){
-        Admin other =(Admin) obj;
-        return this.userName.equals(other.getUserName());
+        Customer other =(Customer) obj;
+        return this.getUserName().equals(other.getUserName());
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
 

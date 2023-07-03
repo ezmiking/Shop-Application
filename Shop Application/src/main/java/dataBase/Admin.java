@@ -1,9 +1,10 @@
-package clientPKG;
+package dataBase;
 
-public class Customer {
-    public Customer(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
+public class Admin{
 
-        this.userName=userName;
+    public Admin(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
+
+        this.setUserName(userName);
         setPassword(password);
         setFirstName(firstName);
         setLastName(lastName);
@@ -11,11 +12,12 @@ public class Customer {
         setEmail(email);
     }
 
-    public Customer(String userName){
+    public Admin(String userName){
 
-        this.userName=userName;
+        this.setUserName(userName);
     }
-    private final String userName;
+
+    private String userName;
     private String password;
     private String firstName;
     private String lastName;
@@ -69,8 +71,12 @@ public class Customer {
 
     @Override
     public boolean equals(Object obj){
-        Customer other =(Customer) obj;
-        return this.userName.equals(other.getUserName());
+        Admin other =(Admin) obj;
+        return this.getUserName().equals(other.getUserName());
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 }
+
