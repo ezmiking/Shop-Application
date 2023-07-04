@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="connecting database to project v01">
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="Login sign up.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/signupPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/signupPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -38,22 +41,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;
-  }
-}</component>
-  <component name="RunManager" selected="Application.LoginMenu">
-    <configuration name="CashPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.pay.CashPage" />
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Application.SignupPage">
+    <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
       <module name="ShopApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.pay.*" />
+          <option name="PATTERN" value="view.shop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -67,19 +65,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="view.login.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PaymentPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.pay.PaymentPage" />
-      <module name="ShopApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="view.pay.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,13 +98,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignupPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.login.SignupPage" />
+      <module name="ShopApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SignupPage" />
         <item itemvalue="Application.LoginMenu" />
-        <item itemvalue="Application.CashPage" />
-        <item itemvalue="Application.ProfileMenu" />
         <item itemvalue="Application.Portalpage" />
-        <item itemvalue="Application.PaymentPage" />
+        <item itemvalue="Application.ProfileMenu" />
+        <item itemvalue="Application.CartPage" />
       </list>
     </recent_temporary>
   </component>
@@ -136,8 +134,8 @@
       <workItem from="1688360688441" duration="7902000" />
       <workItem from="1688369747715" duration="72000" />
       <workItem from="1688370905225" duration="505000" />
-      <workItem from="1688379787476" duration="4528000" />
-      <workItem from="1688413542596" duration="124000" />
+      <workItem from="1688379787476" duration="4464000" />
+      <workItem from="1688423858801" duration="22436000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -167,14 +165,56 @@
       <option name="project" value="LOCAL" />
       <updated>1688333231931</updated>
     </task>
-    <task id="LOCAL-00005" summary="connecting database to project v01">
-      <created>1688384295752</created>
+    <task id="LOCAL-00005" summary="captcha003 + if moshkel dare">
+      <created>1688422255335</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1688384295752</updated>
+      <updated>1688422255335</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="captcha004 + endPage">
+      <created>1688424743545</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1688424743546</updated>
+    </task>
+    <task id="LOCAL-00007" summary="captcha005 + captchareload">
+      <created>1688425330140</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688425330141</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Login sign in + Login captcha">
+      <created>1688436168917</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1688436168918</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Login sign in + Login captcha (001)">
+      <created>1688436955945</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688436955945</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Login sign in + Login captcha (002)">
+      <created>1688437362921</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688437362922</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Login sign up.fxml">
+      <created>1688443661276</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688443661276</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,7 +236,13 @@
     <MESSAGE value="make send and receive info" />
     <MESSAGE value="Cart" />
     <MESSAGE value="Cart + captch" />
-    <MESSAGE value="connecting database to project v01" />
-    <option name="LAST_COMMIT_MESSAGE" value="connecting database to project v01" />
+    <MESSAGE value="captcha003 + if moshkel dare" />
+    <MESSAGE value="captcha004 + endPage" />
+    <MESSAGE value="captcha005 + captchareload" />
+    <MESSAGE value="Login sign in + Login captcha" />
+    <MESSAGE value="Login sign in + Login captcha (001)" />
+    <MESSAGE value="Login sign in + Login captcha (002)" />
+    <MESSAGE value="Login sign up.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login sign up.fxml" />
   </component>
 </project>
