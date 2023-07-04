@@ -17,9 +17,9 @@ public class LoginController extends PortalPageController {
     public TextField txtFildPass;
     public PasswordField passFildPass;
     public ImageView imageViewEye;
-    private Image imageEye1;
-    private Image imageEye2;
-    private boolean eye = true;
+    protected Image imageEye1;
+    protected Image imageEye2;
+    protected boolean eye = true;
 
     public void signIn(MouseEvent mouseEvent) {
         if (txtEmail.getText().length() == 0) {
@@ -50,7 +50,7 @@ public class LoginController extends PortalPageController {
         setImage();
     }
 
-    private void setImage() {
+    protected void setImage() {
         if (eye == true) { //show pass
             setImage1();
             txtFildPass.setText(passFildPass.getText());
@@ -65,7 +65,7 @@ public class LoginController extends PortalPageController {
         }
     }
 
-    private void setImage1() {
+    protected void setImage1() {
         imageEye2 = new Image(LoginController.class.getResourceAsStream("/image/icon/eye2.png"));
 //        if (imageViewEye.getImage().equals(image1) == true) {
 //            imageViewEye.setImage(image2);
@@ -76,7 +76,7 @@ public class LoginController extends PortalPageController {
         imageViewEye.setImage(imageEye2);
     }
 
-    private void setImage2() {
+    protected void setImage2() {
         imageEye1 = new Image(LoginController.class.getResourceAsStream("/image/icon/eye1.png"));
         imageViewEye.setImage(imageEye1);
     }

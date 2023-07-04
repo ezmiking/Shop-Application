@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="Login sign in + Login captcha (002)">
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/signupPage.fxml" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="Login sign up.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/loginMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/loginMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/signupPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/signupPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +45,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.LoginMenu">
+  <component name="RunManager" selected="Application.SignupPage">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
       <module name="ShopApplication" />
@@ -115,8 +113,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoginMenu" />
         <item itemvalue="Application.SignupPage" />
+        <item itemvalue="Application.LoginMenu" />
         <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.ProfileMenu" />
         <item itemvalue="Application.CartPage" />
@@ -137,7 +135,7 @@
       <workItem from="1688369747715" duration="72000" />
       <workItem from="1688370905225" duration="505000" />
       <workItem from="1688379787476" duration="4464000" />
-      <workItem from="1688423858801" duration="17689000" />
+      <workItem from="1688423858801" duration="22436000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -209,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688437362922</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Login sign up.fxml">
+      <created>1688443661276</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1688443661276</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +242,7 @@
     <MESSAGE value="Login sign in + Login captcha" />
     <MESSAGE value="Login sign in + Login captcha (001)" />
     <MESSAGE value="Login sign in + Login captcha (002)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login sign in + Login captcha (002)" />
+    <MESSAGE value="Login sign up.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login sign up.fxml" />
   </component>
 </project>
