@@ -139,6 +139,14 @@
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </Button>
+                              <Hyperlink alignment="CENTER" contentDisplay="TOP" prefHeight="13.0" prefWidth="118.0" text="I forgot the password" textFill="#4b1a5b">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="15.0" />
+                                 </VBox.margin>
+                              </Hyperlink>
                               <HBox alignment="TOP_CENTER" prefHeight="16.0" prefWidth="374.0">
                                  <children>
                                     <Label text="Don't have an account?">
@@ -149,7 +157,7 @@
                                     <Hyperlink onMouseClicked="#signUp" prefHeight="17.0" prefWidth="53.0" text="sign up" textFill="#184580" />
                                  </children>
                                  <VBox.margin>
-                                    <Insets top="30.0" />
+                                    <Insets />
                                  </VBox.margin>
                               </HBox>
                            </children>

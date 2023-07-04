@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="Login sign in + Login captcha">
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="Login sign in + Login captcha (002)">
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/signupPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/loginMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/loginMenu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/pay/PortalPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/pay/PortalPageController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,19 +61,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CashPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.pay.CashPage" />
-      <module name="ShopApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="view.pay.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="LoginMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.login.LoginMenu" />
       <module name="ShopApplication" />
@@ -111,13 +100,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SignupPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.login.SignupPage" />
+      <module name="ShopApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoginMenu" />
+        <item itemvalue="Application.SignupPage" />
         <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.ProfileMenu" />
         <item itemvalue="Application.CartPage" />
-        <item itemvalue="Application.CashPage" />
       </list>
     </recent_temporary>
   </component>
@@ -135,7 +137,7 @@
       <workItem from="1688369747715" duration="72000" />
       <workItem from="1688370905225" duration="505000" />
       <workItem from="1688379787476" duration="4464000" />
-      <workItem from="1688423858801" duration="12251000" />
+      <workItem from="1688423858801" duration="17689000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -193,7 +195,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688436168918</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Login sign in + Login captcha (001)">
+      <created>1688436955945</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1688436955945</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Login sign in + Login captcha (002)">
+      <created>1688437362921</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1688437362922</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +235,8 @@
     <MESSAGE value="captcha004 + endPage" />
     <MESSAGE value="captcha005 + captchareload" />
     <MESSAGE value="Login sign in + Login captcha" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login sign in + Login captcha" />
+    <MESSAGE value="Login sign in + Login captcha (001)" />
+    <MESSAGE value="Login sign in + Login captcha (002)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login sign in + Login captcha (002)" />
   </component>
 </project>

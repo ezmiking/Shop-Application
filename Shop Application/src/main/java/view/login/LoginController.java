@@ -42,7 +42,8 @@ public class LoginController extends PortalPageController {
         }
     }
 
-    public void signUp(MouseEvent mouseEvent) {
+    public void signUp(MouseEvent mouseEvent) throws Exception {
+        new SignupPage().start(LoginMenu.stage);
     }
 
     public void imageView(MouseEvent mouseEvent) {
