@@ -111,12 +111,14 @@ public class PortalPageController {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         if (capcha.getText().length() == 0) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("enter captcha");
             alert.showAndWait();
         }
         else if (cap == 1181 && capcha.getText().equals("1181") == false) {
             checked = false;
+            captchaReload();
             alert.setHeaderText("Error in captcha");
             alert.setContentText("""
                     Please enter the desired captcha

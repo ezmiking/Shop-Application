@@ -36,7 +36,7 @@ public class LoginController extends PortalPageController {
                     please enter your Password
                     """).showAndWait();
         }
-        super.captchaCode();
+        captchaCode();
         if (checked == true) {
             System.out.println("haaayaa");
         }
