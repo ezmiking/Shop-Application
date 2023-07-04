@@ -32,20 +32,20 @@ public class PortalPageController {
     public TextField cvv2;
     public TextField year;
     public TextField moth;
-    private Image image0;
-    private Image image1;
-    private Image image2;
-    private Image image3;
-    private Image image4;
-    private Image image5;
-    private Image image6;
-    private Image image7;
-    private Image image8;
-    private Image image9;
-    private Image image10;
-    private Image image11;
-    private static int cap = 1181;
-    private  boolean checked = true;
+    public Image image0;
+    public Image image1;
+    public Image image2;
+    public Image image3;
+    public Image image4;
+    public Image image5;
+    public Image image6;
+    public Image image7;
+    public Image image8;
+    public Image image9;
+    public Image image10;
+    public Image image11;
+    public static int cap = 1181;
+    public boolean checked = true;
     public ArrayList<Image> imageArrayLis = new ArrayList<>();
 
 
@@ -78,7 +78,37 @@ public class PortalPageController {
             System.out.println("The moth is invalid");
             alert.showAndWait();
         }
+        //********* captcha test
+        captchaCode();
+        //*********
 
+        if (password.getText().length() == 0) {
+            checked = false;
+            alert.setContentText("The password is invalid");
+            System.out.println("The password is invalid");
+            alert.showAndWait();
+        }
+        if (gmail.getText().length() == 0) {
+            checked = false;
+            alert.setContentText("The gmail is invalid");
+            System.out.println("The gmail is invalid");
+            alert.showAndWait();
+        }
+
+        if (checked == true) {
+            System.out.println("enter in end page");
+            URL urlEndPortal = PortalPageController.class.getResource("/fxml/endPortal.fxml");
+            AnchorPane anchorPane = FXMLLoader.load(urlEndPortal);
+            Scene sceneEnd = new Scene(anchorPane);
+            Portalpage.stagePortal.setTitle("The end of the portal");
+            Portalpage.stagePortal.setScene(sceneEnd);
+            Portalpage.stagePortal.show();
+
+        }
+    }
+
+    public void captchaCode() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
         if (capcha.getText().length() == 0) {
             checked = false;
             alert.setHeaderText("Error in captcha");
@@ -193,30 +223,6 @@ public class PortalPageController {
                     kh kh kh kh
                     """);
             alert.showAndWait();
-        }
-
-        if (password.getText().length() == 0) {
-            checked = false;
-            alert.setContentText("The password is invalid");
-            System.out.println("The password is invalid");
-            alert.showAndWait();
-        }
-        if (gmail.getText().length() == 0) {
-            checked = false;
-            alert.setContentText("The gmail is invalid");
-            System.out.println("The gmail is invalid");
-            alert.showAndWait();
-        }
-
-        if (checked == true) {
-            System.out.println("enter in end page");
-            URL urlEndPortal = PortalPageController.class.getResource("/fxml/endPortal.fxml");
-            AnchorPane anchorPane = FXMLLoader.load(urlEndPortal);
-            Scene sceneEnd = new Scene(anchorPane);
-            Portalpage.stagePortal.setTitle("The end of the portal");
-            Portalpage.stagePortal.setScene(sceneEnd);
-            Portalpage.stagePortal.show();
-
         }
     }
 

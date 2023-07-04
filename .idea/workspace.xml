@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="captcha004 + endPage">
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="captcha005 + captchareload">
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/loginMenu2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/loginMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/loginMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/loginMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/loginMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginMenu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/pay/PortalPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/pay/PortalPageController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -40,9 +48,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-  <component name="RunManager" selected="Application.Portalpage">
+  <component name="RunManager" selected="Application.LoginMenu">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
       <module name="ShopApplication" />
@@ -110,10 +119,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LoginMenu" />
         <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.ProfileMenu" />
         <item itemvalue="Application.CartPage" />
-        <item itemvalue="Application.LoginMenu" />
         <item itemvalue="Application.CashPage" />
       </list>
     </recent_temporary>
@@ -132,7 +141,7 @@
       <workItem from="1688369747715" duration="72000" />
       <workItem from="1688370905225" duration="505000" />
       <workItem from="1688379787476" duration="4464000" />
-      <workItem from="1688423858801" duration="1428000" />
+      <workItem from="1688423858801" duration="11216000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -176,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688424743546</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="captcha005 + captchareload">
+      <created>1688425330140</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1688425330141</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +216,7 @@
     <MESSAGE value="Cart + captch" />
     <MESSAGE value="captcha003 + if moshkel dare" />
     <MESSAGE value="captcha004 + endPage" />
-    <option name="LAST_COMMIT_MESSAGE" value="captcha004 + endPage" />
+    <MESSAGE value="captcha005 + captchareload" />
+    <option name="LAST_COMMIT_MESSAGE" value="captcha005 + captchareload" />
   </component>
 </project>

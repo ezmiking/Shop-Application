@@ -1,9 +1,9 @@
 package view.login;
 
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -19,8 +19,8 @@ public class LoginMenu extends Application {
     public void start(Stage stage) throws Exception {
         LoginMenu.stage = stage;
         URL url = LoginMenu.class.getResource("/fxml/loginMenu.fxml");
-        BorderPane borderPane = FXMLLoader.load(url);
-        Scene scene = new Scene(borderPane);
+        AnchorPane anchorPane = FXMLLoader.load(url);
+        Scene scene = new Scene(anchorPane);
         stage.setScene(scene);
         stage.show();
     }
