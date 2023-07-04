@@ -5,7 +5,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
-public class SignupPageController extends LoginController {
+public class SignupController extends LoginController {
     public Label lblName;
     public Label lblLastname;
     public TextField txtName;
