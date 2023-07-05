@@ -1,13 +1,15 @@
 package dataBase;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable {
     public Customer(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
 
        setUserName(userName);
         setPassword(password);
         setFirstName(firstName);
         setLastName(lastName);
-        setPhoneNumber(Integer.parseInt(phoneNumber));
+        setPhoneNumber(phoneNumber);
         setEmail(email);
     }
 
@@ -20,7 +22,7 @@ public class Customer {
     private String firstName;
     private String lastName;
     private String email;
-    private int phoneNumber;
+    private String phoneNumber;
 
     public String getUserName() {
         return userName;
@@ -59,11 +61,11 @@ public class Customer {
         this.email = email;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

@@ -1,6 +1,8 @@
 package dataBase;
 
-public class Good {
+import java.io.Serializable;
+
+public class Good implements Serializable {
     private int codeGood;
     private int priceGood;
     private String nameGood;

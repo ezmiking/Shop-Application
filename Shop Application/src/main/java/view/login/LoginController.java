@@ -1,5 +1,6 @@
 package view.login;
 
+import dataBase.CheckInfo;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -11,17 +12,19 @@ import javafx.scene.input.MouseEvent;
 import view.pay.PortalPageController;
 
 public class LoginController extends PortalPageController {
+    //CheckInfo checkInfo = new CheckInfo();
     public Label lblEmail;
     public TextField txtEmail;
     public Label lblPass;
-    public TextField txtFildPass;
-    public PasswordField passFildPass;
+    public TextField txtFieldPass;
+    public PasswordField passFieldPass;
     public ImageView imageViewEye;
     protected Image imageEye1;
     protected Image imageEye2;
     protected boolean eye = true;
 
     public void signIn(MouseEvent mouseEvent) {
+
         if (txtEmail.getText().length() == 0) {
             checked = false;
             new Alert(Alert.AlertType.ERROR, """
@@ -30,7 +33,7 @@ public class LoginController extends PortalPageController {
         }
         eye = false;
         setImage();
-        if (passFildPass.getText().length() == 0 && txtFildPass.getText().length() == 0) {
+        if (passFieldPass.getText().length() == 0 && txtFieldPass.getText().length() == 0) {
             checked = false;
             new Alert(Alert.AlertType.ERROR, """
                     please enter your Password
@@ -53,14 +56,14 @@ public class LoginController extends PortalPageController {
     protected void setImage() {
         if (eye == true) { //show pass
             setImage1();
-            txtFildPass.setText(passFildPass.getText());
-            passFildPass.setVisible(false);
-            txtFildPass.setVisible(true);
+            txtFieldPass.setText(passFieldPass.getText());
+            passFieldPass.setVisible(false);
+            txtFieldPass.setVisible(true);
             eye = false;
         } else { // hide pass
             setImage2();
-            passFildPass.setVisible(true);
-            txtFildPass.setVisible(false);
+            passFieldPass.setVisible(true);
+            txtFieldPass.setVisible(false);
             eye = true;
         }
     }
@@ -90,7 +93,7 @@ public class LoginController extends PortalPageController {
     }
 
     public void txtFildPass(KeyEvent keyEvent) {
-        if (txtFildPass.getText().length() == 0) {
+        if (txtFieldPass.getText().length() == 0) {
             lblPass.setVisible(true);
         } else {
             lblPass.setVisible(false);
@@ -98,7 +101,7 @@ public class LoginController extends PortalPageController {
     }
 
     public void passFildPass(KeyEvent keyEvent) {
-        if (passFildPass.getText().length() == 0) {
+        if (passFieldPass.getText().length() == 0) {
             lblPass.setVisible(true);
         } else {
             lblPass.setVisible(false);

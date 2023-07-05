@@ -33,7 +33,8 @@ public class DataBase {
     {
         try {
             database = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdatabase", "root","");
-           // database = DriverManager.getConnection("jdbc:mysql://192.168.1.5:3306/shopdatabase", "root","");
+            //database = DriverManager.getConnection("jdbc:mysql://192.168.1.5:3306/shopdatabase", "root","");
+            //database = DriverManager.getConnection("jdbc:mysql://127.0.0.1 :3306/shopdatabase", "root","");
             statement = database.createStatement();
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -52,14 +53,14 @@ public class DataBase {
 
             resultSetCustomer = statement.executeQuery("SELECT * FROM customer");
 
-                while (resultSetCustomer.next()) {
-                    Customer customer = new Customer(resultSetCustomer.getString("userNameF"), resultSetCustomer.getString("passwordF"),
-                            resultSetCustomer.getString("firstNameF"), resultSetCustomer.getString("lastNameF"),
-                            resultSetCustomer.getString("phoneNumberF"), resultSetCustomer.getString("emailF"));
+            while (resultSetCustomer.next()) {
+                Customer customer = new Customer(resultSetCustomer.getString("userNameF"), resultSetCustomer.getString("passwordF"),
+                        resultSetCustomer.getString("firstNameF"), resultSetCustomer.getString("lastNameF"),
+                        resultSetCustomer.getString("phoneNumberF"), resultSetCustomer.getString("emailF"));
 
 
-                    customerArrayList.add(customer);
-                }
+                customerArrayList.add(customer);
+            }
 
         } catch (SQLException e){
             throw new RuntimeException(e);
@@ -83,6 +84,15 @@ public class DataBase {
             throw new RuntimeException(e);
         }
         customerArrayList.add(newCustomer);
+    }
+    public void insertInfoCustomer(Customer customer){
+        String userName = customer.getUserName();
+        String password = customer.getPassword();
+        String firstName = customer.getFirstName();
+        String lastName = customer.getLastName();
+        String phoneNumber = customer.getPhoneNumber();
+        String email = customer.getEmail();
+        insertInfoCustomer(userName,password,firstName,lastName,phoneNumber,email);
     }
 
 
@@ -131,7 +141,7 @@ public class DataBase {
         if(phoneNumber!=null){
             try {
                 statement.executeUpdate("UPDATE customer SET phoneNumberF = phoneNumber WHERE userNameF = userName");
-                changeCustomer.setPhoneNumber(Integer.parseInt(phoneNumber));
+                changeCustomer.setPhoneNumber(phoneNumber);
                 customerArrayList.set(index, changeCustomer);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
@@ -149,6 +159,16 @@ public class DataBase {
 
 
 
+    }
+    public void updateInfoCustomer(Customer customer,Customer newCustomer){
+        String userName = customer.getUserName();
+        String newUserName = newCustomer.getUserName();
+        String password = newCustomer.getPassword();
+        String firstName = newCustomer.getFirstName();
+        String lastName = newCustomer.getLastName();
+        String phoneNumber = newCustomer.getPhoneNumber();
+        String email = newCustomer.getEmail();
+        updateInfoCustomer(userName,newUserName,password,firstName,lastName,phoneNumber,email);
     }
 
 
@@ -204,6 +224,15 @@ public class DataBase {
             throw new RuntimeException(e);
         }
         adminArrayList.add(newAdmin);
+    }
+    public void insertInfoAdmin(Admin admin){
+        String userName = admin.getUserName();
+        String password = admin.getPassword();
+        String firstName = admin.getFirstName();
+        String lastName = admin.getLastName();
+        String phoneNumber = admin.getPhoneNumber();
+        String email = admin.getEmail();
+        insertInfoAdmin(userName,password,firstName,lastName,phoneNumber,email);
     }
 
 
@@ -270,6 +299,16 @@ public class DataBase {
 
 
 
+    }
+    public void updateInfoAdmin(Admin admin,Admin newAdmin){
+        String userName = admin.getUserName();
+        String newUserName = newAdmin.getUserName();
+        String password = newAdmin.getPassword();
+        String firstName = newAdmin.getFirstName();
+        String lastName = newAdmin.getLastName();
+        String phoneNumber = newAdmin.getPhoneNumber();
+        String email = newAdmin.getEmail();
+        updateInfoAdmin(userName,newUserName,password,firstName,lastName,phoneNumber,email);
     }
 
     public void deleteInfoAdmin(String userName){

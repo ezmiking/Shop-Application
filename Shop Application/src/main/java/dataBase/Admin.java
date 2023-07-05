@@ -1,6 +1,8 @@
 package dataBase;
 
-public class Admin{
+import java.io.Serializable;
+
+public class Admin implements Serializable {
 
     public Admin(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
 

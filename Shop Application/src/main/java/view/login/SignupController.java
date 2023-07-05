@@ -89,7 +89,7 @@ public class SignupController extends LoginController {
             alert.showAndWait();
         }
 
-        if (passFildPass.getText().length() == 0 && txtFildPass.getText().length() == 0) {
+        if (passFieldPass.getText().length() == 0 && txtFieldPass.getText().length() == 0) {
             alert.setContentText("* please enter your Password !!");
             alert.showAndWait();
         }
@@ -99,14 +99,14 @@ public class SignupController extends LoginController {
             alert.showAndWait();
         }
 
-        if (passFildPass.getText().equals(passFildPassCon.getText()) == false) {
+        if (passFieldPass.getText().equals(passFildPassCon.getText()) == false) {
             create = false;
             new Alert(Alert.AlertType.ERROR, """
                     The confirmed password is different from the current password
                     Please enter again
                     """).showAndWait();
-            passFildPass.setText("");
-            txtFildPass.setText("");
+            passFieldPass.setText("");
+            txtFieldPass.setText("");
             passFildPassCon.setText("");
             txtFildPassCon.setText("");
             n = -2;
