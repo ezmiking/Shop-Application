@@ -19,7 +19,9 @@ public class DataBase {
     Statement statement;
 
 
-
+    public static void main(String[] args) {
+        DataBase dataBase = new DataBase();
+    }
     ResultSet resultSetAdmin;
     ResultSet resultSetCustomer;
     ResultSet resultSetGood;
@@ -32,6 +34,7 @@ public class DataBase {
 
     {
         try {
+            //database = DriverManager.getConnection("jdbc:mysql:176.65.241.166/sheedtab_amir", "sheedtab_amir","amirreza_Daneshmand1382");
             database = DriverManager.getConnection("jdbc:mysql://localhost:3306/shopdatabase", "root","");
             //database = DriverManager.getConnection("jdbc:mysql://192.168.1.5:3306/shopdatabase", "root","");
             //database = DriverManager.getConnection("jdbc:mysql://127.0.0.1 :3306/shopdatabase", "root","");

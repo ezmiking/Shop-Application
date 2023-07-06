@@ -1,11 +1,16 @@
 package view.login;
 
+import dataBase.CheckInfo;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
 public class SignupController extends LoginController {
+
+    CheckInfo checkInfo = new CheckInfo();
     public Label lblName;
     public Label lblLastname;
     public TextField txtName;
@@ -19,11 +24,40 @@ public class SignupController extends LoginController {
     public ImageView successful;
     public Label lblsuccessful;
     public Label welcome;
+    public CheckBox adminCheckBox;
+    public CheckBox customerCheckBox;
+    private boolean adminSign = false;
+    private boolean customerSign = false;
     private boolean eyeCon = true;
     private static boolean create = true;
     private boolean welcomeB = false;
     private int n = 0;
-
+    @FXML
+    void adminBoxAction(ActionEvent event) {
+        if(adminCheckBox.isSelected()){
+            adminSign = true;
+            customerSign=false;
+            customerCheckBox.setSelected(false);
+        }
+        if(!adminCheckBox.isSelected()){
+            adminSign = false;
+            customerSign=true;
+            customerCheckBox.setSelected(true);
+        }
+    }
+    @FXML
+    void customerBoxAction(ActionEvent event) {
+        if(customerCheckBox.isSelected()){
+            adminSign = false;
+            customerSign=true;
+            adminCheckBox.setSelected(false);
+        }
+        if(!customerCheckBox.isSelected()){
+            adminSign = true;
+            customerSign=false;
+            adminCheckBox.setSelected(true);
+        }
+    }
     public void lastName(KeyEvent keyEvent) {
         if (txtLastName.getText().length() == 0) {
             lblLastname.setVisible(true);
@@ -39,7 +73,8 @@ public class SignupController extends LoginController {
         if (txtName.getText().length() == 0) {
             lblName.setVisible(true);
             create = false;
-        } else {
+        }
+         else {
             lblName.setVisible(false);
             create = true;
         }
@@ -88,6 +123,10 @@ public class SignupController extends LoginController {
             alert.setContentText("* please enter your E-mail !!");
             alert.showAndWait();
         }
+        if(checkInfo.checkCustomerInfo(txtEmail.getText())){
+            alert.setContentText("* this Email is available");
+            alert.showAndWait();
+        }
 
         if (passFieldPass.getText().length() == 0 && txtFieldPass.getText().length() == 0) {
             alert.setContentText("* please enter your Password !!");
@@ -99,7 +138,7 @@ public class SignupController extends LoginController {
             alert.showAndWait();
         }
 
-        if (passFieldPass.getText().equals(passFildPassCon.getText()) == false) {
+        if (!passFieldPass.getText().equals(passFildPassCon.getText())) {
             create = false;
             new Alert(Alert.AlertType.ERROR, """
                     The confirmed password is different from the current password
@@ -121,12 +160,15 @@ public class SignupController extends LoginController {
             alert.showAndWait();
         }
 
-        if (create == true && n != -2) {
+        if (create && n != -2) {
             System.out.println("khkhkh");
             welcomeB = true;
         }
 
-        if (welcomeB == true) {
+        if (welcomeB) {
+            if(adminSign){
+
+            }
             successful.setVisible(true);
             lblsuccessful.setVisible(true);
             welcome.setVisible(true);

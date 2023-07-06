@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
@@ -14,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="592.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.login.SignupController">
+<AnchorPane prefHeight="592.0" prefWidth="864.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.login.SignupController">
     <children>
         <HBox prefHeight="592.0" prefWidth="864.0" style="-fx-background-color: #2c2b2b;">
             <children>
@@ -209,11 +215,23 @@
                                     <Insets left="70.0" right="70.0" top="10.0" />
                                  </VBox.margin>
                               </HBox>
-                                        <Button mnemonicParsing="false" onMouseClicked="#create" prefHeight="30.0" prefWidth="201.0" style="-fx-background-color: #496209; -fx-background-radius: 25;" text="CREATE ACCOUNT">
-                                            <VBox.margin>
-                                                <Insets top="10.0" />
-                                            </VBox.margin>
-                                        </Button>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                 <children>
+                                    <VBox alignment="BASELINE_CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="customerCheckBox" mnemonicParsing="false" onAction="#customerBoxAction" prefHeight="21.0" prefWidth="14.0" />
+                                          <Label prefHeight="23.0" prefWidth="64.0" text="customer" />
+                                       </children>
+                                    </VBox>
+                                              <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#create" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: #496209; -fx-background-radius: 25;" text="CREATE ACCOUNT" />
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <CheckBox fx:id="adminCheckBox" mnemonicParsing="false" onAction="#adminBoxAction" prefHeight="25.0" prefWidth="21.0" />
+                                          <Label text="admin" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
                                         <HBox alignment="TOP_CENTER" prefHeight="16.0" prefWidth="374.0">
                                             <children>
                                                 <Label text="Already have an account?">

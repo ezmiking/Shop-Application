@@ -10,9 +10,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import view.pay.PortalPageController;
+import view.shop.ShopPanel;
 
 public class LoginController extends PortalPageController {
-    //CheckInfo checkInfo = new CheckInfo();
+    CheckInfo checkInfo = new CheckInfo();
     public Label lblEmail;
     public TextField txtEmail;
     public Label lblPass;
@@ -22,11 +23,76 @@ public class LoginController extends PortalPageController {
     protected Image imageEye1;
     protected Image imageEye2;
     protected boolean eye = true;
+    public boolean sighInAdmin = false;
+    public boolean sighInCustomer = false;
 
-    public void signIn(MouseEvent mouseEvent) {
+    public void signIn(MouseEvent mouseEvent) throws Exception {
+
+        String userNameString = txtEmail.getText();
+        String passwordString;
+        if(passFieldPass.getText() != null){
+            passwordString = passFieldPass.getText();
+        }else {
+            passwordString = txtFieldPass.getText();
+        }
+
+        //check for login
+        //check admin is available
+        if (checkInfo.checkAdminInfo(userNameString)){
+            //check admin password
+            if(checkInfo.checkAdminInfo(userNameString, passwordString)){
+                if(captchaCodeChecked){
+                    sighInAdmin=true;
+                    new ShopPanel().start(LoginMenu.stage);
+                }else{
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR");
+                    alert.setHeaderText("Admin SING IN ERROR");
+                    alert.setContentText("please check your info again ");
+                    alert.showAndWait();
+                }
+
+            }else{
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("ERROR");
+                alert.setHeaderText("Admin SING IN ERROR");
+                alert.setContentText("your password is wrong");
+                alert.showAndWait();
+               // System.out.println(dataBase.adminArrayList.get(dataBase.adminArrayList.indexOf(new Admin(userNameString))).getPassword());
+            }
+        }else if(checkInfo.checkCustomerInfo(userNameString)){
+            //check customer password
+            if(checkInfo.checkCustomerInfo(userNameString, passwordString)){
+                //password is correct
+                if(captchaCodeChecked){
+                    sighInCustomer=true;
+                    new ShopPanel().start(LoginMenu.stage);
+                }else{
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("ERROR");
+                    alert.setHeaderText("Admin SING IN ERROR");
+                    alert.setContentText("please check your info again ");
+                    alert.showAndWait();
+                }
+            }else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("ERROR");
+                alert.setHeaderText("Customer SING IN ERROR");
+                alert.setContentText("your password is wrong");
+                alert.showAndWait();
+            }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("ERROR");
+            alert.setHeaderText("not allow");
+            alert.setContentText("you did not join to our shop");
+            alert.showAndWait();
+        }
+
+
 
         if (txtEmail.getText().length() == 0) {
-            checked = false;
+            captchaCodeChecked = false;
             new Alert(Alert.AlertType.ERROR, """
                     please enter your Email
                     """).showAndWait();
@@ -34,13 +100,13 @@ public class LoginController extends PortalPageController {
         eye = false;
         setImage();
         if (passFieldPass.getText().length() == 0 && txtFieldPass.getText().length() == 0) {
-            checked = false;
+            captchaCodeChecked = false;
             new Alert(Alert.AlertType.ERROR, """
                     please enter your Password
                     """).showAndWait();
         }
         captchaCode();
-        if (checked == true) {
+        if (captchaCodeChecked) {
             System.out.println("haaayaa");
         }
     }
@@ -54,7 +120,7 @@ public class LoginController extends PortalPageController {
     }
 
     protected void setImage() {
-        if (eye == true) { //show pass
+        if (eye) { //show pass
             setImage1();
             txtFieldPass.setText(passFieldPass.getText());
             passFieldPass.setVisible(false);
