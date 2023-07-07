@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="image">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="kh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/SignupPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/SignupPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +48,9 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager" selected="Application.ProfileMenu">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -149,7 +144,7 @@
       <workItem from="1688379787476" duration="4464000" />
       <workItem from="1688423858801" duration="24491000" />
       <workItem from="1688591426499" duration="57000" />
-      <workItem from="1688716967336" duration="461000" />
+      <workItem from="1688716967336" duration="1492000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -235,7 +230,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688448238839</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="kh">
+      <created>1688717570874</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1688717570874</updated>
+    </task>
+    <task id="LOCAL-00014" summary="kh">
+      <created>1688717686090</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1688717686091</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +274,7 @@
     <MESSAGE value="Login sign in + Login captcha (002)" />
     <MESSAGE value="Login sign up.fxml" />
     <MESSAGE value="Login sign up + ..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Login sign up + ..." />
+    <MESSAGE value="kh" />
+    <option name="LAST_COMMIT_MESSAGE" value="kh" />
   </component>
 </project>
