@@ -4,32 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="connecting database to project v01.3">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_mac_aarch64_17_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_aarch64_18_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_aarch64_17_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_23__23_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_23__23_54__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_4_23__00_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_4_23__00_42__Changes_.xml" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="image">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/ShopApplication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/ShopApplication.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Good.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/loginMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/loginMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/signupPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/signupPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/LoginMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Good.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/signupPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/signupPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/SignupPageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/LoginMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/SignupPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/SignupPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +34,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -61,19 +52,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/uni/code 3/sqlPractice"
-  }
-}]]></component>
-  <component name="RunManager" selected="Application.LoginMenu">
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Application.ProfileMenu">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
       <module name="ShopApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="view.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CashPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.pay.CashPage" />
+      <module name="ShopApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.pay.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,8 +97,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Portalpage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.pay.Portalpage" />
+    <configuration name="PaymentPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.pay.PaymentPage" />
       <module name="ShopApplication" />
       <extension name="coverage">
         <pattern>
@@ -120,26 +123,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SignupPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.login.SignupPage" />
-      <module name="ShopApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="view.login.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LoginMenu" />
-        <item itemvalue="Application.SignupPage" />
-        <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.ProfileMenu" />
+        <item itemvalue="Application.CashPage" />
         <item itemvalue="Application.CartPage" />
+        <item itemvalue="Application.PaymentPage" />
+        <item itemvalue="Application.LoginMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -158,8 +148,8 @@
       <workItem from="1688370905225" duration="505000" />
       <workItem from="1688379787476" duration="4464000" />
       <workItem from="1688423858801" duration="24491000" />
-      <workItem from="1688460128117" duration="3963000" />
-      <workItem from="1688539534752" duration="4882000" />
+      <workItem from="1688591426499" duration="57000" />
+      <workItem from="1688716967336" duration="461000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -276,19 +266,5 @@
     <MESSAGE value="Login sign up.fxml" />
     <MESSAGE value="Login sign up + ..." />
     <option name="LAST_COMMIT_MESSAGE" value="Login sign up + ..." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.StackOverflowError" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint enabled="true" type="java-exception" />
-        <breakpoint enabled="true" type="javascript-exception" />
-      </default-breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

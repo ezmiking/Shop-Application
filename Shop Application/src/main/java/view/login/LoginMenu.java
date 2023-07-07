@@ -21,6 +21,7 @@ public class LoginMenu extends Application {
         URL url = LoginMenu.class.getResource("/fxml/loginMenu.fxml");
         AnchorPane anchorPane = FXMLLoader.load(url);
         Scene scene = new Scene(anchorPane);
+        stage.setTitle("Login Menu");
         stage.setScene(scene);
         stage.show();
     }

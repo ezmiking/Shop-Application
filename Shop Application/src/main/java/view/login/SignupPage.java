@@ -16,6 +16,7 @@ public class SignupPage extends Application {
         URL urlSignup = SignupPage.class.getResource("/fxml/signupPage.fxml");
         AnchorPane anchorPane = FXMLLoader.load(urlSignup);
         Scene scene = new Scene(anchorPane);
+        stage.setTitle("Login Menu");
         stage.setScene(scene);
         stage.show();
     }
