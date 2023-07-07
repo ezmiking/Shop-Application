@@ -1,0 +1,83 @@
+Index: Shop Application/ShopApplication.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule=\"true\" type=\"JAVA_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\" LANGUAGE_LEVEL=\"JDK_17\">\n    <output url=\"file://$MODULE_DIR$/target/classes\" />\n    <output-test url=\"file://$MODULE_DIR$/target/test-classes\" />\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$/src/main/java\" isTestSource=\"false\" />\n      <sourceFolder url=\"file://$MODULE_DIR$/src/main/resources\" type=\"java-resource\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/${project.build.directory}/classes\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/${project.build.directory}/test-classes\" />\n      <excludeFolder url=\"file://$MODULE_DIR$/target\" />\n    </content>\n    <orderEntry type=\"jdk\" jdkName=\"19\" jdkType=\"JavaSDK\" />\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n    <orderEntry type=\"module-library\">\n      <library>\n        <CLASSES>\n          <root url=\"jar://C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar!/\" />\n        </CLASSES>\n        <JAVADOC />\n        <SOURCES />\n      </library>\n    </orderEntry>\n    <orderEntry type=\"library\" name=\"Maven: org.openjfx:javafx-controls:18.0.2\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Maven: org.openjfx:javafx-controls:win:18.0.2\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Maven: org.openjfx:javafx-fxml:18.0.2\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Maven: org.openjfx:javafx-fxml:win:18.0.2\" level=\"project\" />\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.junit.jupiter:junit-jupiter-api:5.8.1\" level=\"project\" />\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.opentest4j:opentest4j:1.2.0\" level=\"project\" />\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.junit.platform:junit-platform-commons:1.8.1\" level=\"project\" />\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.apiguardian:apiguardian-api:1.1.2\" level=\"project\" />\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.junit.jupiter:junit-jupiter-engine:5.8.1\" level=\"project\" />\n    <orderEntry type=\"library\" scope=\"TEST\" name=\"Maven: org.junit.platform:junit-platform-engine:1.8.1\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Maven: org.jetbrains:annotations:24.0.1\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Maven: org.openjfx:javafx-graphics:17.0.2\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Maven: org.openjfx:javafx-graphics:win:17.0.2\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Maven: org.openjfx:javafx-base:17.0.2\" level=\"project\" />\n    <orderEntry type=\"library\" name=\"Maven: org.openjfx:javafx-base:win:17.0.2\" level=\"project\" />\n  </component>\n</module>
+===================================================================
+diff --git a/Shop Application/ShopApplication.iml b/Shop Application/ShopApplication.iml
+--- a/Shop Application/ShopApplication.iml	
++++ b/Shop Application/ShopApplication.iml	
+@@ -22,9 +22,9 @@
+       </library>
+     </orderEntry>
+     <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:18.0.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:win:18.0.2" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-controls:mac-aarch64:18.0.2" level="project" />
+     <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:18.0.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:win:18.0.2" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-fxml:mac-aarch64:18.0.2" level="project" />
+     <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.8.1" level="project" />
+     <orderEntry type="library" scope="TEST" name="Maven: org.opentest4j:opentest4j:1.2.0" level="project" />
+     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-commons:1.8.1" level="project" />
+@@ -33,8 +33,8 @@
+     <orderEntry type="library" scope="TEST" name="Maven: org.junit.platform:junit-platform-engine:1.8.1" level="project" />
+     <orderEntry type="library" name="Maven: org.jetbrains:annotations:24.0.1" level="project" />
+     <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:17.0.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:win:17.0.2" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-graphics:mac-aarch64:17.0.2" level="project" />
+     <orderEntry type="library" name="Maven: org.openjfx:javafx-base:17.0.2" level="project" />
+-    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:win:17.0.2" level="project" />
++    <orderEntry type="library" name="Maven: org.openjfx:javafx-base:mac-aarch64:17.0.2" level="project" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_2.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_2.xml b/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_aarch64_17_0_2.xml
+rename from .idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_2.xml
+rename to .idea/libraries/Maven__org_openjfx_javafx_graphics_mac_aarch64_17_0_2.xml
+--- a/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_17_0_2.xml	
++++ b/.idea/libraries/Maven__org_openjfx_javafx_graphics_mac_aarch64_17_0_2.xml	
+@@ -1,7 +1,7 @@
+ <component name="libraryTable">
+-  <library name="Maven: org.openjfx:javafx-graphics:win:17.0.2">
++  <library name="Maven: org.openjfx:javafx-graphics:mac-aarch64:17.0.2">
+     <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/17.0.2/javafx-graphics-17.0.2-win.jar!/" />
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/17.0.2/javafx-graphics-17.0.2-mac-aarch64.jar!/" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/17.0.2/javafx-graphics-17.0.2-javadoc.jar!/" />
+Index: .idea/libraries/Maven__org_openjfx_javafx_controls_win_18_0_2.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_controls_win_18_0_2.xml b/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_aarch64_18_0_2.xml
+rename from .idea/libraries/Maven__org_openjfx_javafx_controls_win_18_0_2.xml
+rename to .idea/libraries/Maven__org_openjfx_javafx_controls_mac_aarch64_18_0_2.xml
+--- a/.idea/libraries/Maven__org_openjfx_javafx_controls_win_18_0_2.xml	
++++ b/.idea/libraries/Maven__org_openjfx_javafx_controls_mac_aarch64_18_0_2.xml	
+@@ -1,7 +1,7 @@
+ <component name="libraryTable">
+-  <library name="Maven: org.openjfx:javafx-controls:win:18.0.2">
++  <library name="Maven: org.openjfx:javafx-controls:mac-aarch64:18.0.2">
+     <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/18.0.2/javafx-controls-18.0.2-win.jar!/" />
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/18.0.2/javafx-controls-18.0.2-mac-aarch64.jar!/" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-controls/18.0.2/javafx-controls-18.0.2-javadoc.jar!/" />
+Index: .idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_2.xml
+===================================================================
+diff --git a/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_2.xml b/.idea/libraries/Maven__org_openjfx_javafx_base_mac_aarch64_17_0_2.xml
+rename from .idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_2.xml
+rename to .idea/libraries/Maven__org_openjfx_javafx_base_mac_aarch64_17_0_2.xml
+--- a/.idea/libraries/Maven__org_openjfx_javafx_base_win_17_0_2.xml	
++++ b/.idea/libraries/Maven__org_openjfx_javafx_base_mac_aarch64_17_0_2.xml	
+@@ -1,7 +1,7 @@
+ <component name="libraryTable">
+-  <library name="Maven: org.openjfx:javafx-base:win:17.0.2">
++  <library name="Maven: org.openjfx:javafx-base:mac-aarch64:17.0.2">
+     <CLASSES>
+-      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/17.0.2/javafx-base-17.0.2-win.jar!/" />
++      <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/17.0.2/javafx-base-17.0.2-mac-aarch64.jar!/" />
+     </CLASSES>
+     <JAVADOC>
+       <root url="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-base/17.0.2/javafx-base-17.0.2-javadoc.jar!/" />
