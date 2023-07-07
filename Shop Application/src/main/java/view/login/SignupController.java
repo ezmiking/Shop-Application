@@ -28,6 +28,7 @@ public class SignupController extends LoginController {
     public CheckBox customerCheckBox;
     private boolean adminSign = false;
     private boolean customerSign = false;
+    private boolean emailNotAvailable = true;
     private boolean eyeCon = true;
     private static boolean create = true;
     private boolean welcomeB = false;
@@ -113,20 +114,33 @@ public class SignupController extends LoginController {
             alert.setContentText("* please enter your Name !!");
             alert.showAndWait();
         }
-
-        if (txtLastName.getText().length() == 0) {
+         if (txtLastName.getText().length() == 0) {
             alert.setContentText("* please enter your Last name !!");
             alert.showAndWait();
         }
-
-        if (txtEmail.getText().length() == 0) {
-            alert.setContentText("* please enter your E-mail !!");
-            alert.showAndWait();
-        }
-        if(checkInfo.checkCustomerInfo(txtEmail.getText())){
+         if(checkInfo.checkCustomerInfo(txtEmail.getText())){
             alert.setContentText("* this Email is available");
             alert.showAndWait();
+            emailNotAvailable = false;
+        }else{
+             emailNotAvailable=true;
+         }
+        if(checkInfo.checkAdminInfo(txtEmail.getText())){
+            alert.setContentText("* this Email is available");
+            alert.showAndWait();
+            emailNotAvailable = false;
+        }else{
+            emailNotAvailable=true;
         }
+         if (txtEmail.getText().length() == 0) {
+            alert.setContentText("* please enter your E-mail !!");
+            alert.showAndWait();
+             emailNotAvailable = false;
+         }else{
+             emailNotAvailable=true;
+         }
+
+
 
         if (passFieldPass.getText().length() == 0 && txtFieldPass.getText().length() == 0) {
             alert.setContentText("* please enter your Password !!");
@@ -138,7 +152,7 @@ public class SignupController extends LoginController {
             alert.showAndWait();
         }
 
-        if (!passFieldPass.getText().equals(passFildPassCon.getText())) {
+        else if (!passFieldPass.getText().equals(passFildPassCon.getText())) {
             create = false;
             new Alert(Alert.AlertType.ERROR, """
                     The confirmed password is different from the current password
@@ -166,8 +180,13 @@ public class SignupController extends LoginController {
         }
 
         if (welcomeB) {
-            if(adminSign){
-
+            if(adminSign&&emailNotAvailable){
+                checkInfo.signUpAdmin(txtEmail.getText(),passFieldPass.getText(),
+                        txtName.getText(),txtLastName.getText(),txtEmail.getText());
+            }
+            if(customerSign&&emailNotAvailable){
+                checkInfo.signUpCustomer(txtEmail.getText(),passFieldPass.getText(),
+                        txtName.getText(),txtLastName.getText(),txtEmail.getText());
             }
             successful.setVisible(true);
             lblsuccessful.setVisible(true);
@@ -175,16 +194,16 @@ public class SignupController extends LoginController {
         }
     }
 
-    public void signin(MouseEvent mouseEvent) throws Exception {
+    public void signIn(MouseEvent mouseEvent) throws Exception {
         new LoginMenu().start(SignupPage.stageSignup);
     }
 
     public void imageViewCon(MouseEvent mouseEvent) {
-        setImgeCon();
+        setImageCon();
     }
     
-    private void setImgeCon() {
-        if (eyeCon == true) { //show pass
+    private void setImageCon() {
+        if (eyeCon) { //show pass
             setImageCon1();
             txtFildPassCon.setText(passFildPassCon.getText());
             passFildPassCon.setVisible(false);

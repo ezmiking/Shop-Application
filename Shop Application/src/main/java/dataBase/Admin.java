@@ -4,13 +4,12 @@ import java.io.Serializable;
 
 public class Admin implements Serializable {
 
-    public Admin(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
+    public Admin(String userName, String password, String firstName, String lastName, String email){
 
         this.setUserName(userName);
         setPassword(password);
         setFirstName(firstName);
         setLastName(lastName);
-        setPhoneNumber(phoneNumber);
         setEmail(email);
     }
 
