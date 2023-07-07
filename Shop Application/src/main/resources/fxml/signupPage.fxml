@@ -239,7 +239,7 @@
                                                         <Insets top="4.0" />
                                                     </HBox.margin>
                                                 </Label>
-                                                <Hyperlink onMouseClicked="#signin" prefHeight="17.0" prefWidth="53.0" text="sign in" textFill="#184580" />
+                                                <Hyperlink onMouseClicked="#signIn" prefHeight="17.0" prefWidth="53.0" text="sign in" textFill="#184580" />
                                             </children>
                                             <VBox.margin>
                                                 <Insets top="15.0" />

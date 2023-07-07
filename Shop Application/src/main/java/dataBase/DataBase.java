@@ -59,7 +59,7 @@ public class DataBase {
             while (resultSetCustomer.next()) {
                 Customer customer = new Customer(resultSetCustomer.getString("userNameF"), resultSetCustomer.getString("passwordF"),
                         resultSetCustomer.getString("firstNameF"), resultSetCustomer.getString("lastNameF"),
-                        resultSetCustomer.getString("phoneNumberF"), resultSetCustomer.getString("emailF"));
+                        resultSetCustomer.getString("emailF"));
 
 
                 customerArrayList.add(customer);
@@ -74,15 +74,15 @@ public class DataBase {
         Customer newCustomer = new Customer(userName);
         return customerArrayList.contains(newCustomer);
     }
-    public void insertInfoCustomer(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
+    public void insertInfoCustomer(String userName, String password, String firstName, String lastName, String email){
 
-        Customer newCustomer = new Customer(userName, password, firstName, lastName, phoneNumber, email);
+        Customer newCustomer = new Customer(userName, password, firstName, lastName, email);
 
 
         try {
             statement.executeUpdate("INSERT INTO customer " +
-                    "(userNameF,passwordF,firstNameF,lastNameF,phoneNumberF,emailF) " +
-                    "VALUES (userName,password,firstName,lastName,phoneNumber,email)");
+                    "(userNameF,passwordF,firstNameF,lastNameF,emailF) " +
+                    "VALUES (userName,password,firstName,lastName,email)");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -93,14 +93,13 @@ public class DataBase {
         String password = customer.getPassword();
         String firstName = customer.getFirstName();
         String lastName = customer.getLastName();
-        String phoneNumber = customer.getPhoneNumber();
         String email = customer.getEmail();
-        insertInfoCustomer(userName,password,firstName,lastName,phoneNumber,email);
+        insertInfoCustomer(userName,password,firstName,lastName,email);
     }
 
 
 
-    public void updateInfoCustomer(String userName,String newUserName, String password, String firstName, String lastName, String phoneNumber, String email){
+    public void updateInfoCustomer(String userName,String newUserName, String password, String firstName, String lastName, String email){
 
         Customer customer = new Customer(userName);
         int index = customerArrayList.indexOf(customer);
@@ -141,15 +140,7 @@ public class DataBase {
                 throw new RuntimeException(e);
             }
         }
-        if(phoneNumber!=null){
-            try {
-                statement.executeUpdate("UPDATE customer SET phoneNumberF = phoneNumber WHERE userNameF = userName");
-                changeCustomer.setPhoneNumber(phoneNumber);
-                customerArrayList.set(index, changeCustomer);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
+
         if(email!=null){
             try {
                 statement.executeUpdate("UPDATE customer SET emailF = email WHERE userNameF = userName");
@@ -169,9 +160,8 @@ public class DataBase {
         String password = newCustomer.getPassword();
         String firstName = newCustomer.getFirstName();
         String lastName = newCustomer.getLastName();
-        String phoneNumber = newCustomer.getPhoneNumber();
         String email = newCustomer.getEmail();
-        updateInfoCustomer(userName,newUserName,password,firstName,lastName,phoneNumber,email);
+        updateInfoCustomer(userName,newUserName,password,firstName,lastName,email);
     }
 
 
@@ -198,7 +188,7 @@ public class DataBase {
             while (resultSetAdmin.next()){
                 Admin admin = new Admin(resultSetAdmin.getString("userNameF"),resultSetAdmin.getString("passwordF"),
                         resultSetAdmin.getString("firstNameF"),resultSetAdmin.getString("lastNameF"),
-                        resultSetAdmin.getString("phoneNumberF"),resultSetAdmin.getString("emailF"));
+                        resultSetAdmin.getString("emailF"));
 
 
                 adminArrayList.add(admin);
@@ -214,15 +204,15 @@ public class DataBase {
         Admin newAdmin = new Admin(userName);
         return adminArrayList.contains(newAdmin);
     }
-    public void insertInfoAdmin(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
+    public void insertInfoAdmin(String userName, String password, String firstName, String lastName, String email){
 
-        Admin newAdmin = new Admin(userName, password, firstName, lastName, phoneNumber, email);
+        Admin newAdmin = new Admin(userName, password, firstName, lastName, email);
 
 
         try {
             statement.executeUpdate("INSERT INTO admin " +
-                    "(userNameF,passwordF,firstNameF,lastNameF,phoneNumberF,emailF) " +
-                    "VALUES (userName,password,firstName,lastName,phoneNumber,email)");
+                    "(userNameF,passwordF,firstNameF,lastNameF,emailF) " +
+                    "VALUES (userName,password,firstName,lastName,email)");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -235,13 +225,13 @@ public class DataBase {
         String lastName = admin.getLastName();
         String phoneNumber = admin.getPhoneNumber();
         String email = admin.getEmail();
-        insertInfoAdmin(userName,password,firstName,lastName,phoneNumber,email);
+        insertInfoAdmin(userName,password,firstName,lastName,email);
     }
 
 
 
 
-    public void updateInfoAdmin( String userName,String newUserName, String password, String firstName, String lastName, String phoneNumber, String email){
+    public void updateInfoAdmin( String userName,String newUserName, String password, String firstName, String lastName, String email){
         Admin admin = new Admin(userName);
         int index = adminArrayList.indexOf(admin);
         Admin changeAdmin = adminArrayList.get(index);
@@ -281,15 +271,7 @@ public class DataBase {
                 throw new RuntimeException(e);
             }
         }
-        if(phoneNumber!=null){
-            try {
-                statement.executeUpdate("UPDATE admin SET phoneNumberF = phoneNumber WHERE userNameF = userName");
-                changeAdmin.setPhoneNumber(phoneNumber);
-                adminArrayList.set(index, changeAdmin);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
-        }
+
         if(email!=null){
             try {
                 statement.executeUpdate("UPDATE admin SET emailF = email WHERE userNameF = userName");
@@ -309,9 +291,9 @@ public class DataBase {
         String password = newAdmin.getPassword();
         String firstName = newAdmin.getFirstName();
         String lastName = newAdmin.getLastName();
-        String phoneNumber = newAdmin.getPhoneNumber();
+
         String email = newAdmin.getEmail();
-        updateInfoAdmin(userName,newUserName,password,firstName,lastName,phoneNumber,email);
+        updateInfoAdmin(userName,newUserName,password,firstName,lastName,email);
     }
 
     public void deleteInfoAdmin(String userName){

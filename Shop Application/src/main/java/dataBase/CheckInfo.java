@@ -40,22 +40,22 @@ public class CheckInfo {
         }
     }
 
-    public void signUpAdmin(String userName, String password, String firstName, String lastName, String phoneNumber, String email) {
-        this.admin = new Admin(userName, password, firstName, lastName, phoneNumber, email);
-        this.dataBase.insertInfoAdmin(userName, password, firstName, lastName, phoneNumber, email);
+    public void signUpAdmin(String userName, String password, String firstName, String lastName, String email) {
+        this.admin = new Admin(userName, password, firstName, lastName, email);
+        this.dataBase.insertInfoAdmin(userName, password, firstName, lastName, email);
     }
 
-    public void signUpCustomer(String userName, String password, String firstName, String lastName, String phoneNumber, String email) {
-        this.customer = new Customer(userName, password, firstName, lastName, phoneNumber, email);
-        this.dataBase.insertInfoCustomer(userName, password, firstName, lastName, phoneNumber, email);
+    public void signUpCustomer(String userName, String password, String firstName, String lastName, String email) {
+        this.customer = new Customer(userName, password, firstName, lastName, email);
+        this.dataBase.insertInfoCustomer(userName, password, firstName, lastName, email);
     }
 
-    public void updateAdminInfo(String userName, String newUserName, String password, String firstName, String lastName, String phoneNumber, String email) {
-        this.dataBase.updateInfoAdmin(userName, newUserName, password, firstName, lastName, phoneNumber, email);
+    public void updateAdminInfo(String userName, String newUserName, String password, String firstName, String lastName, String email) {
+        this.dataBase.updateInfoAdmin(userName, newUserName, password, firstName, lastName, email);
     }
 
-    public void updateCustomerInfo(String userName, String newUserName, String password, String firstName, String lastName, String phoneNumber, String email) {
-        this.dataBase.updateInfoCustomer(userName, newUserName, password, firstName, lastName, phoneNumber, email);
+    public void updateCustomerInfo(String userName, String newUserName, String password, String firstName, String lastName, String email) {
+        this.dataBase.updateInfoCustomer(userName, newUserName, password, firstName, lastName, email);
     }
 
     public void deleteInfoAdmin(String userName) {

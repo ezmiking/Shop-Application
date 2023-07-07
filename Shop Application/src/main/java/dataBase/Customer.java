@@ -3,13 +3,12 @@ package dataBase;
 import java.io.Serializable;
 
 public class Customer implements Serializable {
-    public Customer(String userName, String password, String firstName, String lastName, String phoneNumber, String email){
+    public Customer(String userName, String password, String firstName, String lastName, String email){
 
        setUserName(userName);
         setPassword(password);
         setFirstName(firstName);
         setLastName(lastName);
-        setPhoneNumber(phoneNumber);
         setEmail(email);
     }
 
@@ -22,7 +21,7 @@ public class Customer implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
-    private String phoneNumber;
+    private String phoneNumber = null;
 
     public String getUserName() {
         return userName;
