@@ -1,0 +1,39 @@
+<changelist name="Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]" date="1688720174783" recycled="false" toDelete="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 7/7/2023 1:26 PM [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/dataBase/Admin.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/dataBase/Admin.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]/Admin.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/dataBase/DataBase.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/dataBase/DataBase.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]/DataBase.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/view/pay/PortalPageController.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/view/pay/PortalPageController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]/PortalPageController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/dataBase/CheckInfo.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/dataBase/CheckInfo.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]/CheckInfo.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/view/login/SignupPage.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/view/login/SignupPage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]/SignupPage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/view/login/LoginMenu.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/view/login/LoginMenu.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]/LoginMenu.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/dataBase/Customer.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/dataBase/Customer.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM_[Changes]/Customer.class" />
+  </binary>
+</changelist>
