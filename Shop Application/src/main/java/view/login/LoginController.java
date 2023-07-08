@@ -1,6 +1,8 @@
 package view.login;
 
+import dataBase.Admin;
 import dataBase.CheckInfo;
+import dataBase.Customer;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -186,5 +188,18 @@ public class LoginController extends PortalPageController {
 
     public void reloadCaptcha(MouseEvent mouseEvent) { // تابع عکس ریلود
         captchaReload();
+    }
+
+    public Admin returnAdmin(){
+        if(sighInAdmin){
+            return new Admin(txtEmail.getText());
+        }
+        return null;
+    }
+    public Customer returnCustomer(){
+        if(sighInCustomer){
+            return new Customer(txtEmail.getText());
+        }
+        return null;
     }
 }
