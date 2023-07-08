@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="ShopPanel + kala">
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/KalaCartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/KalaPageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/KalaCartPage.fxml" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="kalaPage + Cartkala">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cartPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/kalaPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/kalaPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/image/kh1/chips.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/image/kh1/chitoz.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/image/kh1/gold.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/image/kh1/keranchi.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/cartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/cartPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/module-info.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanelController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688840015049</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="kalaPage + Cartkala">
+      <created>1688849991760</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1688849991760</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -361,6 +362,7 @@
     <MESSAGE value="make profile" />
     <MESSAGE value="solve captcha problem" />
     <MESSAGE value="ShopPanel + kala" />
-    <option name="LAST_COMMIT_MESSAGE" value="ShopPanel + kala" />
+    <MESSAGE value="kalaPage + Cartkala" />
+    <option name="LAST_COMMIT_MESSAGE" value="kalaPage + Cartkala" />
   </component>
 </project>
