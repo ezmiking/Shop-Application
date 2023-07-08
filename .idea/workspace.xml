@@ -44,7 +44,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.ShopPanel">
+  <component name="RunManager" selected="Application.LoginMenu">
     <configuration name="CashPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.pay.CashPage" />
       <module name="ShopApplication" />
@@ -112,8 +112,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ShopPanel" />
         <item itemvalue="Application.LoginMenu" />
+        <item itemvalue="Application.ShopPanel" />
         <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.PaymentPage" />
         <item itemvalue="Application.CashPage" />

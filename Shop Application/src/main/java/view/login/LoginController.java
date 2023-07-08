@@ -48,6 +48,7 @@ public class LoginController extends PortalPageController {
                 if(captchaCodeChecked) {
                     sighInAdmin=true;
                     admin = new Admin(userNameString);
+                    System.out.println("admin :"+admin);
                     new ShopPanel().start(LoginMenu.stage);
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -72,6 +73,7 @@ public class LoginController extends PortalPageController {
                 if(captchaCodeChecked){
                     sighInCustomer=true;
                     customer = new Customer(userNameString);
+                    System.out.println("customer :"+customer);
                     new ShopPanel().start(LoginMenu.stage);
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
