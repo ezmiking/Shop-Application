@@ -32,21 +32,23 @@ public class ProfileMenuController {
     }
 
     public void initialize() {
-        /*
-        if(shopPanelController.admin!=null){
-            name.setText(shopPanelController.admin.getFirstName());
-            lastName.setText(shopPanelController.admin.getLastName());
-            gmail.setText(shopPanelController.admin.getEmail());
-            passwordField.setText(shopPanelController.admin.getPassword());
-            textFieldPassword.setText(shopPanelController.admin.getPassword());
-        }else if(shopPanelController.customer!=null){
-        name.setText(shopPanelController.customer.getFirstName());
-        lastName.setText(shopPanelController.customer.getLastName());
-        gmail.setText(shopPanelController.customer.getEmail());
-        passwordField.setText(shopPanelController.customer.getPassword());
-        textFieldPassword.setText(shopPanelController.customer.getPassword());
+
+        if(shopPanelController.returnAdminShop()!=null){
+            name.setText(shopPanelController.returnAdminShop().getFirstName());
+            lastName.setText(shopPanelController.returnAdminShop().getLastName());
+            gmail.setText(shopPanelController.returnAdminShop().getEmail());
+            passwordField.setText(shopPanelController.returnAdminShop().getPassword());
+            textFieldPassword.setText(shopPanelController.returnAdminShop().getPassword());
+            System.out.println("profile admin info");
+        }else if(shopPanelController.returnCustomerShop()!=null){
+            name.setText(shopPanelController.returnCustomerShop().getFirstName());
+            lastName.setText(shopPanelController.returnCustomerShop().getLastName());
+            gmail.setText(shopPanelController.returnCustomerShop().getEmail());
+            passwordField.setText(shopPanelController.returnCustomerShop().getPassword());
+            textFieldPassword.setText(shopPanelController.returnCustomerShop().getPassword());
+            System.out.println("profile customer info");
         }
-*/
+
     }
 
     public void saveInformation(MouseEvent mouseEvent) {
