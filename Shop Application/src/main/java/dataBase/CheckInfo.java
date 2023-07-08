@@ -54,8 +54,8 @@ public class CheckInfo {
         this.dataBase.updateInfoAdmin(userName, newUserName, password, firstName, lastName, email);
     }
 
-    public void updateCustomerInfo(String userName, String newUserName, String password, String firstName, String lastName, String email) {
-        this.dataBase.updateInfoCustomer(userName, newUserName, password, firstName, lastName, email);
+    public void updateCustomerInfo(String userName, String newUserName, String password, String firstName, String lastName,int money, String email) {
+        this.dataBase.updateInfoCustomer(userName, newUserName, password, firstName, lastName,money, email);
     }
 
     public void deleteInfoAdmin(String userName) {

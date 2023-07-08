@@ -4,16 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="kh">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_23__23_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_3_23__23_54__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_4_2023_10_12_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_4_2023_10_12_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_4_23__00_42__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_4_23__00_42__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_5_23__20_25__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_5_23__20_25__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_2023_1_26_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_23__12_35__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_23__12_35__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_23__12_35__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_7_23__12_35__Changes_1.xml" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="solving problems">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/module-info.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,15 +50,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar",
-    "project.structure.last.edited": "Global Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.3908046"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3908046&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.LoginMenu">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
@@ -154,7 +152,9 @@
       <workItem from="1688423858801" duration="24491000" />
       <workItem from="1688591426499" duration="57000" />
       <workItem from="1688716967336" duration="1492000" />
-      <workItem from="1688725270368" duration="120000" />
+      <workItem from="1688725270368" duration="472000" />
+      <workItem from="1688731834870" duration="1633000" />
+      <workItem from="1688793210512" duration="3799000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -254,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688717686091</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="solving problems">
+      <created>1688725735486</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1688725735486</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +292,7 @@
     <MESSAGE value="Login sign up.fxml" />
     <MESSAGE value="Login sign up + ..." />
     <MESSAGE value="kh" />
-    <option name="LAST_COMMIT_MESSAGE" value="kh" />
+    <MESSAGE value="solving problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="solving problems" />
   </component>
 </project>

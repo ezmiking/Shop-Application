@@ -21,7 +21,7 @@ public class Customer implements Serializable {
     private String firstName;
     private String lastName;
     private String email;
-    private String phoneNumber = null;
+    private int money = 0;
 
     public String getUserName() {
         return userName;
@@ -60,12 +60,12 @@ public class Customer implements Serializable {
         this.email = email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public int getMoney() {
+        return money;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setMoney(int money) {
+        this.money = money;
     }
 
     @Override

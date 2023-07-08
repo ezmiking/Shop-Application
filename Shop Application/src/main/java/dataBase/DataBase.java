@@ -2,10 +2,7 @@ package dataBase;
 
 
 
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class DataBase {
@@ -60,7 +57,7 @@ public class DataBase {
                 Customer customer = new Customer(resultSetCustomer.getString("userNameF"), resultSetCustomer.getString("passwordF"),
                         resultSetCustomer.getString("firstNameF"), resultSetCustomer.getString("lastNameF"),
                         resultSetCustomer.getString("emailF"));
-
+                customer.setMoney(resultSetCustomer.getInt("moneyF"));
 
                 customerArrayList.add(customer);
             }
@@ -79,10 +76,15 @@ public class DataBase {
         Customer newCustomer = new Customer(userName, password, firstName, lastName, email);
 
 
-        try {
-            statement.executeUpdate("INSERT INTO customer " +
-                    "(userNameF,passwordF,firstNameF,lastNameF,emailF) " +
-                    "VALUES (userName,password,firstName,lastName,email)");
+        int money = newCustomer.getMoney();
+        System.out.println(userName);
+        //PreparedStatement customerInsert;
+        String SQL = "INSERT INTO customer (userNameF, passwordF, firstNameF, lastNameF, moneyF,emailF) VALUES (" + userName + ", " + password + ", " + firstName + "," + lastName + ", " + money + ", " + email + ");";
+       ///String SQL = "UPDATE customer SET userNameF = " + newUserName + "WHERE userNameF = " + userName ";";
+        //String SQL = "UPDATE customer SET userNameF = newUserName WHERE userNameF = userName";
+
+        try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+            customerInsert.execute();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -94,62 +96,136 @@ public class DataBase {
         String firstName = customer.getFirstName();
         String lastName = customer.getLastName();
         String email = customer.getEmail();
+        int money = customer.getMoney();
         insertInfoCustomer(userName,password,firstName,lastName,email);
     }
 
 
 
-    public void updateInfoCustomer(String userName,String newUserName, String password, String firstName, String lastName, String email){
+    public void updateInfoCustomer(String userName,String newUserName, String password, String firstName, String lastName,int money, String email){
 
         Customer customer = new Customer(userName);
         int index = customerArrayList.indexOf(customer);
         Customer changeCustomer = customerArrayList.get(index);
+        /*
+        *
+        * String SQL = "UPDATE products SET score = " + newScore + ", vote_count = " + voteCount + " WHERE product_id = " + ProductPage.PRODUCT_ID + ";";
+        try (Connection connection = establishConnection("shop"); PreparedStatement preparedStatement = connection.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS)) {
+            preparedStatement.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        * */
         if(newUserName!=null){
-            try {
-                statement.executeUpdate("UPDATE customer SET userNameF = newUserName WHERE userNameF = userName");
+            String SQL = "UPDATE customer SET userNameF = " + newUserName +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
                 changeCustomer.setUserName(newUserName);
                 customerArrayList.set(index, changeCustomer);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
+           /* try {
+                statement.executeUpdate("UPDATE customer SET userNameF = newUserName WHERE userNameF = userName");
+                changeCustomer.setUserName(newUserName);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }*/
         }
         if(password!=null){
+            String SQL = "UPDATE customer SET passwordF = " + password +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeCustomer.setPassword(password);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+            /*
             try {
                 statement.executeUpdate("UPDATE customer SET passwordF = password WHERE userNameF = userName");
                 changeCustomer.setPassword(password);
                 customerArrayList.set(index, changeCustomer);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
-            }
+            }*/
         }
         if(firstName!=null){
+            String SQL = "UPDATE customer SET firstNameF = " + firstName +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeCustomer.setFirstName(firstName);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            /*
             try {
                 statement.executeUpdate("UPDATE customer SET firstNameF = firstName WHERE userNameF = userName");
                 changeCustomer.setFirstName(firstName);
                 customerArrayList.set(index, changeCustomer);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
-            }
+            }*/
         }
         if(lastName!=null){
+            String SQL = "UPDATE customer SET lastNameF = " + lastName +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeCustomer.setLastName(lastName);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            /*
             try {
                 statement.executeUpdate("UPDATE customer SET lastNameF = lastName WHERE userNameF = userName");
                 changeCustomer.setLastName(lastName);
                 customerArrayList.set(index, changeCustomer);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
-            }
+            }*/
         }
 
         if(email!=null){
+            String SQL = "UPDATE customer SET emailF = " + email +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeCustomer.setEmail(email);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            /*
             try {
                 statement.executeUpdate("UPDATE customer SET emailF = email WHERE userNameF = userName");
                 changeCustomer.setEmail(email);
                 customerArrayList.set(index, changeCustomer);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
-            }
+            }*/
         }
+        if(money!=0){
+            String SQL = "UPDATE customer SET moneyF = " + email +" WHERE money = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeCustomer.setMoney(money);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            /*
+            try {
+                statement.executeUpdate("UPDATE customer SET moneyF = money WHERE userNameF = userName");
+                changeCustomer.setMoney(money);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }*/
+        }
+
 
 
 
@@ -161,7 +237,8 @@ public class DataBase {
         String firstName = newCustomer.getFirstName();
         String lastName = newCustomer.getLastName();
         String email = newCustomer.getEmail();
-        updateInfoCustomer(userName,newUserName,password,firstName,lastName,email);
+        int money = newCustomer.getMoney();
+        updateInfoCustomer(userName,newUserName,password,firstName,lastName,money,email);
     }
 
 
@@ -208,14 +285,20 @@ public class DataBase {
 
         Admin newAdmin = new Admin(userName, password, firstName, lastName, email);
 
+        String SQL = "INSERT INTO admin (userNameF,passwordF,firstNameF,lastNameF,emailF) VALUES (" + userName + ", " + password + ", " + firstName + "," + lastName + ", " + email + ");";
 
-        try {
+        try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+            customerInsert.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        /*try {
             statement.executeUpdate("INSERT INTO admin " +
                     "(userNameF,passwordF,firstNameF,lastNameF,emailF) " +
                     "VALUES (userName,password,firstName,lastName,email)");
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }
+        }*/
         adminArrayList.add(newAdmin);
     }
     public void insertInfoAdmin(Admin admin){
@@ -235,6 +318,100 @@ public class DataBase {
         Admin admin = new Admin(userName);
         int index = adminArrayList.indexOf(admin);
         Admin changeAdmin = adminArrayList.get(index);
+        if(newUserName!=null){
+            String SQL = "UPDATE admin SET userNameF = " + newUserName +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeAdmin.setUserName(newUserName);
+                adminArrayList.set(index, changeAdmin);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+           /* try {
+                statement.executeUpdate("UPDATE customer SET userNameF = newUserName WHERE userNameF = userName");
+                changeCustomer.setUserName(newUserName);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }*/
+        }
+        if(password!=null){
+            String SQL = "UPDATE admin SET passwordF = " + password +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeAdmin.setPassword(password);
+                adminArrayList.set(index, changeAdmin);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+            /*
+            try {
+                statement.executeUpdate("UPDATE customer SET passwordF = password WHERE userNameF = userName");
+                changeCustomer.setPassword(password);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }*/
+        }
+        if(firstName!=null){
+            String SQL = "UPDATE admin SET firstNameF = " + firstName +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeAdmin.setFirstName(firstName);
+                adminArrayList.set(index, changeAdmin);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            /*
+            try {
+                statement.executeUpdate("UPDATE customer SET firstNameF = firstName WHERE userNameF = userName");
+                changeCustomer.setFirstName(firstName);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }*/
+        }
+        if(lastName!=null){
+            String SQL = "UPDATE admin SET lastNameF = " + lastName +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeAdmin.setLastName(lastName);
+                adminArrayList.set(index, changeAdmin);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            /*
+            try {
+                statement.executeUpdate("UPDATE customer SET lastNameF = lastName WHERE userNameF = userName");
+                changeCustomer.setLastName(lastName);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }*/
+        }
+
+        if(email!=null){
+            String SQL = "UPDATE admin SET emailF = " + email +" WHERE userNameF = " + userName + ";";
+            try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
+                customerInsert.execute();
+                changeAdmin.setEmail(email);
+                adminArrayList.set(index, changeAdmin);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+            /*
+            try {
+                statement.executeUpdate("UPDATE customer SET emailF = email WHERE userNameF = userName");
+                changeCustomer.setEmail(email);
+                customerArrayList.set(index, changeCustomer);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }*/
+        }
+
+
+        /*
         if(newUserName!=null){
             try {
                 statement.executeUpdate("UPDATE admin SET userNameF = newUserName WHERE userNameF = userName");
@@ -279,8 +456,8 @@ public class DataBase {
                 adminArrayList.set(index, changeAdmin);
             } catch (SQLException e) {
                 throw new RuntimeException(e);
-            }
-        }
+
+        }*/
 
 
 
