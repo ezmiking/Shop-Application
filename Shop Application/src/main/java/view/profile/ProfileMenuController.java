@@ -1,6 +1,7 @@
 package view.profile;
 
 import dataBase.Admin;
+import dataBase.CheckInfo;
 import dataBase.Customer;
 import dataBase.DataBase;
 import javafx.scene.control.Label;
@@ -13,6 +14,7 @@ import view.shop.ShopPanelController;
 
 public class ProfileMenuController {
     DataBase dataBase = new DataBase();
+    CheckInfo checkInfo = new CheckInfo();
     public TextField name;
     public TextField lastName;
     public TextField gmail;
@@ -61,7 +63,13 @@ public class ProfileMenuController {
     }
 
     public void saveInformation(MouseEvent mouseEvent) {
-
+        if(ShopPanelController.admin!=null){
+            checkInfo.updateAdminInfo(ShopPanelController.admin.getUserName(), gmail.getText(),
+                    passwordField.getText(),name.getText(),lastName.getText(),gmail.getText());
+        }else if (ShopPanelController.customer!=null){
+            checkInfo.updateCustomerInfo(ShopPanelController.customer.getUserName(), gmail.getText(),
+                    passwordField.getText(),name.getText(),lastName.getText(),ShopPanelController.customer.getMoney(),gmail.getText());
+        }
     }
 
     public void inventoryIncrease(MouseEvent mouseEvent) throws Exception {

@@ -7,11 +7,14 @@ import javafx.event.ActionEvent;
 import view.login.LoginController;
 import view.profile.ProfileMenu;
 
+import java.util.ArrayList;
+
 public class ShopPanelController {
 
 
     LoginController loginController = new LoginController();
     DataBase dataBase = new DataBase();
+
 
 
     public static Admin admin = null;
@@ -34,7 +37,11 @@ public class ShopPanelController {
         return customer;
     }
 
+    {
+        for(int i=0;i<dataBase.goodArrayList.size();i++){
 
+        }
+    }
 
 
 }
