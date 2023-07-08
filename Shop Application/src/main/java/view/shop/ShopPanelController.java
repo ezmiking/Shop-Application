@@ -15,6 +15,7 @@ public class ShopPanelController {
     public Customer customer = null;
 
     public void profile(ActionEvent actionEvent) {
+        System.out.println("kh");
     }
     /*
     {

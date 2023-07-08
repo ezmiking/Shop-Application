@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -23,7 +30,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.ShopPanelController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.ShopPanelController">
    <content>
       <BorderPane prefHeight="3000.0" prefWidth="936.0">
          <top>
@@ -46,6 +53,15 @@
                         </Button>
                         <MenuButton mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0">
                           <items>
+                              <MenuItem mnemonicParsing="false" text="profile" onAction="#profile">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/avatar/avatar4.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
                             <MenuItem mnemonicParsing="false" text="orders">
                                  <graphic>
                                     <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">

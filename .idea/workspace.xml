@@ -51,26 +51,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="RunManager" selected="Application.LoginMenu">
+  <component name="RunManager" selected="Application.ShopPanel">
     <configuration name="CashPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.pay.CashPage" />
       <module name="ShopApplication" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="view.pay.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataBase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="dataBase.DataBase" />
-      <module name="ShopApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dataBase.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,13 +104,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ShopPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.shop.ShopPanel" />
+      <module name="ShopApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.shop.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ShopPanel" />
         <item itemvalue="Application.LoginMenu" />
         <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.PaymentPage" />
         <item itemvalue="Application.CashPage" />
-        <item itemvalue="Application.DataBase" />
       </list>
     </recent_temporary>
   </component>
