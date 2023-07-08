@@ -45,7 +45,7 @@ public class LoginController extends PortalPageController {
         if (checkInfo.checkAdminInfo(userNameString)){
             //check admin password
             if(checkInfo.checkAdminInfo(userNameString, passwordString)){
-                if(captchaCodeChecked){
+                if(captchaCodeChecked) {
                     sighInAdmin=true;
                     admin = new Admin(userNameString);
                     new ShopPanel().start(LoginMenu.stage);

@@ -53,6 +53,15 @@
                         </Button>
                         <MenuButton mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0">
                           <items>
+                              <MenuItem mnemonicParsing="false" text="profile" onAction="#profile">
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../image/avatar/avatar4.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
                             <MenuItem mnemonicParsing="false" text="orders">
                                  <graphic>
                                     <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">

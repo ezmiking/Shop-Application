@@ -13,6 +13,9 @@ public class ShopPanelController {
     DataBase dataBase = new DataBase();
     public Admin admin = null;
     public Customer customer = null;
+
+    public void profile(ActionEvent actionEvent) {
+    }
     /*
     {
         if(loginController.returnAdmin()!=null){

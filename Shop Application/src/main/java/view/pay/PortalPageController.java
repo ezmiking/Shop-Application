@@ -92,7 +92,7 @@ public class PortalPageController {
             alert.showAndWait();
         }
 
-        if (captchaCodeChecked) {
+        if (captchaCodeChecked == true) {
             System.out.println("enter in end page");
             URL urlEndPortal = PortalPageController.class.getResource("/fxml/endPortal.fxml");
             AnchorPane anchorPane = FXMLLoader.load(urlEndPortal);

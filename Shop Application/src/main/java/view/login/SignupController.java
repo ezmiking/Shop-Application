@@ -175,16 +175,16 @@ public class SignupController extends LoginController {
         }
 
         if (create && n != -2) {
-            System.out.println("khkhkh");
+//            System.out.println("khkhkh");
             welcomeB = true;
         }
 
         if (welcomeB) {
-            if(adminSign&&emailNotAvailable){
+            if(adminSign && emailNotAvailable){
                 checkInfo.signUpAdmin(txtEmail.getText(),passFieldPass.getText(),
                         txtName.getText(),txtLastName.getText(),txtEmail.getText());
             }
-            if(customerSign&&emailNotAvailable){
+            if(customerSign && emailNotAvailable){
                 checkInfo.signUpCustomer(txtEmail.getText(),passFieldPass.getText(),
                         txtName.getText(),txtLastName.getText(),txtEmail.getText());
             }
