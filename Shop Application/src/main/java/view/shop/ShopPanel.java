@@ -26,6 +26,8 @@ public class ShopPanel extends Application {
 
         URL url = ShopPanel.class.getResource("/fxml/oneKala.fxml");
         AnchorPane anchorPane = FXMLLoader.load(url);
+
+
         {
             for(int i = 0; i < dataBase.goodArrayList.size(); i++){
 

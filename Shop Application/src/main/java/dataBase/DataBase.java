@@ -285,7 +285,7 @@ public class DataBase {
 
         Admin newAdmin = new Admin(userName, password, firstName, lastName, email);
 
-        String SQL = "INSERT INTO admin (userNameF,passwordF,firstNameF,lastNameF,emailF) VALUES (" + userName + ", " + password + ", " + firstName + "," + lastName + ", " + email + ");";
+        String SQL = "INSERT INTO admin (userNameF,passwordF,firstNameF,lastNameF,emailF) VALUES (" + userName + ", " + password + ", " + firstName + ", " + lastName + ", " + email + ");";
 
         try (PreparedStatement customerInsert = database.prepareStatement(SQL,Statement.RETURN_GENERATED_KEYS)) {
             customerInsert.execute();
