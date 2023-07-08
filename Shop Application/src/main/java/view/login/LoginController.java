@@ -16,6 +16,8 @@ import view.shop.ShopPanel;
 
 public class LoginController extends PortalPageController {
     CheckInfo checkInfo = new CheckInfo();
+    Admin admin = null;
+    Customer customer = null;
     public Label lblEmail;
     public TextField txtEmail;
     public Label lblPass;
@@ -45,6 +47,7 @@ public class LoginController extends PortalPageController {
             if(checkInfo.checkAdminInfo(userNameString, passwordString)){
                 if(captchaCodeChecked){
                     sighInAdmin=true;
+                    admin = new Admin(userNameString);
                     new ShopPanel().start(LoginMenu.stage);
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -68,6 +71,7 @@ public class LoginController extends PortalPageController {
                 //password is correct
                 if(captchaCodeChecked){
                     sighInCustomer=true;
+                    customer = new Customer(userNameString);
                     new ShopPanel().start(LoginMenu.stage);
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -192,14 +196,23 @@ public class LoginController extends PortalPageController {
 
     public Admin returnAdmin(){
         if(sighInAdmin){
-            return new Admin(txtEmail.getText());
+            if(admin!=null){
+                System.out.println("admin method");
+            }
+            return admin;
+
         }
         return null;
     }
     public Customer returnCustomer(){
         if(sighInCustomer){
-            return new Customer(txtEmail.getText());
+            if(customer!=null){
+                System.out.println("customer method");
+            }
+            return customer;
         }
         return null;
     }
+
+
 }

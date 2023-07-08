@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -14,7 +20,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="682.0" prefWidth="621.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.profile.ProfileMenuController">
+<AnchorPane prefHeight="682.0" prefWidth="621.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.profile.ProfileMenuController">
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="682.0" prefWidth="621.0">
          <children>
@@ -60,20 +66,7 @@
                               <Insets top="5.0" />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="432.0">
-                           <children>
-                              <TextField fx:id="phoneNumber" alignment="CENTER" promptText="phone number" style="-fx-background-radius: 25;">
-                                 <HBox.margin>
-                                    <Insets right="5.0" />
-                                 </HBox.margin>
-                              </TextField>
-                              <TextField alignment="CENTER" promptText="ءءMM/DD/YYYY" style="-fx-background-radius: 25;" fx:id="data">
-                                 <HBox.margin>
-                                    <Insets left="5.0" />
-                                 </HBox.margin>
-                              </TextField>
-                           </children>
-                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="22.0" prefWidth="432.0" />
                         <HBox alignment="CENTER" prefHeight="39.0" prefWidth="432.0">
                            <children>
                               <Pane>
@@ -93,7 +86,7 @@
                               <Insets left="52.0" right="52.0" />
                            </VBox.margin>
                         </TextField>
-                        <Button mnemonicParsing="false" style="-fx-background-radius: 8; -fx-background-color: rgba(255,255,255,0.5);" text="save" onMouseClicked="#saveInformation">
+                        <Button mnemonicParsing="false" onMouseClicked="#saveInformation" style="-fx-background-radius: 8; -fx-background-color: rgba(255,255,255,0.5);" text="save">
                            <VBox.margin>
                               <Insets top="15.0" />
                            </VBox.margin>
@@ -180,14 +173,14 @@
                         </Label>
                         <HBox prefHeight="45.0" prefWidth="184.0">
                            <children>
-                              <Label alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="10000 $" textFill="#229724" fx:id="cash">
+                              <Label fx:id="cash" alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="10000 $" textFill="#229724">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin></Label>
-                              <Button mnemonicParsing="false" prefHeight="36.0" prefWidth="38.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="+" textFill="#23750f" onMouseClicked="#inventoryIncrease">
+                              <Button mnemonicParsing="false" onMouseClicked="#inventoryIncrease" alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="+" textFill="#23750f">
                                  <HBox.margin>
                                     <Insets right="5.0" top="2.0" />
                                  </HBox.margin>

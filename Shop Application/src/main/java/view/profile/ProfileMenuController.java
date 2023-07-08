@@ -6,16 +6,17 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import view.pay.CashPage;
+import view.shop.ShopPanelController;
 
 public class ProfileMenuController {
+    ShopPanelController shopPanelController = new ShopPanelController();
     public TextField name;
     public TextField lastName;
-    public TextField phoneNumber;
     public TextField gmail;
     public TextField textFieldPassword;
     public PasswordField passwordField;
     public RadioButton showPassword;
-    public TextField data;
+
     public Label cash;
 
     public void showPassword(MouseEvent mouseEvent) {
@@ -31,13 +32,21 @@ public class ProfileMenuController {
     }
 
     public void initialize() {
-        name.setText("Amir");
-        lastName.setText("khadem");
-        phoneNumber.setText("09150952624");
-        data.setText("12/25/2003");
-        gmail.setText("alipi82.alipir82@gmail.com");
-        passwordField.setText("ezmi2325");
-        textFieldPassword.setText("ezmi2325");
+        /*
+        if(shopPanelController.admin!=null){
+            name.setText(shopPanelController.admin.getFirstName());
+            lastName.setText(shopPanelController.admin.getLastName());
+            gmail.setText(shopPanelController.admin.getEmail());
+            passwordField.setText(shopPanelController.admin.getPassword());
+            textFieldPassword.setText(shopPanelController.admin.getPassword());
+        }else if(shopPanelController.customer!=null){
+        name.setText(shopPanelController.customer.getFirstName());
+        lastName.setText(shopPanelController.customer.getLastName());
+        gmail.setText(shopPanelController.customer.getEmail());
+        passwordField.setText(shopPanelController.customer.getPassword());
+        textFieldPassword.setText(shopPanelController.customer.getPassword());
+        }
+*/
     }
 
     public void saveInformation(MouseEvent mouseEvent) {
