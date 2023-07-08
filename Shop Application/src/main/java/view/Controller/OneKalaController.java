@@ -1,4 +1,4 @@
-package view.shop;
+package view.Controller;
 
 public class OneKalaController {
 }

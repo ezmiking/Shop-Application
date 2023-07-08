@@ -13,4 +13,6 @@ module shopapplication {
     exports view.pay;
     opens view.profile to javafx.fxml;
     exports view.profile;
+    exports view.Controller;
+    opens view.Controller to javafx.fxml;
 }

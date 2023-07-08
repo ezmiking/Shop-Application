@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="164.0" prefWidth="605.0" style="-fx-background-color: #777773; -fx-background-radius: 35;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.KalaCartController">
+   <children>
+      <ImageView fitHeight="180.0" fitWidth="214.0" layoutX="21.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/products/gold.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="327.0" layoutY="21.0" prefHeight="31.0" prefWidth="181.0" style="-fx-background-radius: 25; -fx-background-color: #bdcc9b;" text="Name">
+         <font>
+            <Font name="BM HANNA Air OTF" size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="357.0" layoutY="65.0" prefHeight="17.0" prefWidth="116.0" style="-fx-background-color: #bdcc9b; -fx-background-radius: 15;" text="price">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="345.0" layoutY="59.0" text="\$" textFill="#0ec32c">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="95.0" style="-fx-background-color: #bdcc9b; -fx-background-radius: 15;" text="score">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="391.0" layoutY="157.0" prefHeight="23.0" prefWidth="43.0" style="-fx-background-color: black; -fx-background-radius: 10;" text="0" textFill="#ee0606" fx:id="number">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="364.0" layoutY="155.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="16.0" text="+" textFill="#d30000" onMouseClicked="#toIncrease"/>
+      <Button layoutX="435.0" layoutY="155.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="16.0" text="-" textFill="#d30000" onMouseClicked="#toLessen"/>
+   </children>
+</AnchorPane>
