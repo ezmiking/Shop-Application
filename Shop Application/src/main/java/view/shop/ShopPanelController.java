@@ -35,11 +35,7 @@ public class ShopPanelController {
         return customer;
     }
 
-    {
-        for(int i = 0; i < dataBase.goodArrayList.size(); i++){
 
-        }
-    }
 
 
 }
