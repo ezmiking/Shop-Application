@@ -225,6 +225,67 @@ public class PortalPageController {
         }
     }
 
+    public boolean captchaCodeEnter(){
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        if (capcha.getText().length() == 0) {
+            captchaCodeChecked = false;
+            captchaReload();
+            alert.setHeaderText("Error in captcha");
+            alert.setContentText("enter captcha");
+            alert.showAndWait();
+            return false;
+        }
+        if (cap == 1381 && capcha.getText().equals("1381")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 1181 && capcha.getText().equals("1181")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 1491 && capcha.getText().equals("1491")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 1722 && capcha.getText().equals("1722")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 1959 && capcha.getText().equals("1959")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 2163 && capcha.getText().equals("2163")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 2177 && capcha.getText().equals("2177")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 2723 && capcha.getText().equals("2723")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 2785 && capcha.getText().equals("2785")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        if (cap == 3541 && capcha.getText().equals("3541")) {
+            captchaCodeChecked = true;
+            return true;
+        }
+        captchaCodeChecked = false;
+        captchaReload();
+        alert.setHeaderText("Error in captcha");
+        alert.setContentText("""
+                    Please enter the desired captcha
+                    v
+                    kh kh kh kh
+                    """);
+        alert.showAndWait();
+        return false;
+    }
     public void cancel(MouseEvent mouseEvent) throws Exception {
         if (CashPageController.previousPage == 1) {
             new PaymentPage().start(Portalpage.stagePortal);

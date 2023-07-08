@@ -33,98 +33,134 @@ public class LoginController extends PortalPageController {
 
     public void signIn(MouseEvent mouseEvent) throws Exception {
 
-        String userNameString = txtEmail.getText();
-        String passwordString;
-        if(passFieldPass.getText() != null){
-            passwordString = passFieldPass.getText();
-        }else {
-            passwordString = txtFieldPass.getText();
-        }
 
-        //check for login
-        //check admin is available
-        if (checkInfo.checkAdminInfo(userNameString)){
-            //check admin password
-            if(checkInfo.checkAdminInfo(userNameString, passwordString)){
-                if(captchaCodeChecked) {
-                    ShopPanelController shopPanelController = new ShopPanelController();
-                    sighInAdmin=true;
-                    admin = new Admin(userNameString);
-                    System.out.println("admin :"+admin);
-                    ShopPanelController.admin=admin;
 
-                    new ShopPanel().start(LoginMenu.stage);
-                }else{
+            String userNameString = txtEmail.getText();
+            String passwordString;
+            if (txtEmail.getText().length() == 0) {
+                captchaCodeChecked = false;
+                new Alert(Alert.AlertType.ERROR, """
+                        please enter your Email
+                        """).showAndWait();
+
+            }
+            eye = false;
+            setImage();
+            if (passFieldPass.getText().length() == 0 && txtFieldPass.getText().length() == 0) {
+                captchaCodeChecked = false;
+                new Alert(Alert.AlertType.ERROR, """
+                        please enter your Password
+                        """).showAndWait();
+            }
+            if (passFieldPass.getText() != null) {
+                passwordString = passFieldPass.getText();
+            } else {
+                passwordString = txtFieldPass.getText();
+            }
+
+
+            //check for login
+            //check admin is available
+            if (checkInfo.checkAdminInfo(userNameString)) {
+                //check admin password
+                if (checkInfo.checkAdminInfo(userNameString, passwordString)) {
+                    if (captchaCodeEnter()) {
+                        ShopPanelController shopPanelController = new ShopPanelController();
+                        sighInAdmin = true;
+                        admin = new Admin(userNameString);
+                        System.out.println("admin :" + admin);
+                        ShopPanelController.admin = admin;
+
+                        new ShopPanel().start(LoginMenu.stage);
+
+                    } else {
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("ERROR");
+                        alert.setHeaderText("Admin SING IN ERROR");
+
+
+                        alert.setContentText("please check your info again ");
+                        alert.showAndWait();
+                        txtEmail.setText(null);
+                        passFieldPass.setText(null);
+                        password.setText(null);
+                        capcha.setText(null);
+
+                    }
+
+                } else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("ERROR");
                     alert.setHeaderText("Admin SING IN ERROR");
-                    
-
-                    alert.setContentText("please check your info again ");
+                    alert.setContentText("your password is wrong");
                     alert.showAndWait();
-                }
+                    txtEmail.setText(null);
+                    passFieldPass.setText(null);
+                    password.setText(null);
+                    capcha.setText(null);
 
-            }else{
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("ERROR");
-                alert.setHeaderText("Admin SING IN ERROR");
-                alert.setContentText("your password is wrong");
-                alert.showAndWait();
-               // System.out.println(dataBase.adminArrayList.get(dataBase.adminArrayList.indexOf(new Admin(userNameString))).getPassword());
-            }
-        }else if(checkInfo.checkCustomerInfo(userNameString)){
-            //check customer password
-            if(checkInfo.checkCustomerInfo(userNameString, passwordString)){
-                //password is correct
-                if(captchaCodeChecked){
-                    ShopPanelController shopPanelController = new ShopPanelController();
-                    sighInCustomer=true;
-                    customer = new Customer(userNameString);
-                    System.out.println("customer :"+customer);
-                    ShopPanelController.customer = customer;
-                    new ShopPanel().start(LoginMenu.stage);
-                }else{
+                    // System.out.println(dataBase.adminArrayList.get(dataBase.adminArrayList.indexOf(new Admin(userNameString))).getPassword());
+                }
+            } else if (checkInfo.checkCustomerInfo(userNameString)) {
+                //check customer password
+                if (checkInfo.checkCustomerInfo(userNameString, passwordString)) {
+                    //password is correct
+
+                    if (captchaCodeChecked) {
+                        ShopPanelController shopPanelController = new ShopPanelController();
+                        sighInCustomer = true;
+                        customer = new Customer(userNameString);
+                        System.out.println("customer :" + customer);
+                        ShopPanelController.customer = customer;
+                        new ShopPanel().start(LoginMenu.stage);
+
+                    } else {
+                        Alert alert = new Alert(Alert.AlertType.ERROR);
+                        alert.setTitle("ERROR");
+                        alert.setHeaderText("Admin SING IN ERROR");
+                        alert.setContentText("please check your info again ");
+                        alert.showAndWait();
+                        txtEmail.setText(null);
+                        passFieldPass.setText(null);
+                        password.setText(null);
+                        capcha.setText(null);
+
+                    }
+                } else {
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("ERROR");
-                    alert.setHeaderText("Admin SING IN ERROR");
-                    alert.setContentText("please check your info again ");
+                    alert.setHeaderText("Customer SING IN ERROR");
+                    alert.setContentText("your password is wrong");
                     alert.showAndWait();
+                    txtEmail.setText(null);
+                    passFieldPass.setText(null);
+                    password.setText(null);
+                    capcha.setText(null);
+
                 }
-            }else {
+            } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("ERROR");
-                alert.setHeaderText("Customer SING IN ERROR");
-                alert.setContentText("your password is wrong");
+                alert.setHeaderText("not allow");
+                alert.setContentText("you did not join to our shop");
                 alert.showAndWait();
+                txtEmail.setText(null);
+                passFieldPass.setText(null);
+                password.setText(null);
+                capcha.setText(null);
+
             }
-        }else{
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("ERROR");
-            alert.setHeaderText("not allow");
-            alert.setContentText("you did not join to our shop");
-            alert.showAndWait();
-        }
 
 
 
-        if (txtEmail.getText().length() == 0) {
-            captchaCodeChecked = false;
-            new Alert(Alert.AlertType.ERROR, """
-                    please enter your Email
-                    """).showAndWait();
-        }
-        eye = false;
-        setImage();
-        if (passFieldPass.getText().length() == 0 && txtFieldPass.getText().length() == 0) {
-            captchaCodeChecked = false;
-            new Alert(Alert.AlertType.ERROR, """
-                    please enter your Password
-                    """).showAndWait();
-        }
-        captchaCode();
-        if (captchaCodeChecked) {
-            System.out.println("haaayaa");
-        }
+            /*
+            captchaCode();
+            if (captchaCodeChecked) {
+                System.out.println("haaayaa");
+            }
+
+             */
+
     }
 
     public void signUp(MouseEvent mouseEvent) throws Exception {
