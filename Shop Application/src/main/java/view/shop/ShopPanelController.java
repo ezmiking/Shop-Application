@@ -15,8 +15,6 @@ public class ShopPanelController {
     LoginController loginController = new LoginController();
     DataBase dataBase = new DataBase();
 
-
-
     public static Admin admin = null;
     public static Customer customer = null;
 
@@ -38,7 +36,7 @@ public class ShopPanelController {
     }
 
     {
-        for(int i=0;i<dataBase.goodArrayList.size();i++){
+        for(int i = 0; i < dataBase.goodArrayList.size(); i++){
 
         }
     }
