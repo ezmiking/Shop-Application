@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="e 0.12154" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="solve captcha problem">
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/kalaPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/image/kh1/chips.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/image/products/chips.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/image/kh1/chitoz.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/image/products/chitoz.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/image/kh1/gold.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/image/products/gold.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/image/kh1/keranchi.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/image/products/keranchi.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanelController.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,13 +24,21 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -293,14 +312,7 @@
       <option name="project" value="LOCAL" />
       <updated>1688816431967</updated>
     </task>
-    <task id="LOCAL-00022" summary="e 0.12154">
-      <created>1688825527842</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1688825527842</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +350,6 @@
     <MESSAGE value="changes v0.1" />
     <MESSAGE value="make profile" />
     <MESSAGE value="solve captcha problem" />
-    <MESSAGE value="e 0.12154" />
-    <option name="LAST_COMMIT_MESSAGE" value="e 0.12154" />
+    <option name="LAST_COMMIT_MESSAGE" value="solve captcha problem" />
   </component>
 </project>
