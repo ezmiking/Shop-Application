@@ -1,5 +1,8 @@
 package view.profile;
 
+import dataBase.Admin;
+import dataBase.Customer;
+import dataBase.DataBase;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
@@ -9,7 +12,7 @@ import view.pay.CashPage;
 import view.shop.ShopPanelController;
 
 public class ProfileMenuController {
-    ShopPanelController shopPanelController = new ShopPanelController();
+    DataBase dataBase = new DataBase();
     public TextField name;
     public TextField lastName;
     public TextField gmail;
@@ -18,6 +21,7 @@ public class ProfileMenuController {
     public RadioButton showPassword;
 
     public Label cash;
+
 
     public void showPassword(MouseEvent mouseEvent) {
         if (showPassword.isSelected()) {
@@ -33,20 +37,25 @@ public class ProfileMenuController {
 
     public void initialize() {
 
-        if(shopPanelController.returnAdminShop()!=null){
-            name.setText(shopPanelController.returnAdminShop().getFirstName());
-            lastName.setText(shopPanelController.returnAdminShop().getLastName());
-            gmail.setText(shopPanelController.returnAdminShop().getEmail());
-            passwordField.setText(shopPanelController.returnAdminShop().getPassword());
-            textFieldPassword.setText(shopPanelController.returnAdminShop().getPassword());
+        if(ShopPanelController.admin!=null){
+            Admin admin = dataBase.adminArrayList.get(dataBase.adminArrayList.indexOf(ShopPanelController.admin));
+            name.setText(admin.getFirstName());
+            lastName.setText(admin.getLastName());
+            gmail.setText(admin.getEmail());
+            passwordField.setText(admin.getPassword());
+            textFieldPassword.setText(admin.getPassword());
             System.out.println("profile admin info");
-        }else if(shopPanelController.returnCustomerShop()!=null){
-            name.setText(shopPanelController.returnCustomerShop().getFirstName());
-            lastName.setText(shopPanelController.returnCustomerShop().getLastName());
-            gmail.setText(shopPanelController.returnCustomerShop().getEmail());
-            passwordField.setText(shopPanelController.returnCustomerShop().getPassword());
-            textFieldPassword.setText(shopPanelController.returnCustomerShop().getPassword());
+        }else if(ShopPanelController.customer!=null){
+            Customer customer = dataBase.customerArrayList.get(dataBase.customerArrayList.indexOf(ShopPanelController.customer));
+            name.setText(customer.getFirstName());
+            lastName.setText(customer.getLastName());
+            gmail.setText(customer.getEmail());
+            passwordField.setText(customer.getPassword());
+            textFieldPassword.setText(customer.getPassword());
             System.out.println("profile customer info");
+        }else{
+            System.out.println("empty");
+
         }
 
     }

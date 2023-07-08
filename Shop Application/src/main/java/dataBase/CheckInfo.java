@@ -5,6 +5,8 @@
 
 package dataBase;
 
+import view.login.LoginController;
+
 public class CheckInfo {
     DataBase dataBase = new DataBase();
     Admin admin;
@@ -64,5 +66,13 @@ public class CheckInfo {
 
     public void deleteInfoCustomer(String userName) {
         this.dataBase.deleteInfoCustomer(userName);
+    }
+    public int indexOfAdmin(String userName){
+
+        return dataBase.adminArrayList.indexOf(new Admin(userName));
+    }
+    public int indexOfCustomer(String userName){
+
+        return dataBase.customerArrayList.indexOf(new Customer(userName));
     }
 }

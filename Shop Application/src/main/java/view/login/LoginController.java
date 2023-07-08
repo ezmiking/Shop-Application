@@ -13,11 +13,12 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import view.pay.PortalPageController;
 import view.shop.ShopPanel;
+import view.shop.ShopPanelController;
 
 public class LoginController extends PortalPageController {
     CheckInfo checkInfo = new CheckInfo();
-    Admin admin = null;
-    Customer customer = null;
+    public Admin admin;
+    public Customer customer;
     public Label lblEmail;
     public TextField txtEmail;
     public Label lblPass;
@@ -46,14 +47,19 @@ public class LoginController extends PortalPageController {
             //check admin password
             if(checkInfo.checkAdminInfo(userNameString, passwordString)){
                 if(captchaCodeChecked) {
+                    ShopPanelController shopPanelController = new ShopPanelController();
                     sighInAdmin=true;
                     admin = new Admin(userNameString);
                     System.out.println("admin :"+admin);
+                    ShopPanelController.admin=admin;
+
                     new ShopPanel().start(LoginMenu.stage);
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
                     alert.setTitle("ERROR");
                     alert.setHeaderText("Admin SING IN ERROR");
+                    
+
                     alert.setContentText("please check your info again ");
                     alert.showAndWait();
                 }
@@ -71,9 +77,11 @@ public class LoginController extends PortalPageController {
             if(checkInfo.checkCustomerInfo(userNameString, passwordString)){
                 //password is correct
                 if(captchaCodeChecked){
+                    ShopPanelController shopPanelController = new ShopPanelController();
                     sighInCustomer=true;
                     customer = new Customer(userNameString);
                     System.out.println("customer :"+customer);
+                    ShopPanelController.customer = customer;
                     new ShopPanel().start(LoginMenu.stage);
                 }else{
                     Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -196,25 +204,7 @@ public class LoginController extends PortalPageController {
         captchaReload();
     }
 
-    public Admin returnAdmin(){
-        if(sighInAdmin){
-            if(admin!=null){
-                System.out.println("admin method");
-            }
-            return admin;
 
-        }
-        return null;
-    }
-    public Customer returnCustomer(){
-        if(sighInCustomer){
-            if(customer!=null){
-                System.out.println("customer method");
-            }
-            return customer;
-        }
-        return null;
-    }
 
 
 }
