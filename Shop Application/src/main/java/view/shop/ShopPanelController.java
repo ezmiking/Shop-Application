@@ -9,13 +9,13 @@ import view.login.LoginController;
 import view.profile.ProfileMenu;
 
 public class ShopPanelController {
-    LoginController loginController = new LoginController();
-    DataBase dataBase = new DataBase();
-    public Admin admin = null;
-    public Customer customer = null;
+//    LoginController loginController = new LoginController();
+//    DataBase dataBase = new DataBase();
+//    public Admin admin = null;
+//    public Customer customer = null;
 
-    public void profile(ActionEvent actionEvent) {
-        System.out.println("kh");
+    public void profile(ActionEvent actionEvent) throws Exception {
+        new ProfileMenu().start(ShopPanel.stage);
     }
     /*
     {
