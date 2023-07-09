@@ -1,0 +1,176 @@
+Index: Shop Application/src/main/java/view/shop/ShopPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package view.shop;\n\nimport dataBase.DataBase;\nimport dataBase.Good;\nimport javafx.application.Application;\nimport javafx.fxml.FXMLLoader;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Label;\nimport javafx.scene.control.ScrollPane;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.layout.*;\nimport javafx.stage.Stage;\n\nimport java.net.URL;\n\npublic class ShopPanel extends Application {\n    public static Stage stage;\n    public DataBase dataBase = new DataBase();\n    public Good good = new Good( \"nameGood\", \"companyName\", 85, 0, 3, \"imageAddressGood\");\n    @Override\n    public void start(Stage stage) throws Exception {\n        ShopPanel.stage = stage;\n        URL urlShop = ShopPanel.class.getResource(\"/fxml/shopPanel.fxml\");\n        ScrollPane scrollPane = FXMLLoader.load(urlShop);\n        BorderPane borderPane = (BorderPane) scrollPane.getContent();\n        GridPane gridPane = (GridPane) borderPane.getCenter();\n\n        URL urlkala = ShopPanel.class.getResource(\"/fxml/oneKala.fxml\");\n        AnchorPane anchorPane = FXMLLoader.load(urlkala);\n\n\n        {\n            int i = 0, j = 0;\n            for (int k = 0; k < dataBase.goodArrayList.size(); k++) {\n                VBox vBox = (VBox) anchorPane.getChildren().get(0);\n                HBox hBox1 = (HBox) vBox.getChildren().get(3);\n                HBox hBox2 = (HBox) vBox.getChildren().get(4);\n                ImageView imageView = (ImageView) vBox.getChildren().get(0);\n                Label name = (Label) vBox.getChildren().get(1);\n                Label score = (Label) vBox.getChildren().get(2);\n                Label brand = (Label) hBox1.getChildren().get(1);\n                Label price = (Label) hBox2.getChildren().get(1);\n//                ImageView pastive = (ImageView) hBox2.getChildren().get(2);\n\n\n\n\n\n\n                gridPane.add(anchorPane, j, i);\n                if(j == 2) {\n                    i++;\n                    j = 0;\n                }\n                else {\n                    j++;\n                }\n            }\n        }\n\n\n        Scene scene = new Scene(scrollPane);\n        stage.setScene(scene);\n        stage.show();\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Shop Application/src/main/java/view/shop/ShopPanel.java b/Shop Application/src/main/java/view/shop/ShopPanel.java
+--- a/Shop Application/src/main/java/view/shop/ShopPanel.java	(revision 909127c65000cbad7f2ee48aa0ca4fadf9a91bb0)
++++ b/Shop Application/src/main/java/view/shop/ShopPanel.java	(date 1688892679166)
+@@ -12,11 +12,13 @@
+ import javafx.stage.Stage;
+ 
+ import java.net.URL;
++import java.util.ArrayList;
+ 
+ public class ShopPanel extends Application {
+     public static Stage stage;
+     public DataBase dataBase = new DataBase();
+-    public Good good = new Good( "nameGood", "companyName", 85, 0, 3, "imageAddressGood");
++    public ArrayList<AnchorPane> anchorPaneArrayList = new ArrayList<>();
++//    public Good good = new Good( "nameGood", "companyName", 85, 0, 3, "imageAddressGood");
+     @Override
+     public void start(Stage stage) throws Exception {
+         ShopPanel.stage = stage;
+@@ -27,11 +29,15 @@
+ 
+         URL urlkala = ShopPanel.class.getResource("/fxml/oneKala.fxml");
+         AnchorPane anchorPane = FXMLLoader.load(urlkala);
++        AnchorPane anchorPane1 = FXMLLoader.load(urlkala);
+ 
++//        gridPane.add(anchorPane, 1, 0);
++//       gridPane.add(anchorPane1, 1 , 1);
+ 
+         {
+             int i = 0, j = 0;
+             for (int k = 0; k < dataBase.goodArrayList.size(); k++) {
++                Good good = dataBase.goodArrayList.get(k);
+                 VBox vBox = (VBox) anchorPane.getChildren().get(0);
+                 HBox hBox1 = (HBox) vBox.getChildren().get(3);
+                 HBox hBox2 = (HBox) vBox.getChildren().get(4);
+@@ -40,19 +46,34 @@
+                 Label score = (Label) vBox.getChildren().get(2);
+                 Label brand = (Label) hBox1.getChildren().get(1);
+                 Label price = (Label) hBox2.getChildren().get(1);
+-//                ImageView pastive = (ImageView) hBox2.getChildren().get(2);
+-
+ 
++                name.setText(good.getNameGood());
++                score.setText(String.valueOf(good.getPointGood()));
++                brand.setText(good.getCompanyName());
++                price.setText(String.valueOf(good.getPriceGood()));
++               // imageView.setImage(new Image(ShopPanel.class.getResourceAsStream(good.getImageAddressGood())));
+ 
++                System.out.println(good.getPriceGood());
++                anchorPaneArrayList.add(anchorPane);
+ 
++//                gridPane.add(anchorPane, j, i);
++//
++//                if(j == 2) {
++//                    i++;
++//                    j = 0;
++//                }
++//                else {
++//                    j++;
++//                }
++            }
+ 
+-
+-                gridPane.add(anchorPane, j, i);
+-                if(j == 2) {
++            for (int k = 0; k < dataBase.goodArrayList.size(); k++) {
++                AnchorPane anchorPane2 = anchorPaneArrayList.get(k);
++                gridPane.add(anchorPane2, j, i);
++                if (j == 2) {
+                     i++;
+                     j = 0;
+-                }
+-                else {
++                } else {
+                     j++;
+                 }
+             }
+Index: Shop Application/src/main/java/view/shop/CartPage.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package view.shop;\n\nimport javafx.application.Application;\nimport javafx.fxml.FXMLLoader;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Label;\nimport javafx.scene.image.ImageView;\nimport javafx.scene.layout.AnchorPane;\nimport javafx.scene.layout.GridPane;\nimport javafx.scene.layout.HBox;\nimport javafx.stage.Stage;\n\nimport java.net.URL;\n\npublic class CartPage extends Application {\n    public static Stage stageCart;\n    @Override\n    public void start(Stage stage) throws Exception {\n        CartPage.stageCart = stage;\n        URL urlCart = CartPage.class.getResource(\"/fxml/cartPage.fxml\");\n\n        AnchorPane anchorPane = FXMLLoader.load(urlCart);\n        HBox hBox1 = (HBox) anchorPane.getChildren().get(0);\n        GridPane gridPane = (GridPane) hBox1.getChildren().get(1);\n\n        URL urlKalaCart = CartPage.class.getResource(\"/fxml/KalaCartPage.fxml\");\n        AnchorPane anchorPane1 = FXMLLoader.load(urlKalaCart);\n        gridPane.add(anchorPane1, 0, 1);\n        // اضافه شدن به سبد خرید\n        for (int i = 0; i < 3; i++) {\n            ImageView imageView = (ImageView) anchorPane1.getChildren().get(0);\n            Label name = (Label) anchorPane1.getChildren().get(1);\n            Label price = (Label) anchorPane1.getChildren().get(2);\n\n            //از دیتابیس باید زده بشه\n\n            gridPane.add(anchorPane1, 0, i);\n        }\n\n        Scene scene = new Scene(anchorPane);\n        stage.setScene(scene);\n        stage.show();\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Shop Application/src/main/java/view/shop/CartPage.java b/Shop Application/src/main/java/view/shop/CartPage.java
+--- a/Shop Application/src/main/java/view/shop/CartPage.java	(revision 909127c65000cbad7f2ee48aa0ca4fadf9a91bb0)
++++ b/Shop Application/src/main/java/view/shop/CartPage.java	(date 1688892826584)
+@@ -25,7 +25,7 @@
+ 
+         URL urlKalaCart = CartPage.class.getResource("/fxml/KalaCartPage.fxml");
+         AnchorPane anchorPane1 = FXMLLoader.load(urlKalaCart);
+-        gridPane.add(anchorPane1, 0, 1);
++
+         // اضافه شدن به سبد خرید
+         for (int i = 0; i < 3; i++) {
+             ImageView imageView = (ImageView) anchorPane1.getChildren().get(0);
+Index: Shop Application/src/main/resources/fxml/oneKala.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<?import javafx.geometry.Insets?>\n<?import javafx.scene.control.Label?>\n<?import javafx.scene.image.Image?>\n<?import javafx.scene.image.ImageView?>\n<?import javafx.scene.layout.AnchorPane?>\n<?import javafx.scene.layout.HBox?>\n<?import javafx.scene.layout.VBox?>\n<?import javafx.scene.text.Font?>\n\n<AnchorPane prefHeight=\"395.0\" prefWidth=\"238.0\" xmlns=\"http://javafx.com/javafx/20.0.1\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"view.Controller.OneKalaController\">\n   <children>\n      <VBox alignment=\"TOP_CENTER\" layoutX=\"10.0\" layoutY=\"10.0\" prefHeight=\"391.0\" prefWidth=\"225.0\">\n         <children>\n            <ImageView fitHeight=\"256.0\" fitWidth=\"225.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n               <image>\n                  <Image url=\"@../image/products/chitoz.jpg\" />\n               </image>\n            </ImageView>\n            <Label prefHeight=\"31.0\" prefWidth=\"158.0\" text=\"Snacks chi-toz cheese\" textAlignment=\"CENTER\">\n               <font>\n                  <Font name=\"Chalkboard SE Light\" size=\"15.0\" />\n               </font>\n            </Label>\n            <Label prefHeight=\"23.0\" prefWidth=\"36.0\" text=\"180 g\">\n               <font>\n                  <Font name=\"Gujarati Sangam MN\" size=\"12.0\" />\n               </font>\n            </Label>\n            <HBox alignment=\"TOP_CENTER\" prefHeight=\"26.0\" prefWidth=\"225.0\">\n               <children>\n                  <Label text=\"Brand :\">\n                     <font>\n                        <Font name=\"Arial Narrow\" size=\"16.0\" />\n                     </font>\n                  </Label>\n                  <Label text=\"Chitoz\">\n                     <font>\n                        <Font name=\"Gurmukhi MN\" size=\"14.0\" />\n                     </font>\n                     <HBox.margin>\n                        <Insets left=\"4.0\" top=\"2.0\" />\n                     </HBox.margin>\n                  </Label>\n               </children>\n               <VBox.margin>\n                  <Insets top=\"3.0\" />\n               </VBox.margin>\n            </HBox>\n            <HBox prefHeight=\"1.0\" prefWidth=\"225.0\">\n               <children>\n                  <Label text=\"\\$\" />\n                  <Label prefHeight=\"37.0\" prefWidth=\"55.0\" text=\"5,99\">\n                     <font>\n                        <Font name=\"Apple SD Gothic Neo Regular\" size=\"28.0\" />\n                     </font>\n                  </Label>\n                  <ImageView fitHeight=\"20.0\" fitWidth=\"16.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                     <image>\n                        <Image url=\"@../image/icon/IMG_8109.jpg\" />\n                     </image>\n                     <HBox.margin>\n                        <Insets left=\"135.0\" top=\"10.0\" />\n                     </HBox.margin>\n                  </ImageView>\n               </children>\n            </HBox>\n         </children>\n      </VBox>\n   </children>\n</AnchorPane>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Shop Application/src/main/resources/fxml/oneKala.fxml b/Shop Application/src/main/resources/fxml/oneKala.fxml
+--- a/Shop Application/src/main/resources/fxml/oneKala.fxml	(revision 909127c65000cbad7f2ee48aa0ca4fadf9a91bb0)
++++ b/Shop Application/src/main/resources/fxml/oneKala.fxml	(date 1688891012950)
+@@ -18,7 +18,7 @@
+                   <Image url="@../image/products/chitoz.jpg" />
+                </image>
+             </ImageView>
+-            <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
++            <Label alignment="CENTER" prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+                <font>
+                   <Font name="Chalkboard SE Light" size="15.0" />
+                </font>
+@@ -35,7 +35,7 @@
+                         <Font name="Arial Narrow" size="16.0" />
+                      </font>
+                   </Label>
+-                  <Label text="Chitoz">
++                  <Label alignment="CENTER" text="Chitoz">
+                      <font>
+                         <Font name="Gurmukhi MN" size="14.0" />
+                      </font>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"e002a54b-b128-4beb-abb8-3c0b9d457d81\" name=\"Changes\" comment=\"database problems v0.1\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"FxmlFile\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"GitSEFilterConfiguration\">\n    <file-type-list>\n      <filtered-out-file-type name=\"LOCAL_BRANCH\" />\n      <filtered-out-file-type name=\"REMOTE_BRANCH\" />\n      <filtered-out-file-type name=\"TAG\" />\n      <filtered-out-file-type name=\"COMMIT_BY_MESSAGE\" />\n    </file-type-list>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"useMavenConfig\" value=\"true\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2S178Aky5yR2xl5Plo75ueNkMHo\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"WebServerToolWindowFactoryState\": \"false\"\n  }\n}]]></component>\n  <component name=\"RunManager\" selected=\"Application.LoginMenu\">\n    <configuration name=\"CartPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.shop.CartPage\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.Controller.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"LoginMenu\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.login.LoginMenu\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.login.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PaymentPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.pay.PaymentPage\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.pay.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Portalpage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.pay.Portalpage\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.pay.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"ShopPanel\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.shop.ShopPanel\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.Controller.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.LoginMenu\" />\n        <item itemvalue=\"Application.CartPage\" />\n        <item itemvalue=\"Application.ShopPanel\" />\n        <item itemvalue=\"Application.Portalpage\" />\n        <item itemvalue=\"Application.PaymentPage\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"e002a54b-b128-4beb-abb8-3c0b9d457d81\" name=\"Changes\" comment=\"\" />\n      <created>1688302072052</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1688302072052</updated>\n      <workItem from=\"1688302073847\" duration=\"3417000\" />\n      <workItem from=\"1688305982524\" duration=\"15017000\" />\n      <workItem from=\"1688360688441\" duration=\"7902000\" />\n      <workItem from=\"1688369747715\" duration=\"72000\" />\n      <workItem from=\"1688370905225\" duration=\"505000\" />\n      <workItem from=\"1688379787476\" duration=\"4464000\" />\n      <workItem from=\"1688423858801\" duration=\"24491000\" />\n      <workItem from=\"1688591426499\" duration=\"57000\" />\n      <workItem from=\"1688716967336\" duration=\"1492000\" />\n      <workItem from=\"1688725270368\" duration=\"472000\" />\n      <workItem from=\"1688731834870\" duration=\"1633000\" />\n      <workItem from=\"1688793210512\" duration=\"5418000\" />\n      <workItem from=\"1688817445367\" duration=\"3964000\" />\n      <workItem from=\"1688887265502\" duration=\"2765000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"testting git v02\">\n      <created>1688302440225</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688302440225</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"make send and receive info\">\n      <created>1688305301601</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688305301601</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Cart\">\n      <created>1688333084738</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688333084738</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Cart + captch\">\n      <created>1688333231931</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688333231931</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"captcha003 + if moshkel dare\">\n      <created>1688422255335</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688422255335</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"captcha004 + endPage\">\n      <created>1688424743545</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688424743546</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"captcha005 + captchareload\">\n      <created>1688425330140</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688425330141</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Login sign in + Login captcha\">\n      <created>1688436168917</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688436168918</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Login sign in + Login captcha (001)\">\n      <created>1688436955945</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688436955945</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Login sign in + Login captcha (002)\">\n      <created>1688437362921</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688437362922</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Login sign up.fxml\">\n      <created>1688443661276</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688443661276</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Login sign up + ...\">\n      <created>1688448238839</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688448238839</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"kh\">\n      <created>1688717570874</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688717570874</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"kh\">\n      <created>1688717686090</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688717686091</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"solving problems\">\n      <created>1688725735486</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688725735486</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"solving database bogs\">\n      <created>1688797383664</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688797383664</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"profile Action\">\n      <created>1688807355178</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688807355178</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"profile Action001\">\n      <created>1688807544376</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688807544376</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"changes v0.1\">\n      <created>1688807956227</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688807956227</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"make profile\">\n      <created>1688814768600</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688814768600</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"solve captcha problem\">\n      <created>1688816431967</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688816431967</updated>\n    </task>\n    <task id=\"LOCAL-00022\" summary=\"ShopPanel + kala\">\n      <created>1688840015049</created>\n      <option name=\"number\" value=\"00022\" />\n      <option name=\"presentableId\" value=\"LOCAL-00022\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688840015049</updated>\n    </task>\n    <task id=\"LOCAL-00023\" summary=\"kalaPage + Cartkala\">\n      <created>1688849991760</created>\n      <option name=\"number\" value=\"00023\" />\n      <option name=\"presentableId\" value=\"LOCAL-00023\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688849991760</updated>\n    </task>\n    <task id=\"LOCAL-00024\" summary=\"database problems\">\n      <created>1688889037210</created>\n      <option name=\"number\" value=\"00024\" />\n      <option name=\"presentableId\" value=\"LOCAL-00024\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688889037210</updated>\n    </task>\n    <task id=\"LOCAL-00025\" summary=\"database problems v0.1\">\n      <created>1688889442693</created>\n      <option name=\"number\" value=\"00025\" />\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688889442693</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"26\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"testting git v02\" />\n    <MESSAGE value=\"make send and receive info\" />\n    <MESSAGE value=\"Cart\" />\n    <MESSAGE value=\"Cart + captch\" />\n    <MESSAGE value=\"captcha003 + if moshkel dare\" />\n    <MESSAGE value=\"captcha004 + endPage\" />\n    <MESSAGE value=\"captcha005 + captchareload\" />\n    <MESSAGE value=\"Login sign in + Login captcha\" />\n    <MESSAGE value=\"Login sign in + Login captcha (001)\" />\n    <MESSAGE value=\"Login sign in + Login captcha (002)\" />\n    <MESSAGE value=\"Login sign up.fxml\" />\n    <MESSAGE value=\"Login sign up + ...\" />\n    <MESSAGE value=\"kh\" />\n    <MESSAGE value=\"solving problems\" />\n    <MESSAGE value=\"solving database bogs\" />\n    <MESSAGE value=\"profile Action\" />\n    <MESSAGE value=\"profile Action001\" />\n    <MESSAGE value=\"changes v0.1\" />\n    <MESSAGE value=\"make profile\" />\n    <MESSAGE value=\"solve captcha problem\" />\n    <MESSAGE value=\"ShopPanel + kala\" />\n    <MESSAGE value=\"kalaPage + Cartkala\" />\n    <MESSAGE value=\"database problems\" />\n    <MESSAGE value=\"database problems v0.1\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"database problems v0.1\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 909127c65000cbad7f2ee48aa0ca4fadf9a91bb0)
++++ b/.idea/workspace.xml	(date 1688892758305)
+@@ -6,7 +6,11 @@
+   <component name="ChangeListManager">
+     <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="database problems v0.1">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -53,12 +57,7 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "WebServerToolWindowFactoryState": "false"
+-  }
+-}]]></component>
+-  <component name="RunManager" selected="Application.LoginMenu">
++  <component name="RunManager" selected="Application.CartPage">
+     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
+       <module name="ShopApplication" />
+@@ -126,8 +125,8 @@
+     </configuration>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.LoginMenu" />
+         <item itemvalue="Application.CartPage" />
++        <item itemvalue="Application.LoginMenu" />
+         <item itemvalue="Application.ShopPanel" />
+         <item itemvalue="Application.Portalpage" />
+         <item itemvalue="Application.PaymentPage" />

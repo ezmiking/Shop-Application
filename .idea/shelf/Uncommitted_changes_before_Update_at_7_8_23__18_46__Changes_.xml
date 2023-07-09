@@ -1,0 +1,14 @@
+<changelist name="Uncommitted_changes_before_Update_at_7_8_23,_18_46_[Changes]" date="1688825803373" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_8_23,_18_46_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 7/8/23, 18:46 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/view/shop/ShopPanelController.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/view/shop/ShopPanelController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_8_23,_18_46_[Changes]/ShopPanelController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Shop Application/target/classes/view/shop/ShopPanel.class" />
+    <option name="AFTER_PATH" value="Shop Application/target/classes/view/shop/ShopPanel.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_7_8_23,_18_46_[Changes]/ShopPanel.class" />
+  </binary>
+</changelist>

@@ -1,0 +1,567 @@
+Index: Shop Application/src/main/java/view/shop/ShopPanel.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package view.shop;\n\nimport javafx.application.Application;\nimport javafx.fxml.FXMLLoader;\nimport javafx.scene.Scene;\nimport javafx.scene.control.ScrollPane;\nimport javafx.scene.layout.AnchorPane;\nimport javafx.scene.layout.BorderPane;\nimport javafx.scene.layout.GridPane;\nimport javafx.stage.Stage;\n\nimport java.net.URL;\n\npublic class ShopPanel extends Application {\n    public static Stage stage;\n    @Override\n    public void start(Stage stage) throws Exception {\n        ShopPanel.stage = stage;\n        URL urlShop = ShopPanel.class.getResource(\"/fxml/shopPanel.fxml\");\n        ScrollPane scrollPane = FXMLLoader.load(urlShop);\n        BorderPane borderPane = (BorderPane) scrollPane.getContent();\n        GridPane gridPane = (GridPane) borderPane.getCenter();\n\n        URL url = ShopPanel.class.getResource(\"/fxml/oneKala.fxml\");\n        AnchorPane anchorPane = FXMLLoader.load(url);\n\n        gridPane.add(anchorPane, 0, 0);\n\n        Scene scene = new Scene(scrollPane);\n        stage.setScene(scene);\n        stage.show();\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Shop Application/src/main/java/view/shop/ShopPanel.java b/Shop Application/src/main/java/view/shop/ShopPanel.java
+--- a/Shop Application/src/main/java/view/shop/ShopPanel.java	(revision 942f129932ce148b3e5141c88b21dfab284b3d28)
++++ b/Shop Application/src/main/java/view/shop/ShopPanel.java	(date 1688825531314)
+@@ -12,6 +12,7 @@
+ import java.net.URL;
+ 
+ public class ShopPanel extends Application {
++
+     public static Stage stage;
+     @Override
+     public void start(Stage stage) throws Exception {
+@@ -23,9 +24,7 @@
+ 
+         URL url = ShopPanel.class.getResource("/fxml/oneKala.fxml");
+         AnchorPane anchorPane = FXMLLoader.load(url);
+-
+         gridPane.add(anchorPane, 0, 0);
+-
+         Scene scene = new Scene(scrollPane);
+         stage.setScene(scene);
+         stage.show();
+Index: Shop Application/target/classes/fxml/shopPanel.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<?import java.lang.*?>\n<?import javafx.geometry.*?>\n<?import javafx.scene.control.*?>\n<?import javafx.scene.image.*?>\n<?import javafx.scene.layout.*?>\n<?import javafx.scene.shape.*?>\n<?import javafx.scene.text.*?>\n<?import javafx.geometry.Insets?>\n<?import javafx.scene.control.Accordion?>\n<?import javafx.scene.control.Button?>\n<?import javafx.scene.control.CheckBox?>\n<?import javafx.scene.control.Hyperlink?>\n<?import javafx.scene.control.Label?>\n<?import javafx.scene.control.MenuButton?>\n<?import javafx.scene.control.MenuItem?>\n<?import javafx.scene.control.ScrollPane?>\n<?import javafx.scene.control.Slider?>\n<?import javafx.scene.control.TextField?>\n<?import javafx.scene.control.TitledPane?>\n<?import javafx.scene.image.Image?>\n<?import javafx.scene.image.ImageView?>\n<?import javafx.scene.layout.BorderPane?>\n<?import javafx.scene.layout.ColumnConstraints?>\n<?import javafx.scene.layout.GridPane?>\n<?import javafx.scene.layout.HBox?>\n<?import javafx.scene.layout.RowConstraints?>\n<?import javafx.scene.layout.VBox?>\n<?import javafx.scene.shape.Circle?>\n<?import javafx.scene.text.Font?>\n\n<ScrollPane maxHeight=\"-Infinity\" maxWidth=\"-Infinity\" prefHeight=\"3000.0\" prefWidth=\"936.0\" stylesheets=\"@../css/style1.css\" xmlns=\"http://javafx.com/javafx/8\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"view.shop.ShopPanelController\">\n   <content>\n      <BorderPane prefHeight=\"3000.0\" prefWidth=\"936.0\">\n         <top>\n            <VBox alignment=\"TOP_CENTER\" prefHeight=\"152.0\" prefWidth=\"937.0\" BorderPane.alignment=\"CENTER\">\n               <children>\n                  <Label text=\"FUM kala\" textAlignment=\"CENTER\">\n                     <font>\n                        <Font name=\"Wawati SC Regular\" size=\"32.0\" />\n                     </font>\n                     <VBox.margin>\n                        <Insets />\n                     </VBox.margin>\n                  </Label>\n                  <HBox alignment=\"TOP_CENTER\" prefHeight=\"93.0\" prefWidth=\"911.0\">\n                     <children>\n                        <Button mnemonicParsing=\"false\" prefHeight=\"48.0\" prefWidth=\"57.0\" text=\"enter\">\n                           <HBox.margin>\n                              <Insets top=\"10.0\" />\n                           </HBox.margin>\n                        </Button>\n                        <MenuButton mnemonicParsing=\"false\" prefHeight=\"33.0\" prefWidth=\"70.0\">\n                          <items>\n                              <MenuItem mnemonicParsing=\"false\" text=\"profile\" onAction=\"#profile\">\n                                 <graphic>\n                                    <ImageView fitHeight=\"35.0\" fitWidth=\"35.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                       <image>\n                                          <Image url=\"@../image/avatar/avatar4.png\" />\n                                       </image>\n                                    </ImageView>\n                                 </graphic>\n                              </MenuItem>\n                            <MenuItem mnemonicParsing=\"false\" text=\"orders\">\n                                 <graphic>\n                                    <ImageView fitHeight=\"35.0\" fitWidth=\"35.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                       <image>\n                                          <Image url=\"@../image/icon/1686121288661.png\" />\n                                       </image></ImageView>\n                                 </graphic></MenuItem>\n                            <MenuItem mnemonicParsing=\"false\" text=\"lists\">\n                                 <graphic>\n                                    <ImageView fitHeight=\"35.0\" fitWidth=\"35.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                       <image>\n                                          <Image url=\"@../image/icon/1686121002382.png\" />\n                                       </image></ImageView>\n                                 </graphic></MenuItem>\n                             <MenuItem mnemonicParsing=\"false\" text=\"exit\">\n                                 <graphic>\n                                    <ImageView fitHeight=\"30.0\" fitWidth=\"30.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                       <image>\n                                          <Image url=\"@../image/icon/1686122375517.png\" />\n                                       </image></ImageView>\n                                 </graphic></MenuItem>\n                          </items>\n                           <graphic>\n                              <ImageView fitHeight=\"35.0\" fitWidth=\"39.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/avatar/avatar1.png\" />\n                                 </image></ImageView>\n                           </graphic>\n                           <HBox.margin>\n                              <Insets left=\"5.0\" top=\"10.0\" />\n                           </HBox.margin>\n                        </MenuButton>\n                        <TextField prefHeight=\"32.0\" prefWidth=\"354.0\" promptText=\"search...\">\n                           <HBox.margin>\n                              <Insets left=\"110.0\" top=\"20.0\" />\n                           </HBox.margin></TextField>\n                        <Button mnemonicParsing=\"false\" prefHeight=\"31.0\" prefWidth=\"46.0\">\n                           <HBox.margin>\n                              <Insets left=\"2.0\" top=\"20.0\" />\n                           </HBox.margin>\n                           <graphic>\n                              <ImageView fitHeight=\"19.0\" fitWidth=\"30.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/icon/1686120971210.png\" />\n                                 </image></ImageView>\n                           </graphic>\n                        </Button>\n                        <Button mnemonicParsing=\"false\">\n                           <graphic>\n                              <ImageView fitHeight=\"41.0\" fitWidth=\"41.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/icon/1686121267598.png\" />\n                                 </image>\n                              </ImageView>\n                           </graphic>\n                           <HBox.margin>\n                              <Insets left=\"90.0\" right=\"10.0\" top=\"10.0\" />\n                           </HBox.margin>\n                        </Button>\n                     </children>\n                     <VBox.margin>\n                        <Insets left=\"5.0\" right=\"20.0\" />\n                     </VBox.margin>\n                  </HBox>\n               </children>\n               <BorderPane.margin>\n                  <Insets />\n               </BorderPane.margin>\n            </VBox>\n         </top>\n         <center>\n            <GridPane alignment=\"TOP_CENTER\" nodeOrientation=\"LEFT_TO_RIGHT\" prefHeight=\"2758.0\" prefWidth=\"706.0\">\n              <columnConstraints>\n                <ColumnConstraints hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"20.0\" />\n                <ColumnConstraints hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"20.0\" />\n                 <ColumnConstraints hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"20.0\" />\n              </columnConstraints>\n              <rowConstraints>\n                <RowConstraints fillHeight=\"false\" maxHeight=\"-Infinity\" minHeight=\"10.0\" valignment=\"BASELINE\" vgrow=\"SOMETIMES\" />\n                <RowConstraints fillHeight=\"false\" maxHeight=\"-Infinity\" minHeight=\"10.0\" valignment=\"BASELINE\" vgrow=\"SOMETIMES\" />\n                <RowConstraints fillHeight=\"false\" maxHeight=\"-Infinity\" minHeight=\"10.0\" valignment=\"BASELINE\" vgrow=\"SOMETIMES\" />\n                 <RowConstraints fillHeight=\"false\" maxHeight=\"-Infinity\" minHeight=\"10.0\" valignment=\"BASELINE\" vgrow=\"SOMETIMES\" />\n<!--                  <RowConstraints minHeight=\"10.0\" prefHeight=\"30.0\" vgrow=\"SOMETIMES\" />-->\n<!--                  <RowConstraints minHeight=\"10.0\" prefHeight=\"30.0\" vgrow=\"SOMETIMES\" />-->\n<!--                  <RowConstraints minHeight=\"10.0\" prefHeight=\"30.0\" vgrow=\"SOMETIMES\" />-->\n              </rowConstraints>\n               <children>\n                  <Button mnemonicParsing=\"false\" prefHeight=\"395.0\" prefWidth=\"239.0\" style=\"-fx-background-color: #ffffff;\">\n                     <graphic>\n                        <VBox alignment=\"TOP_CENTER\" prefHeight=\"391.0\" prefWidth=\"225.0\">\n                           <children>\n                              <ImageView fitHeight=\"256.0\" fitWidth=\"225.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/kh1/chitoz.jpg\" />\n                                 </image>\n                              </ImageView>\n                              <Label prefHeight=\"31.0\" prefWidth=\"158.0\" text=\"Snacks chi-toz cheese\" textAlignment=\"CENTER\">\n                                 <font>\n                                    <Font name=\"Chalkboard SE Light\" size=\"15.0\" />\n                                 </font>\n                              </Label>\n                              <Label prefHeight=\"23.0\" prefWidth=\"36.0\" text=\"180 g\">\n                                 <font>\n                                    <Font name=\"Gujarati Sangam MN\" size=\"12.0\" />\n                                 </font>\n                              </Label>\n                              <HBox alignment=\"TOP_CENTER\" prefHeight=\"26.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"Brand :\">\n                                       <font>\n                                          <Font name=\"Arial Narrow\" size=\"16.0\" />\n                                       </font>\n                                    </Label>\n                                    <Label text=\"Chitoz\">\n                                       <font>\n                                          <Font name=\"Gurmukhi MN\" size=\"14.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"4.0\" top=\"2.0\" />\n                                       </HBox.margin>\n                                    </Label>\n                                 </children>\n                                 <VBox.margin>\n                                    <Insets top=\"3.0\" />\n                                 </VBox.margin>\n                              </HBox>\n                              <HBox prefHeight=\"1.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"\\$\" />\n                                    <Label prefHeight=\"37.0\" prefWidth=\"55.0\" text=\"5,99\">\n                                       <font>\n                                          <Font name=\"Apple SD Gothic Neo Regular\" size=\"28.0\" />\n                                       </font>\n                                    </Label>\n                                    <Button minWidth=\"34.0\" mnemonicParsing=\"false\" prefHeight=\"32.0\" prefWidth=\"54.0\" styleClass=\"button-input1\" text=\"+\">\n                                       <font>\n                                          <Font name=\"System Bold\" size=\"1.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"105.0\" />\n                                       </HBox.margin></Button>\n                                 </children>\n                              </HBox>\n                           </children>\n                        </VBox>\n                     </graphic>\n                  </Button>\n                  <Button mnemonicParsing=\"false\" prefHeight=\"395.0\" prefWidth=\"239.0\" style=\"-fx-background-color: #ffffff;\" GridPane.rowIndex=\"1\">\n                     <graphic>\n                        <VBox alignment=\"TOP_CENTER\" prefHeight=\"391.0\" prefWidth=\"225.0\">\n                           <children>\n                              <ImageView fitHeight=\"256.0\" fitWidth=\"225.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/kh1/chitoz.jpg\" />\n                                 </image>\n                              </ImageView>\n                              <Label prefHeight=\"31.0\" prefWidth=\"158.0\" text=\"Snacks chi-toz cheese\" textAlignment=\"CENTER\">\n                                 <font>\n                                    <Font name=\"Chalkboard SE Light\" size=\"15.0\" />\n                                 </font>\n                              </Label>\n                              <Label prefHeight=\"23.0\" prefWidth=\"36.0\" text=\"180 g\">\n                                 <font>\n                                    <Font name=\"Gujarati Sangam MN\" size=\"12.0\" />\n                                 </font>\n                              </Label>\n                              <HBox alignment=\"TOP_CENTER\" prefHeight=\"26.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"Brand :\">\n                                       <font>\n                                          <Font name=\"Arial Narrow\" size=\"16.0\" />\n                                       </font>\n                                    </Label>\n                                    <Label text=\"Chitoz\">\n                                       <font>\n                                          <Font name=\"Gurmukhi MN\" size=\"14.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"4.0\" top=\"2.0\" />\n                                       </HBox.margin>\n                                    </Label>\n                                 </children>\n                                 <VBox.margin>\n                                    <Insets top=\"3.0\" />\n                                 </VBox.margin>\n                              </HBox>\n                              <HBox prefHeight=\"1.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"\\$\" />\n                                    <Label prefHeight=\"37.0\" prefWidth=\"55.0\" text=\"5,99\">\n                                       <font>\n                                          <Font name=\"Apple SD Gothic Neo Regular\" size=\"28.0\" />\n                                       </font>\n                                    </Label>\n                                    <Button minWidth=\"34.0\" mnemonicParsing=\"false\" prefHeight=\"32.0\" prefWidth=\"54.0\" styleClass=\"button-input1\" text=\"+\">\n                                       <font>\n                                          <Font name=\"System Bold\" size=\"1.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"105.0\" />\n                                       </HBox.margin>\n                                    </Button>\n                                 </children>\n                              </HBox>\n                           </children>\n                        </VBox>\n                     </graphic>\n                  </Button>\n                  <Button mnemonicParsing=\"false\" prefHeight=\"395.0\" prefWidth=\"239.0\" style=\"-fx-background-color: #ffffff;\" GridPane.rowIndex=\"2\">\n                     <graphic>\n                        <VBox alignment=\"TOP_CENTER\" prefHeight=\"391.0\" prefWidth=\"225.0\">\n                           <children>\n                              <ImageView fitHeight=\"256.0\" fitWidth=\"225.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/kh1/chitoz.jpg\" />\n                                 </image>\n                              </ImageView>\n                              <Label prefHeight=\"31.0\" prefWidth=\"158.0\" text=\"Snacks chi-toz cheese\" textAlignment=\"CENTER\">\n                                 <font>\n                                    <Font name=\"Chalkboard SE Light\" size=\"15.0\" />\n                                 </font>\n                              </Label>\n                              <Label prefHeight=\"23.0\" prefWidth=\"36.0\" text=\"180 g\">\n                                 <font>\n                                    <Font name=\"Gujarati Sangam MN\" size=\"12.0\" />\n                                 </font>\n                              </Label>\n                              <HBox alignment=\"TOP_CENTER\" prefHeight=\"26.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"Brand :\">\n                                       <font>\n                                          <Font name=\"Arial Narrow\" size=\"16.0\" />\n                                       </font>\n                                    </Label>\n                                    <Label text=\"Chitoz\">\n                                       <font>\n                                          <Font name=\"Gurmukhi MN\" size=\"14.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"4.0\" top=\"2.0\" />\n                                       </HBox.margin>\n                                    </Label>\n                                 </children>\n                                 <VBox.margin>\n                                    <Insets top=\"3.0\" />\n                                 </VBox.margin>\n                              </HBox>\n                              <HBox prefHeight=\"1.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"\\$\" />\n                                    <Label prefHeight=\"37.0\" prefWidth=\"55.0\" text=\"5,99\">\n                                       <font>\n                                          <Font name=\"Apple SD Gothic Neo Regular\" size=\"28.0\" />\n                                       </font>\n                                    </Label>\n                                    <Button minWidth=\"34.0\" mnemonicParsing=\"false\" prefHeight=\"32.0\" prefWidth=\"54.0\" styleClass=\"button-input1\" text=\"+\">\n                                       <font>\n                                          <Font name=\"System Bold\" size=\"1.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"105.0\" />\n                                       </HBox.margin>\n                                    </Button>\n                                 </children>\n                              </HBox>\n                           </children>\n                        </VBox>\n                     </graphic>\n                  </Button>\n                  <Button mnemonicParsing=\"false\" prefHeight=\"395.0\" prefWidth=\"239.0\" style=\"-fx-background-color: #ffffff;\" GridPane.columnIndex=\"1\">\n                     <graphic>\n                        <VBox alignment=\"TOP_CENTER\" prefHeight=\"391.0\" prefWidth=\"225.0\">\n                           <children>\n                              <ImageView fitHeight=\"256.0\" fitWidth=\"225.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/kh1/chitoz.jpg\" />\n                                 </image>\n                              </ImageView>\n                              <Label prefHeight=\"31.0\" prefWidth=\"158.0\" text=\"Snacks chi-toz cheese\" textAlignment=\"CENTER\">\n                                 <font>\n                                    <Font name=\"Chalkboard SE Light\" size=\"15.0\" />\n                                 </font>\n                              </Label>\n                              <Label prefHeight=\"23.0\" prefWidth=\"36.0\" text=\"180 g\">\n                                 <font>\n                                    <Font name=\"Gujarati Sangam MN\" size=\"12.0\" />\n                                 </font>\n                              </Label>\n                              <HBox alignment=\"TOP_CENTER\" prefHeight=\"26.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"Brand :\">\n                                       <font>\n                                          <Font name=\"Arial Narrow\" size=\"16.0\" />\n                                       </font>\n                                    </Label>\n                                    <Label text=\"Chitoz\">\n                                       <font>\n                                          <Font name=\"Gurmukhi MN\" size=\"14.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"4.0\" top=\"2.0\" />\n                                       </HBox.margin>\n                                    </Label>\n                                 </children>\n                                 <VBox.margin>\n                                    <Insets top=\"3.0\" />\n                                 </VBox.margin>\n                              </HBox>\n                              <HBox prefHeight=\"1.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"\\$\" />\n                                    <Label prefHeight=\"37.0\" prefWidth=\"55.0\" text=\"5,99\">\n                                       <font>\n                                          <Font name=\"Apple SD Gothic Neo Regular\" size=\"28.0\" />\n                                       </font>\n                                    </Label>\n                                    <Button minWidth=\"34.0\" mnemonicParsing=\"false\" prefHeight=\"32.0\" prefWidth=\"54.0\" styleClass=\"button-input1\" text=\"+\">\n                                       <font>\n                                          <Font name=\"System Bold\" size=\"1.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"105.0\" />\n                                       </HBox.margin>\n                                    </Button>\n                                 </children>\n                              </HBox>\n                           </children>\n                        </VBox>\n                     </graphic>\n                  </Button>\n                  <Button mnemonicParsing=\"false\" prefHeight=\"395.0\" prefWidth=\"239.0\" style=\"-fx-background-color: #ffffff;\" GridPane.columnIndex=\"2\">\n                     <graphic>\n                        <VBox alignment=\"TOP_CENTER\" prefHeight=\"391.0\" prefWidth=\"225.0\">\n                           <children>\n                              <ImageView fitHeight=\"256.0\" fitWidth=\"225.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/kh1/chitoz.jpg\" />\n                                 </image>\n                              </ImageView>\n                              <Label prefHeight=\"31.0\" prefWidth=\"158.0\" text=\"Snacks chi-toz cheese\" textAlignment=\"CENTER\">\n                                 <font>\n                                    <Font name=\"Chalkboard SE Light\" size=\"15.0\" />\n                                 </font>\n                              </Label>\n                              <Label prefHeight=\"23.0\" prefWidth=\"36.0\" text=\"180 g\">\n                                 <font>\n                                    <Font name=\"Gujarati Sangam MN\" size=\"12.0\" />\n                                 </font>\n                              </Label>\n                              <HBox alignment=\"TOP_CENTER\" prefHeight=\"26.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"Brand :\">\n                                       <font>\n                                          <Font name=\"Arial Narrow\" size=\"16.0\" />\n                                       </font>\n                                    </Label>\n                                    <Label text=\"Chitoz\">\n                                       <font>\n                                          <Font name=\"Gurmukhi MN\" size=\"14.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"4.0\" top=\"2.0\" />\n                                       </HBox.margin>\n                                    </Label>\n                                 </children>\n                                 <VBox.margin>\n                                    <Insets top=\"3.0\" />\n                                 </VBox.margin>\n                              </HBox>\n                              <HBox prefHeight=\"1.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"\\$\" />\n                                    <Label prefHeight=\"37.0\" prefWidth=\"55.0\" text=\"5,99\">\n                                       <font>\n                                          <Font name=\"Apple SD Gothic Neo Regular\" size=\"28.0\" />\n                                       </font>\n                                    </Label>\n                                    <Button minWidth=\"34.0\" mnemonicParsing=\"false\" prefHeight=\"32.0\" prefWidth=\"54.0\" styleClass=\"button-input1\" text=\"+\">\n                                       <font>\n                                          <Font name=\"System Bold\" size=\"1.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"105.0\" />\n                                       </HBox.margin>\n                                    </Button>\n                                 </children>\n                              </HBox>\n                           </children>\n                        </VBox>\n                     </graphic>\n                  </Button>\n                  <Button mnemonicParsing=\"false\" prefHeight=\"395.0\" prefWidth=\"239.0\" style=\"-fx-background-color: #ffffff;\" GridPane.columnIndex=\"1\" GridPane.rowIndex=\"1\">\n                     <graphic>\n                        <VBox alignment=\"TOP_CENTER\" prefHeight=\"391.0\" prefWidth=\"225.0\">\n                           <children>\n                              <ImageView fitHeight=\"256.0\" fitWidth=\"225.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/kh1/chitoz.jpg\" />\n                                 </image>\n                              </ImageView>\n                              <Label prefHeight=\"31.0\" prefWidth=\"158.0\" text=\"Snacks chi-toz cheese\" textAlignment=\"CENTER\">\n                                 <font>\n                                    <Font name=\"Chalkboard SE Light\" size=\"15.0\" />\n                                 </font>\n                              </Label>\n                              <Label prefHeight=\"23.0\" prefWidth=\"36.0\" text=\"180 g\">\n                                 <font>\n                                    <Font name=\"Gujarati Sangam MN\" size=\"12.0\" />\n                                 </font>\n                              </Label>\n                              <HBox alignment=\"TOP_CENTER\" prefHeight=\"26.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"Brand :\">\n                                       <font>\n                                          <Font name=\"Arial Narrow\" size=\"16.0\" />\n                                       </font>\n                                    </Label>\n                                    <Label text=\"Chitoz\">\n                                       <font>\n                                          <Font name=\"Gurmukhi MN\" size=\"14.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"4.0\" top=\"2.0\" />\n                                       </HBox.margin>\n                                    </Label>\n                                 </children>\n                                 <VBox.margin>\n                                    <Insets top=\"3.0\" />\n                                 </VBox.margin>\n                              </HBox>\n                              <HBox prefHeight=\"1.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"\\$\" />\n                                    <Label prefHeight=\"37.0\" prefWidth=\"55.0\" text=\"5,99\">\n                                       <font>\n                                          <Font name=\"Apple SD Gothic Neo Regular\" size=\"28.0\" />\n                                       </font>\n                                    </Label>\n                                    <Button minWidth=\"34.0\" mnemonicParsing=\"false\" prefHeight=\"32.0\" prefWidth=\"54.0\" styleClass=\"button-input1\" text=\"+\">\n                                       <font>\n                                          <Font name=\"System Bold\" size=\"1.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"105.0\" />\n                                       </HBox.margin>\n                                    </Button>\n                                 </children>\n                              </HBox>\n                           </children>\n                        </VBox>\n                     </graphic>\n                  </Button>\n                  <Button mnemonicParsing=\"false\" prefHeight=\"395.0\" prefWidth=\"239.0\" style=\"-fx-background-color: #ffffff;\" GridPane.columnIndex=\"2\" GridPane.rowIndex=\"1\">\n                     <graphic>\n                        <VBox alignment=\"TOP_CENTER\" prefHeight=\"391.0\" prefWidth=\"225.0\">\n                           <children>\n                              <ImageView fitHeight=\"256.0\" fitWidth=\"225.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                 <image>\n                                    <Image url=\"@../image/kh1/chitoz.jpg\" />\n                                 </image>\n                              </ImageView>\n                              <Label prefHeight=\"31.0\" prefWidth=\"158.0\" text=\"Snacks chi-toz cheese\" textAlignment=\"CENTER\">\n                                 <font>\n                                    <Font name=\"Chalkboard SE Light\" size=\"15.0\" />\n                                 </font>\n                              </Label>\n                              <Label prefHeight=\"23.0\" prefWidth=\"36.0\" text=\"180 g\">\n                                 <font>\n                                    <Font name=\"Gujarati Sangam MN\" size=\"12.0\" />\n                                 </font>\n                              </Label>\n                              <HBox alignment=\"TOP_CENTER\" prefHeight=\"26.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"Brand :\">\n                                       <font>\n                                          <Font name=\"Arial Narrow\" size=\"16.0\" />\n                                       </font>\n                                    </Label>\n                                    <Label text=\"Chitoz\">\n                                       <font>\n                                          <Font name=\"Gurmukhi MN\" size=\"14.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"4.0\" top=\"2.0\" />\n                                       </HBox.margin>\n                                    </Label>\n                                 </children>\n                                 <VBox.margin>\n                                    <Insets top=\"3.0\" />\n                                 </VBox.margin>\n                              </HBox>\n                              <HBox prefHeight=\"1.0\" prefWidth=\"225.0\">\n                                 <children>\n                                    <Label text=\"\\$\" />\n                                    <Label prefHeight=\"37.0\" prefWidth=\"55.0\" text=\"5,99\">\n                                       <font>\n                                          <Font name=\"Apple SD Gothic Neo Regular\" size=\"28.0\" />\n                                       </font>\n                                    </Label>\n                                    <Button minWidth=\"34.0\" mnemonicParsing=\"false\" prefHeight=\"32.0\" prefWidth=\"54.0\" styleClass=\"button-input1\" text=\"+\">\n                                       <font>\n                                          <Font name=\"System Bold\" size=\"1.0\" />\n                                       </font>\n                                       <HBox.margin>\n                                          <Insets left=\"105.0\" />\n                                       </HBox.margin>\n                                    </Button>\n                                 </children>\n                              </HBox>\n                           </children>\n                        </VBox>\n                     </graphic>\n                  </Button>\n               </children>\n               <BorderPane.margin>\n                  <Insets left=\"10.0\" />\n               </BorderPane.margin>\n               <padding>\n                  <Insets bottom=\"5.0\" left=\"5.0\" right=\"5.0\" top=\"5.0\" />\n               </padding>\n            </GridPane>\n         </center>\n         <left>\n            <VBox prefHeight=\"2871.0\" prefWidth=\"211.0\" BorderPane.alignment=\"CENTER\">\n               <BorderPane.margin>\n                  <Insets />\n               </BorderPane.margin>\n               <children>\n                  <HBox prefHeight=\"51.0\" prefWidth=\"211.0\">\n                     <children>\n                        <Label prefHeight=\"40.0\" prefWidth=\"129.0\" text=\"Filters\">\n                           <font>\n                              <Font name=\"Canela Text Regular\" size=\"23.0\" />\n                           </font>\n                           <HBox.margin>\n                              <Insets left=\"10.0\" top=\"5.0\" />\n                           </HBox.margin>\n                        </Label>\n                        <Hyperlink text=\"reset\" textFill=\"RED\">\n                           <font>\n                              <Font name=\"Toppan Bunkyu Gothic Demibold\" size=\"14.0\" />\n                           </font>\n                           <HBox.margin>\n                              <Insets top=\"15.0\" />\n                           </HBox.margin>\n                        </Hyperlink>\n                     </children>\n                  </HBox>\n                  <Accordion>\n                    <panes>\n                      <TitledPane animated=\"false\" prefHeight=\"247.0\" prefWidth=\"211.0\" text=\"Brands\">\n                        <content>\n                              <VBox>\n                                 <children>\n                                    <HBox prefHeight=\"32.0\" prefWidth=\"208.0\">\n                                       <VBox.margin>\n                                          <Insets left=\"-10.0\" right=\"-10.0\" />\n                                       </VBox.margin>\n                                       <children>\n                                          <TextField>\n                                             <HBox.margin>\n                                                <Insets left=\"5.0\" />\n                                             </HBox.margin></TextField>\n                                          <Button mnemonicParsing=\"false\">\n                                             <graphic>\n                                                <ImageView fitHeight=\"18.0\" fitWidth=\"17.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\n                                                   <image>\n                                                      <Image url=\"@../image/icon/1686120971210.png\" />\n                                                   </image>\n                                                </ImageView>\n                                             </graphic>\n                                             <HBox.margin>\n                                                <Insets left=\"2.0\" />\n                                             </HBox.margin>\n                                          </Button>\n                                       </children>\n                                    </HBox>\n                                    <CheckBox mnemonicParsing=\"false\" text=\"chitoz\">\n                                       <VBox.margin>\n                                          <Insets top=\"5.0\" />\n                                       </VBox.margin>\n                                       <font>\n                                          <Font name=\"Farah Regular\" size=\"14.0\" />\n                                       </font>\n                                    </CheckBox>\n                                    <CheckBox mnemonicParsing=\"false\" text=\"yamiyami\">\n                                       <font>\n                                          <Font size=\"14.0\" />\n                                       </font>\n                                       <VBox.margin>\n                                          <Insets top=\"4.0\" />\n                                       </VBox.margin>\n                                    </CheckBox>\n                                    <CheckBox mnemonicParsing=\"false\" text=\"chakelz\">\n                                       <font>\n                                          <Font name=\"Geneva\" size=\"14.0\" />\n                                       </font>\n                                       <VBox.margin>\n                                          <Insets top=\"4.0\" />\n                                       </VBox.margin>\n                                    </CheckBox>\n                                    <CheckBox mnemonicParsing=\"false\" text=\"CheckBox\">\n                                       <VBox.margin>\n                                          <Insets top=\"4.0\" />\n                                       </VBox.margin>\n                                    </CheckBox>\n                                    <CheckBox mnemonicParsing=\"false\" text=\"CheckBox\">\n                                       <VBox.margin>\n                                          <Insets top=\"4.0\" />\n                                       </VBox.margin>\n                                    </CheckBox>\n                                 </children>\n                              </VBox>\n                        </content>\n                           <graphic>\n                              <Circle fill=\"DODGERBLUE\" radius=\"3.0\" stroke=\"BLACK\" strokeType=\"INSIDE\" />\n                           </graphic>\n                      </TitledPane>\n                      <TitledPane animated=\"false\" prefHeight=\"110.0\" prefWidth=\"211.0\" text=\"Price range\">\n                        <content>\n                              <VBox prefHeight=\"212.0\" prefWidth=\"209.0\">\n                                 <children>\n                                    <HBox prefHeight=\"34.0\" prefWidth=\"188.0\">\n                                       <children>\n                                          <TextField promptText=\"  min_price\" style=\"-fx-border-width: 0 0 2 0;\" />\n                                          <Label prefHeight=\"28.0\" prefWidth=\"16.0\" text=\"\\$\" textFill=\"#1bab25\">\n                                             <font>\n                                                <Font size=\"23.0\" />\n                                             </font>\n                                             <HBox.margin>\n                                                <Insets left=\"7.0\" />\n                                             </HBox.margin>\n                                          </Label>\n                                       </children>\n                                    </HBox>\n                                    <Label prefHeight=\"28.0\" prefWidth=\"26.0\" text=\"to\" textFill=\"#ab501f\">\n                                       <font>\n                                          <Font size=\"20.0\" />\n                                       </font>\n                                       <VBox.margin>\n                                          <Insets left=\"7.0\" />\n                                       </VBox.margin>\n                                    </Label>\n                                    <HBox prefHeight=\"46.0\" prefWidth=\"188.0\">\n                                       <children>\n                                          <TextField promptText=\"MAX_price\" style=\"-fx-border-width: 0 0 2 0;\" />\n                                          <Label text=\"\\$\" textFill=\"#1bab25\">\n                                             <font>\n                                                <Font size=\"23.0\" />\n                                             </font>\n                                             <HBox.margin>\n                                                <Insets left=\"7.0\" />\n                                             </HBox.margin>\n                                          </Label>\n                                       </children>\n                                       <VBox.margin>\n                                          <Insets top=\"4.0\" />\n                                       </VBox.margin>\n                                    </HBox>\n                                    <Slider prefHeight=\"76.0\" prefWidth=\"188.0\">\n                                       <VBox.margin>\n                                          <Insets top=\"7.0\" />\n                                       </VBox.margin>\n                                    </Slider>\n                                 </children>\n                              </VBox>\n                        </content>\n                           <graphic>\n                              <Circle fill=\"#1bab25\" radius=\"3.0\" stroke=\"BLACK\" strokeType=\"INSIDE\" />\n                           </graphic>\n                      </TitledPane>\n                      <TitledPane animated=\"false\" text=\"Customer Reviews\">\n                           <content>\n                              <VBox prefHeight=\"200.0\" prefWidth=\"100.0\" />\n                           </content>\n                      </TitledPane>\n                    </panes>\n                  </Accordion>\n               </children>\n            </VBox>\n         </left></BorderPane>\n   </content>\n</ScrollPane>\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Shop Application/target/classes/fxml/shopPanel.fxml b/Shop Application/target/classes/fxml/shopPanel.fxml
+--- a/Shop Application/target/classes/fxml/shopPanel.fxml	(revision 942f129932ce148b3e5141c88b21dfab284b3d28)
++++ b/Shop Application/target/classes/fxml/shopPanel.fxml	(date 1688824084259)
+@@ -1,12 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import java.lang.*?>
+-<?import javafx.geometry.*?>
+-<?import javafx.scene.control.*?>
+-<?import javafx.scene.image.*?>
+-<?import javafx.scene.layout.*?>
+-<?import javafx.scene.shape.*?>
+-<?import javafx.scene.text.*?>
+ <?import javafx.geometry.Insets?>
+ <?import javafx.scene.control.Accordion?>
+ <?import javafx.scene.control.Button?>
+@@ -30,7 +23,7 @@
+ <?import javafx.scene.shape.Circle?>
+ <?import javafx.scene.text.Font?>
+ 
+-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.ShopPanelController">
++<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.ShopPanelController">
+    <content>
+       <BorderPane prefHeight="3000.0" prefWidth="936.0">
+          <top>
+@@ -53,7 +46,7 @@
+                         </Button>
+                         <MenuButton mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0">
+                           <items>
+-                              <MenuItem mnemonicParsing="false" text="profile" onAction="#profile">
++                              <MenuItem mnemonicParsing="false" onAction="#profile" text="profile">
+                                  <graphic>
+                                     <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+@@ -148,434 +141,6 @@
+ <!--                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />-->
+ <!--                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />-->
+               </rowConstraints>
+-               <children>
+-                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;">
+-                     <graphic>
+-                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+-                           <children>
+-                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+-                                 <image>
+-                                    <Image url="@../image/kh1/chitoz.jpg" />
+-                                 </image>
+-                              </ImageView>
+-                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+-                                 <font>
+-                                    <Font name="Chalkboard SE Light" size="15.0" />
+-                                 </font>
+-                              </Label>
+-                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+-                                 <font>
+-                                    <Font name="Gujarati Sangam MN" size="12.0" />
+-                                 </font>
+-                              </Label>
+-                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="Brand :">
+-                                       <font>
+-                                          <Font name="Arial Narrow" size="16.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Label text="Chitoz">
+-                                       <font>
+-                                          <Font name="Gurmukhi MN" size="14.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="4.0" top="2.0" />
+-                                       </HBox.margin>
+-                                    </Label>
+-                                 </children>
+-                                 <VBox.margin>
+-                                    <Insets top="3.0" />
+-                                 </VBox.margin>
+-                              </HBox>
+-                              <HBox prefHeight="1.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="\$" />
+-                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+-                                       <font>
+-                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+-                                       <font>
+-                                          <Font name="System Bold" size="1.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="105.0" />
+-                                       </HBox.margin></Button>
+-                                 </children>
+-                              </HBox>
+-                           </children>
+-                        </VBox>
+-                     </graphic>
+-                  </Button>
+-                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="1">
+-                     <graphic>
+-                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+-                           <children>
+-                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+-                                 <image>
+-                                    <Image url="@../image/kh1/chitoz.jpg" />
+-                                 </image>
+-                              </ImageView>
+-                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+-                                 <font>
+-                                    <Font name="Chalkboard SE Light" size="15.0" />
+-                                 </font>
+-                              </Label>
+-                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+-                                 <font>
+-                                    <Font name="Gujarati Sangam MN" size="12.0" />
+-                                 </font>
+-                              </Label>
+-                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="Brand :">
+-                                       <font>
+-                                          <Font name="Arial Narrow" size="16.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Label text="Chitoz">
+-                                       <font>
+-                                          <Font name="Gurmukhi MN" size="14.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="4.0" top="2.0" />
+-                                       </HBox.margin>
+-                                    </Label>
+-                                 </children>
+-                                 <VBox.margin>
+-                                    <Insets top="3.0" />
+-                                 </VBox.margin>
+-                              </HBox>
+-                              <HBox prefHeight="1.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="\$" />
+-                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+-                                       <font>
+-                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+-                                       <font>
+-                                          <Font name="System Bold" size="1.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="105.0" />
+-                                       </HBox.margin>
+-                                    </Button>
+-                                 </children>
+-                              </HBox>
+-                           </children>
+-                        </VBox>
+-                     </graphic>
+-                  </Button>
+-                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.rowIndex="2">
+-                     <graphic>
+-                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+-                           <children>
+-                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+-                                 <image>
+-                                    <Image url="@../image/kh1/chitoz.jpg" />
+-                                 </image>
+-                              </ImageView>
+-                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+-                                 <font>
+-                                    <Font name="Chalkboard SE Light" size="15.0" />
+-                                 </font>
+-                              </Label>
+-                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+-                                 <font>
+-                                    <Font name="Gujarati Sangam MN" size="12.0" />
+-                                 </font>
+-                              </Label>
+-                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="Brand :">
+-                                       <font>
+-                                          <Font name="Arial Narrow" size="16.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Label text="Chitoz">
+-                                       <font>
+-                                          <Font name="Gurmukhi MN" size="14.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="4.0" top="2.0" />
+-                                       </HBox.margin>
+-                                    </Label>
+-                                 </children>
+-                                 <VBox.margin>
+-                                    <Insets top="3.0" />
+-                                 </VBox.margin>
+-                              </HBox>
+-                              <HBox prefHeight="1.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="\$" />
+-                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+-                                       <font>
+-                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+-                                       <font>
+-                                          <Font name="System Bold" size="1.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="105.0" />
+-                                       </HBox.margin>
+-                                    </Button>
+-                                 </children>
+-                              </HBox>
+-                           </children>
+-                        </VBox>
+-                     </graphic>
+-                  </Button>
+-                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1">
+-                     <graphic>
+-                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+-                           <children>
+-                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+-                                 <image>
+-                                    <Image url="@../image/kh1/chitoz.jpg" />
+-                                 </image>
+-                              </ImageView>
+-                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+-                                 <font>
+-                                    <Font name="Chalkboard SE Light" size="15.0" />
+-                                 </font>
+-                              </Label>
+-                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+-                                 <font>
+-                                    <Font name="Gujarati Sangam MN" size="12.0" />
+-                                 </font>
+-                              </Label>
+-                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="Brand :">
+-                                       <font>
+-                                          <Font name="Arial Narrow" size="16.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Label text="Chitoz">
+-                                       <font>
+-                                          <Font name="Gurmukhi MN" size="14.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="4.0" top="2.0" />
+-                                       </HBox.margin>
+-                                    </Label>
+-                                 </children>
+-                                 <VBox.margin>
+-                                    <Insets top="3.0" />
+-                                 </VBox.margin>
+-                              </HBox>
+-                              <HBox prefHeight="1.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="\$" />
+-                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+-                                       <font>
+-                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+-                                       <font>
+-                                          <Font name="System Bold" size="1.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="105.0" />
+-                                       </HBox.margin>
+-                                    </Button>
+-                                 </children>
+-                              </HBox>
+-                           </children>
+-                        </VBox>
+-                     </graphic>
+-                  </Button>
+-                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2">
+-                     <graphic>
+-                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+-                           <children>
+-                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+-                                 <image>
+-                                    <Image url="@../image/kh1/chitoz.jpg" />
+-                                 </image>
+-                              </ImageView>
+-                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+-                                 <font>
+-                                    <Font name="Chalkboard SE Light" size="15.0" />
+-                                 </font>
+-                              </Label>
+-                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+-                                 <font>
+-                                    <Font name="Gujarati Sangam MN" size="12.0" />
+-                                 </font>
+-                              </Label>
+-                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="Brand :">
+-                                       <font>
+-                                          <Font name="Arial Narrow" size="16.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Label text="Chitoz">
+-                                       <font>
+-                                          <Font name="Gurmukhi MN" size="14.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="4.0" top="2.0" />
+-                                       </HBox.margin>
+-                                    </Label>
+-                                 </children>
+-                                 <VBox.margin>
+-                                    <Insets top="3.0" />
+-                                 </VBox.margin>
+-                              </HBox>
+-                              <HBox prefHeight="1.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="\$" />
+-                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+-                                       <font>
+-                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+-                                       <font>
+-                                          <Font name="System Bold" size="1.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="105.0" />
+-                                       </HBox.margin>
+-                                    </Button>
+-                                 </children>
+-                              </HBox>
+-                           </children>
+-                        </VBox>
+-                     </graphic>
+-                  </Button>
+-                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+-                     <graphic>
+-                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+-                           <children>
+-                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+-                                 <image>
+-                                    <Image url="@../image/kh1/chitoz.jpg" />
+-                                 </image>
+-                              </ImageView>
+-                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+-                                 <font>
+-                                    <Font name="Chalkboard SE Light" size="15.0" />
+-                                 </font>
+-                              </Label>
+-                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+-                                 <font>
+-                                    <Font name="Gujarati Sangam MN" size="12.0" />
+-                                 </font>
+-                              </Label>
+-                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="Brand :">
+-                                       <font>
+-                                          <Font name="Arial Narrow" size="16.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Label text="Chitoz">
+-                                       <font>
+-                                          <Font name="Gurmukhi MN" size="14.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="4.0" top="2.0" />
+-                                       </HBox.margin>
+-                                    </Label>
+-                                 </children>
+-                                 <VBox.margin>
+-                                    <Insets top="3.0" />
+-                                 </VBox.margin>
+-                              </HBox>
+-                              <HBox prefHeight="1.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="\$" />
+-                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+-                                       <font>
+-                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+-                                       <font>
+-                                          <Font name="System Bold" size="1.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="105.0" />
+-                                       </HBox.margin>
+-                                    </Button>
+-                                 </children>
+-                              </HBox>
+-                           </children>
+-                        </VBox>
+-                     </graphic>
+-                  </Button>
+-                  <Button mnemonicParsing="false" prefHeight="395.0" prefWidth="239.0" style="-fx-background-color: #ffffff;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+-                     <graphic>
+-                        <VBox alignment="TOP_CENTER" prefHeight="391.0" prefWidth="225.0">
+-                           <children>
+-                              <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+-                                 <image>
+-                                    <Image url="@../image/kh1/chitoz.jpg" />
+-                                 </image>
+-                              </ImageView>
+-                              <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+-                                 <font>
+-                                    <Font name="Chalkboard SE Light" size="15.0" />
+-                                 </font>
+-                              </Label>
+-                              <Label prefHeight="23.0" prefWidth="36.0" text="180 g">
+-                                 <font>
+-                                    <Font name="Gujarati Sangam MN" size="12.0" />
+-                                 </font>
+-                              </Label>
+-                              <HBox alignment="TOP_CENTER" prefHeight="26.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="Brand :">
+-                                       <font>
+-                                          <Font name="Arial Narrow" size="16.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Label text="Chitoz">
+-                                       <font>
+-                                          <Font name="Gurmukhi MN" size="14.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="4.0" top="2.0" />
+-                                       </HBox.margin>
+-                                    </Label>
+-                                 </children>
+-                                 <VBox.margin>
+-                                    <Insets top="3.0" />
+-                                 </VBox.margin>
+-                              </HBox>
+-                              <HBox prefHeight="1.0" prefWidth="225.0">
+-                                 <children>
+-                                    <Label text="\$" />
+-                                    <Label prefHeight="37.0" prefWidth="55.0" text="5,99">
+-                                       <font>
+-                                          <Font name="Apple SD Gothic Neo Regular" size="28.0" />
+-                                       </font>
+-                                    </Label>
+-                                    <Button minWidth="34.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="54.0" styleClass="button-input1" text="+">
+-                                       <font>
+-                                          <Font name="System Bold" size="1.0" />
+-                                       </font>
+-                                       <HBox.margin>
+-                                          <Insets left="105.0" />
+-                                       </HBox.margin>
+-                                    </Button>
+-                                 </children>
+-                              </HBox>
+-                           </children>
+-                        </VBox>
+-                     </graphic>
+-                  </Button>
+-               </children>
+                <BorderPane.margin>
+                   <Insets left="10.0" />
+                </BorderPane.margin>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"e002a54b-b128-4beb-abb8-3c0b9d457d81\" name=\"Changes\" comment=\"solve captcha problem\">\n      <change afterPath=\"$PROJECT_DIR$/Shop Application/src/main/java/view/shop/OneKalaController.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanelController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanelController.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Shop Application/target/classes/view/profile/ProfileMenuController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Shop Application/target/classes/view/profile/ProfileMenuController.class\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanelController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanelController.class\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"FxmlFile\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"MavenImportPreferences\">\n    <option name=\"generalSettings\">\n      <MavenGeneralSettings>\n        <option name=\"useMavenConfig\" value=\"true\" />\n      </MavenGeneralSettings>\n    </option>\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2S178Aky5yR2xl5Plo75ueNkMHo\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"project.structure.last.edited\" value=\"Modules\" />\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\n  </component>\n  <component name=\"RunManager\" selected=\"Application.LoginMenu\">\n    <configuration name=\"CashPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.pay.CashPage\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.pay.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"LoginMenu\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.login.LoginMenu\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.login.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"PaymentPage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.pay.PaymentPage\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.pay.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Portalpage\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.pay.Portalpage\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.pay.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"ShopPanel\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"view.shop.ShopPanel\" />\n      <module name=\"ShopApplication\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"view.shop.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.LoginMenu\" />\n        <item itemvalue=\"Application.ShopPanel\" />\n        <item itemvalue=\"Application.Portalpage\" />\n        <item itemvalue=\"Application.PaymentPage\" />\n        <item itemvalue=\"Application.CashPage\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"e002a54b-b128-4beb-abb8-3c0b9d457d81\" name=\"Changes\" comment=\"\" />\n      <created>1688302072052</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1688302072052</updated>\n      <workItem from=\"1688302073847\" duration=\"3417000\" />\n      <workItem from=\"1688305982524\" duration=\"15017000\" />\n      <workItem from=\"1688360688441\" duration=\"7902000\" />\n      <workItem from=\"1688369747715\" duration=\"72000\" />\n      <workItem from=\"1688370905225\" duration=\"505000\" />\n      <workItem from=\"1688379787476\" duration=\"4464000\" />\n      <workItem from=\"1688423858801\" duration=\"24491000\" />\n      <workItem from=\"1688591426499\" duration=\"57000\" />\n      <workItem from=\"1688716967336\" duration=\"1492000\" />\n      <workItem from=\"1688725270368\" duration=\"472000\" />\n      <workItem from=\"1688731834870\" duration=\"1633000\" />\n      <workItem from=\"1688793210512\" duration=\"5418000\" />\n      <workItem from=\"1688817445367\" duration=\"3964000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"testting git v02\">\n      <created>1688302440225</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688302440225</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"make send and receive info\">\n      <created>1688305301601</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688305301601</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Cart\">\n      <created>1688333084738</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688333084738</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"Cart + captch\">\n      <created>1688333231931</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688333231931</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"captcha003 + if moshkel dare\">\n      <created>1688422255335</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688422255335</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"captcha004 + endPage\">\n      <created>1688424743545</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688424743546</updated>\n    </task>\n    <task id=\"LOCAL-00007\" summary=\"captcha005 + captchareload\">\n      <created>1688425330140</created>\n      <option name=\"number\" value=\"00007\" />\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688425330141</updated>\n    </task>\n    <task id=\"LOCAL-00008\" summary=\"Login sign in + Login captcha\">\n      <created>1688436168917</created>\n      <option name=\"number\" value=\"00008\" />\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688436168918</updated>\n    </task>\n    <task id=\"LOCAL-00009\" summary=\"Login sign in + Login captcha (001)\">\n      <created>1688436955945</created>\n      <option name=\"number\" value=\"00009\" />\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688436955945</updated>\n    </task>\n    <task id=\"LOCAL-00010\" summary=\"Login sign in + Login captcha (002)\">\n      <created>1688437362921</created>\n      <option name=\"number\" value=\"00010\" />\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688437362922</updated>\n    </task>\n    <task id=\"LOCAL-00011\" summary=\"Login sign up.fxml\">\n      <created>1688443661276</created>\n      <option name=\"number\" value=\"00011\" />\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688443661276</updated>\n    </task>\n    <task id=\"LOCAL-00012\" summary=\"Login sign up + ...\">\n      <created>1688448238839</created>\n      <option name=\"number\" value=\"00012\" />\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688448238839</updated>\n    </task>\n    <task id=\"LOCAL-00013\" summary=\"kh\">\n      <created>1688717570874</created>\n      <option name=\"number\" value=\"00013\" />\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688717570874</updated>\n    </task>\n    <task id=\"LOCAL-00014\" summary=\"kh\">\n      <created>1688717686090</created>\n      <option name=\"number\" value=\"00014\" />\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688717686091</updated>\n    </task>\n    <task id=\"LOCAL-00015\" summary=\"solving problems\">\n      <created>1688725735486</created>\n      <option name=\"number\" value=\"00015\" />\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688725735486</updated>\n    </task>\n    <task id=\"LOCAL-00016\" summary=\"solving database bogs\">\n      <created>1688797383664</created>\n      <option name=\"number\" value=\"00016\" />\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688797383664</updated>\n    </task>\n    <task id=\"LOCAL-00017\" summary=\"profile Action\">\n      <created>1688807355178</created>\n      <option name=\"number\" value=\"00017\" />\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688807355178</updated>\n    </task>\n    <task id=\"LOCAL-00018\" summary=\"profile Action001\">\n      <created>1688807544376</created>\n      <option name=\"number\" value=\"00018\" />\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688807544376</updated>\n    </task>\n    <task id=\"LOCAL-00019\" summary=\"changes v0.1\">\n      <created>1688807956227</created>\n      <option name=\"number\" value=\"00019\" />\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688807956227</updated>\n    </task>\n    <task id=\"LOCAL-00020\" summary=\"make profile\">\n      <created>1688814768600</created>\n      <option name=\"number\" value=\"00020\" />\n      <option name=\"presentableId\" value=\"LOCAL-00020\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688814768600</updated>\n    </task>\n    <task id=\"LOCAL-00021\" summary=\"solve captcha problem\">\n      <created>1688816431967</created>\n      <option name=\"number\" value=\"00021\" />\n      <option name=\"presentableId\" value=\"LOCAL-00021\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1688816431967</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"22\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"testting git v02\" />\n    <MESSAGE value=\"make send and receive info\" />\n    <MESSAGE value=\"Cart\" />\n    <MESSAGE value=\"Cart + captch\" />\n    <MESSAGE value=\"captcha003 + if moshkel dare\" />\n    <MESSAGE value=\"captcha004 + endPage\" />\n    <MESSAGE value=\"captcha005 + captchareload\" />\n    <MESSAGE value=\"Login sign in + Login captcha\" />\n    <MESSAGE value=\"Login sign in + Login captcha (001)\" />\n    <MESSAGE value=\"Login sign in + Login captcha (002)\" />\n    <MESSAGE value=\"Login sign up.fxml\" />\n    <MESSAGE value=\"Login sign up + ...\" />\n    <MESSAGE value=\"kh\" />\n    <MESSAGE value=\"solving problems\" />\n    <MESSAGE value=\"solving database bogs\" />\n    <MESSAGE value=\"profile Action\" />\n    <MESSAGE value=\"profile Action001\" />\n    <MESSAGE value=\"changes v0.1\" />\n    <MESSAGE value=\"make profile\" />\n    <MESSAGE value=\"solve captcha problem\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"solve captcha problem\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 942f129932ce148b3e5141c88b21dfab284b3d28)
++++ b/.idea/workspace.xml	(date 1688825531414)
+@@ -4,14 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="solve captcha problem">
+-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/OneKalaController.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" afterDir="false" />
++    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="OneKala001">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanelController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/profile/ProfileMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/profile/ProfileMenuController.class" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/shopPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/shopPanel.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanelController.class" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -153,7 +150,7 @@
+       <workItem from="1688725270368" duration="472000" />
+       <workItem from="1688731834870" duration="1633000" />
+       <workItem from="1688793210512" duration="5418000" />
+-      <workItem from="1688817445367" duration="3964000" />
++      <workItem from="1688817445367" duration="4900000" />
+     </task>
+     <task id="LOCAL-00001" summary="testting git v02">
+       <created>1688302440225</created>
+@@ -302,7 +299,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1688816431967</updated>
+     </task>
+-    <option name="localTasksCounter" value="22" />
++    <task id="LOCAL-00022" summary="OneKala001">
++      <created>1688824637363</created>
++      <option name="number" value="00022" />
++      <option name="presentableId" value="LOCAL-00022" />
++      <option name="project" value="LOCAL" />
++      <updated>1688824637363</updated>
++    </task>
++    <option name="localTasksCounter" value="23" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -340,6 +344,7 @@
+     <MESSAGE value="changes v0.1" />
+     <MESSAGE value="make profile" />
+     <MESSAGE value="solve captcha problem" />
+-    <option name="LAST_COMMIT_MESSAGE" value="solve captcha problem" />
++    <MESSAGE value="OneKala001" />
++    <option name="LAST_COMMIT_MESSAGE" value="OneKala001" />
+   </component>
+ </project>
+\ No newline at end of file
