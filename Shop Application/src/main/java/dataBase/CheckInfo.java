@@ -54,11 +54,11 @@ public class CheckInfo {
         this.dataBase.insertInfoCustomer(userName, password, firstName, lastName, email);
     }
 
-    public void updateAdminInfo(String userName, String newUserName, String password, String firstName, String lastName, String email) {
+    public void updateAdminInfo(String userName, String newUserName, String password, String firstName, String lastName, String email) throws SQLException {
         this.dataBase.updateInfoAdmin(userName, newUserName, password, firstName, lastName, email);
     }
 
-    public void updateCustomerInfo(String userName, String newUserName, String password, String firstName, String lastName,int money, String email) {
+    public void updateCustomerInfo(String userName, String newUserName, String password, String firstName, String lastName,int money, String email) throws SQLException {
         this.dataBase.updateInfoCustomer(userName, newUserName, password, firstName, lastName,money, email);
     }
 

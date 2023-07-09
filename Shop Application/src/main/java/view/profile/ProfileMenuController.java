@@ -12,6 +12,8 @@ import javafx.scene.input.MouseEvent;
 import view.pay.CashPage;
 import view.shop.ShopPanelController;
 
+import java.sql.SQLException;
+
 public class ProfileMenuController {
     DataBase dataBase = new DataBase();
     CheckInfo checkInfo = new CheckInfo();
@@ -62,7 +64,7 @@ public class ProfileMenuController {
 
     }
 
-    public void saveInformation(MouseEvent mouseEvent) {
+    public void saveInformation(MouseEvent mouseEvent) throws SQLException {
         if(ShopPanelController.admin!=null){
             checkInfo.updateAdminInfo(ShopPanelController.admin.getUserName(), gmail.getText(),
                     passwordField.getText(),name.getText(),lastName.getText(),gmail.getText());
