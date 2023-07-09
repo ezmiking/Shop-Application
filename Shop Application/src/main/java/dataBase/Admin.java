@@ -13,6 +13,15 @@ public class Admin implements Serializable {
         setEmail(email);
         setMoney(0);
     }
+    public Admin(String userName, String password, String firstName, String lastName, String email,int money){
+
+        this.setUserName(userName);
+        setPassword(password);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmail(email);
+        setMoney(money);
+    }
 
     public Admin(String userName){
 

@@ -11,6 +11,15 @@ public class Customer implements Serializable {
         setLastName(lastName);
         setEmail(email);
     }
+    public Customer(String userName, String password, String firstName, String lastName, String email,int money){
+
+       setUserName(userName);
+        setPassword(password);
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmail(email);
+        setMoney(money);
+    }
 
     public Customer(String userName){
 

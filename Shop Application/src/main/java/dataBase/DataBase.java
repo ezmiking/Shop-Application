@@ -338,7 +338,7 @@ public class DataBase {
             while (resultSetAdmin.next()){
                 Admin admin = new Admin(resultSetAdmin.getString("userNameF"),resultSetAdmin.getString("passwordF"),
                         resultSetAdmin.getString("firstNameF"),resultSetAdmin.getString("lastNameF"),
-                        resultSetAdmin.getString("emailF"));
+                        resultSetAdmin.getString("emailF"),resultSetAdmin.getInt("moneyF"));
 
 
                 adminArrayList.add(admin);

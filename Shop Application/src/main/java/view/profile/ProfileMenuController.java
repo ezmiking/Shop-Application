@@ -50,6 +50,7 @@ public class ProfileMenuController {
             passwordField.setText(admin.getPassword());
             textFieldPassword.setText(admin.getPassword());
             System.out.println("profile admin info");
+            System.out.println(admin.getMoney());
             cash.setText(String.valueOf(admin.getMoney()));
             int cashValue = Integer.parseInt(cash.getText());
             cash.setText(String.valueOf(cashValue+ CashPageController.cashValue));

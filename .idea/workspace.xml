@@ -4,19 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="changes in last minutes">
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="changes in last minutes v0.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/CashPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/CashPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/pay/PortalPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/profile/ProfileMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/profile/ProfileMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/profileMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/profileMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/KalaCartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/KalaCartPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/Controller/KalaCartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/Controller/KalaCartController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/profile/ProfileMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/profile/ProfileMenuController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -391,7 +383,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688912882076</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="changes in last minutes v0.12">
+      <created>1688915297351</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1688915297351</updated>
+    </task>
+    <task id="LOCAL-00033" summary="changes in last minutes v0.1">
+      <created>1688915347374</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1688915347374</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,8 +415,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Cart + captch" />
-    <MESSAGE value="captcha003 + if moshkel dare" />
     <MESSAGE value="captcha004 + endPage" />
     <MESSAGE value="captcha005 + captchareload" />
     <MESSAGE value="Login sign in + Login captcha" />
@@ -434,6 +438,8 @@
     <MESSAGE value="AHhhhhh001" />
     <MESSAGE value="changes in DataBase" />
     <MESSAGE value="changes in last minutes" />
-    <option name="LAST_COMMIT_MESSAGE" value="changes in last minutes" />
+    <MESSAGE value="changes in last minutes v0.12" />
+    <MESSAGE value="changes in last minutes v0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in last minutes v0.1" />
   </component>
 </project>
