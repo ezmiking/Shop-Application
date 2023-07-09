@@ -633,7 +633,7 @@ public class DataBase {
                 good.setCodeGood(resultSetGood.getInt("codeGoodF"));
 
 
-                goodArrayList.add(good.getCodeGood() - 1,good);
+                goodArrayList.add(good);
             }
 
         } catch (SQLException e){

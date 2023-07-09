@@ -83,6 +83,17 @@ public class AddKalaController {
             int invertory = Integer.parseInt(invertoryG.getText());
             try {
                 dataBase.insertInfoGood(nameG.getText(),price,companyG.getText(),invertory,imageG.getText());
+                alert.setTitle("successful");
+                alert.setHeaderText("add kala");
+
+
+                alert.setContentText("kala did insert");
+                alert.showAndWait();
+                try {
+                    new ShopPanel().start(AddKala.stage);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }

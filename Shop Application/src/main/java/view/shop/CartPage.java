@@ -32,7 +32,7 @@ public class CartPage extends Application {
             ImageView imageView = (ImageView) anchorPanes[i].getChildren().get(0);
             Label name = (Label) anchorPanes[i].getChildren().get(1);
             Label price = (Label) anchorPanes[i].getChildren().get(2);
-
+           // Label inventoryLbl = (Label) anchorPanes[i].getChildren().get(5);
             //از دیتابیس باید زده بشه
 
             gridPane.add(anchorPanes[i], 0, i);

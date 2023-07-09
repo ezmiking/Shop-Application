@@ -4,14 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="AHhhhhh001">
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="changes in DataBase">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/profile/ProfileMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/profile/ProfileMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/AddKalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/AddKalaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/KalaCartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/KalaCartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/KalaCartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/KalaCartPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cartPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Good.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/cartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/cartPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/Controller/AddKalaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/Controller/AddKalaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/profile/ProfileMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/profile/ProfileMenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPageController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,15 +64,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.3908046&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-j-8.0.31.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3908046",
+    "settings.editor.selected.configurable": "copyright"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.LoginMenu">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
@@ -370,7 +377,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688899469638</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="changes in DataBase">
+      <created>1688910070023</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1688910070023</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -388,7 +402,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="make send and receive info" />
     <MESSAGE value="Cart" />
     <MESSAGE value="Cart + captch" />
     <MESSAGE value="captcha003 + if moshkel dare" />
@@ -413,6 +426,7 @@
     <MESSAGE value="database problems v0.1" />
     <MESSAGE value="AHhhhhh" />
     <MESSAGE value="AHhhhhh001" />
-    <option name="LAST_COMMIT_MESSAGE" value="AHhhhhh001" />
+    <MESSAGE value="changes in DataBase" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in DataBase" />
   </component>
 </project>
