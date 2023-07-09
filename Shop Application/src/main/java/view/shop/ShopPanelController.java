@@ -4,6 +4,8 @@ import dataBase.Admin;
 import dataBase.Customer;
 import dataBase.DataBase;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import view.login.LoginController;
 import view.profile.ProfileMenu;
 
@@ -12,6 +14,7 @@ import java.util.ArrayList;
 public class ShopPanelController {
 
 
+    public Button adminSignBtn;
     LoginController loginController = new LoginController();
     DataBase dataBase = new DataBase();
 
@@ -35,7 +38,20 @@ public class ShopPanelController {
         return customer;
     }
 
+    
 
+       
 
+    @FXML
+    void adminSignBtnAction(ActionEvent event) {
+        System.out.println("loginController.sighInAdmin");
 
+    }
+
+    public void initialize(){
+        if(LoginController.sighInAdmin){
+            System.out.println(adminSignBtn);
+            adminSignBtn.setVisible(true);
+        }
+    }
 }

@@ -28,8 +28,8 @@ public class LoginController extends PortalPageController {
     protected Image imageEye1;
     protected Image imageEye2;
     protected boolean eye = true;
-    public boolean sighInAdmin = false;
-    public boolean sighInCustomer = false;
+    public static boolean sighInAdmin = false;
+    public static boolean sighInCustomer = false;
 
     public void signIn(MouseEvent mouseEvent) throws Exception {
 

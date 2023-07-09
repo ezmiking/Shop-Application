@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -23,7 +30,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.ShopPanelController">
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="3000.0" prefWidth="936.0" stylesheets="@../css/style1.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.ShopPanelController">
    <content>
       <BorderPane prefHeight="3000.0" prefWidth="936.0">
          <top>
@@ -39,7 +46,7 @@
                   </Label>
                   <HBox alignment="TOP_CENTER" prefHeight="93.0" prefWidth="911.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="48.0" prefWidth="57.0" text="+" visible="false">
+                        <Button fx:id="adminSignBtn" mnemonicParsing="false" onAction="#adminSignBtnAction" prefHeight="48.0" prefWidth="57.0" text="+" visible="false">
                            <HBox.margin>
                               <Insets top="10.0" />
                            </HBox.margin>
