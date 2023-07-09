@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="e 0.156">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="database problems">
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/CheckInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/login/SignupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/login/SignupController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +155,7 @@
       <workItem from="1688731834870" duration="1633000" />
       <workItem from="1688793210512" duration="5418000" />
       <workItem from="1688817445367" duration="3964000" />
-      <workItem from="1688887265502" duration="1511000" />
+      <workItem from="1688887265502" duration="1835000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -322,7 +318,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688849991760</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="database problems">
+      <created>1688889037210</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1688889037210</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +365,7 @@
     <MESSAGE value="solve captcha problem" />
     <MESSAGE value="ShopPanel + kala" />
     <MESSAGE value="kalaPage + Cartkala" />
-    <option name="LAST_COMMIT_MESSAGE" value="kalaPage + Cartkala" />
+    <MESSAGE value="database problems" />
+    <option name="LAST_COMMIT_MESSAGE" value="database problems" />
   </component>
 </project>
