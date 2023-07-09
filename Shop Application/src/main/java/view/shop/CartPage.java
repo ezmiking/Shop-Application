@@ -23,18 +23,19 @@ public class CartPage extends Application {
         HBox hBox1 = (HBox) anchorPane.getChildren().get(0);
         GridPane gridPane = (GridPane) hBox1.getChildren().get(1);
 
-        URL urlKalaCart = CartPage.class.getResource("/fxml/KalaCartPage.fxml");
-        AnchorPane anchorPane1 = FXMLLoader.load(urlKalaCart);
-        gridPane.add(anchorPane1, 0, 1);
+
         // اضافه شدن به سبد خرید
+        AnchorPane[] anchorPanes = new AnchorPane[4];
         for (int i = 0; i < 3; i++) {
-            ImageView imageView = (ImageView) anchorPane1.getChildren().get(0);
-            Label name = (Label) anchorPane1.getChildren().get(1);
-            Label price = (Label) anchorPane1.getChildren().get(2);
+            URL urlKalaCart = CartPage.class.getResource("/fxml/KalaCartPage.fxml");
+            anchorPanes[i] = FXMLLoader.load(urlKalaCart);
+            ImageView imageView = (ImageView) anchorPanes[i].getChildren().get(0);
+            Label name = (Label) anchorPanes[i].getChildren().get(1);
+            Label price = (Label) anchorPanes[i].getChildren().get(2);
 
             //از دیتابیس باید زده بشه
 
-            gridPane.add(anchorPane1, 0, i);
+            gridPane.add(anchorPanes[i], 0, i);
         }
 
         Scene scene = new Scene(anchorPane);

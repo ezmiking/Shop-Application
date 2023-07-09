@@ -14,8 +14,8 @@
             <Image url="@../image/products/gold.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="779.0" layoutY="14.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="21.0" style="-fx-background-radius: 20; -fx-background-color: red;" text="X" textFill="WHITE" />
-      <Button layoutX="498.0" layoutY="427.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="244.0" style="-fx-background-radius: 20; -fx-background-color: #d3a40e;" text="add to Cart">
+      <Button layoutX="779.0" layoutY="14.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="21.0" style="-fx-background-radius: 20; -fx-background-color: red;" text="X" textFill="WHITE" onMouseClicked="#back"/>
+      <Button layoutX="498.0" layoutY="427.0" mnemonicParsing="false" onMouseClicked="#addTo" prefHeight="38.0" prefWidth="244.0" style="-fx-background-radius: 20; -fx-background-color: #d3a40e;" text="add to Cart">
          <font>
             <Font name="BM HANNA Pro OTF" size="17.0" />
          </font></Button>

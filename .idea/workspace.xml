@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="database problems v0.1">
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/AddKalaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/KalaPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/addKala.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Good.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/KalaPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/KalaPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/OneKalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/OneKalaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/kalaPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/kalaPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Good.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/shopPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/shopPanel.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +68,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false"
-  }
-}]]></component>
   <component name="RunManager" selected="Application.LoginMenu">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
@@ -76,12 +82,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.login.LoginMenu" />
+    <configuration name="KalaPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.shop.KalaPage" />
       <module name="ShopApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.login.*" />
+          <option name="PATTERN" value="view.shop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PaymentPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="view.pay.PaymentPage" />
+    <configuration name="LoginMenu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.login.LoginMenu" />
       <module name="ShopApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.pay.*" />
+          <option name="PATTERN" value="view.login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -131,10 +137,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.LoginMenu" />
+        <item itemvalue="Application.KalaPage" />
         <item itemvalue="Application.CartPage" />
         <item itemvalue="Application.ShopPanel" />
         <item itemvalue="Application.Portalpage" />
-        <item itemvalue="Application.PaymentPage" />
       </list>
     </recent_temporary>
   </component>

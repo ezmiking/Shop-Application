@@ -13,12 +13,12 @@
    <children>
       <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="391.0" prefWidth="225.0">
          <children>
-            <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="256.0" fitWidth="225.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#enterKala">
                <image>
                   <Image url="@../image/products/chitoz.jpg" />
                </image>
             </ImageView>
-            <Label prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
+            <Label alignment="CENTER" prefHeight="31.0" prefWidth="158.0" text="Snacks chi-toz cheese" textAlignment="CENTER">
                <font>
                   <Font name="Chalkboard SE Light" size="15.0" />
                </font>
@@ -35,7 +35,7 @@
                         <Font name="Arial Narrow" size="16.0" />
                      </font>
                   </Label>
-                  <Label text="Chitoz">
+                  <Label alignment="CENTER" text="Chitoz">
                      <font>
                         <Font name="Gurmukhi MN" size="14.0" />
                      </font>

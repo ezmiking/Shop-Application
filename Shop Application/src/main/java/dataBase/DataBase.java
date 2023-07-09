@@ -497,7 +497,7 @@ public class DataBase {
 
 
     }
-    public void updateInfoAdmin(Admin admin,Admin newAdmin){
+    public void updateInfoAdmin(Admin admin, Admin newAdmin){
         String userName = admin.getUserName();
         String newUserName = newAdmin.getUserName();
         String password = newAdmin.getPassword();
@@ -530,8 +530,7 @@ public class DataBase {
                 good.setCodeGood(resultSetGood.getInt("codeGoodF"));
 
 
-                goodArrayList.add(good.getCodeGood()-1,good);
-                System.out.println(good.getPriceGood());
+                goodArrayList.add(good.getCodeGood() - 1,good);
             }
 
         } catch (SQLException e){
