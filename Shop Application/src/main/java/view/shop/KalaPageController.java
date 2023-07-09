@@ -10,8 +10,6 @@ public class KalaPageController {
 
     public void addTo(MouseEvent mouseEvent) throws Exception {
 
-        
-
         new CartPage().start(KalaPage.stageKala);
     }
 

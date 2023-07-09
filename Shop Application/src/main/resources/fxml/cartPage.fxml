@@ -39,7 +39,7 @@
                         <Insets top="8.0" />
                      </VBox.margin>
                      <children>
-                        <VBox layoutX="9.0" layoutY="8.0" prefHeight="370.0" prefWidth="271.0" style="-fx-background-color: #e8e8e8; -fx-background-radius: 5;">
+                        <VBox layoutX="9.0" layoutY="8.0" prefHeight="370.0" prefWidth="288.0" style="-fx-background-color: #e8e8e8; -fx-background-radius: 5;">
                            <children>
                               <SplitPane dividerPositions="0.6235521235521235" prefHeight="44.0" prefWidth="271.0" style="-fx-background-radius: 10;">
                                 <items>
@@ -156,6 +156,14 @@
                            </children></VBox>
                      </children>
                   </AnchorPane>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/icon/1686122385177.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets right="250.0" top="170.0" />
+                     </VBox.margin>
+                  </ImageView>
                </children>
                <HBox.margin>
                   <Insets />
