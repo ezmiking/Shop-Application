@@ -22,6 +22,9 @@ public class Good implements Serializable {
         setImageAddressGood(imageAddressGood);
     }
 
+    public Good(String nameGood){
+        setNameGood(nameGood);
+    }
 
     public void setCodeGood(int codeGood){
         this.codeGood=codeGood;
@@ -84,6 +87,12 @@ public class Good implements Serializable {
 
     public void setImageAddressGood(String imageAddressGood) {
         this.imageAddressGood = imageAddressGood;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+        Good other =(Good) obj;
+        return this.getNameGood().equals(other.getNameGood());
     }
 
 }

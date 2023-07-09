@@ -6,6 +6,7 @@ import dataBase.DataBase;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import view.admin.AddKala;
 import view.login.LoginController;
 import view.profile.ProfileMenu;
 
@@ -43,9 +44,9 @@ public class ShopPanelController {
        
 
     @FXML
-    void adminSignBtnAction(ActionEvent event) {
+    void adminSignBtnAction(ActionEvent event) throws Exception {
         System.out.println("loginController.sighInAdmin");
-
+        new AddKala().start(ShopPanel.stage);
     }
 
     public void initialize(){

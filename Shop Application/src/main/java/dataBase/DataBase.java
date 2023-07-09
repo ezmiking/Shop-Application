@@ -538,6 +538,19 @@ public class DataBase {
         }
     }
 
+    public void insertInfoGood(String nameGood,int priceGood, String companyName, int inventoryGood, String imageAddressGood) throws SQLException {
+
+        Good good = new Good(nameGood, priceGood, companyName, inventoryGood, 0,0,imageAddressGood);
+        PreparedStatement preparedStatement = database.prepareStatement("INSERT INTO good (nameGoodF,priceGoodF,companyNameF,inventoryGoodF,discountGoodF,pointGoodF,imageAddressGoodF) VALUES (?,?,?,?,?,?,?)");
+        preparedStatement.setString(1,nameGood);
+        preparedStatement.setString(2, String.valueOf(priceGood));
+        preparedStatement.setString(3,companyName);
+        preparedStatement.setString(4, String.valueOf(inventoryGood));
+        preparedStatement.setString(5, String.valueOf(0));
+        preparedStatement.setString(6, String.valueOf(0));
+        preparedStatement.setString(7,imageAddressGood);
+        preparedStatement.executeUpdate();
+    }
 
     /*************************************************************************************/
 
