@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="539.0" prefWidth="819.0" style="-fx-background-color: #939a86;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Controller.KalaPageController">
+<AnchorPane prefHeight="539.0" prefWidth="819.0" style="-fx-background-color: #939a86;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.shop.KalaPageController">
    <children>
       <ImageView fitHeight="451.0" fitWidth="363.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>

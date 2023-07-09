@@ -1,4 +1,4 @@
-package view.Controller;
+package view.shop;
 
 import javafx.scene.input.MouseEvent;
 import view.pay.CashPage;
@@ -9,6 +9,8 @@ import view.shop.ShopPanel;
 public class KalaPageController {
 
     public void addTo(MouseEvent mouseEvent) throws Exception {
+
+        
 
         new CartPage().start(KalaPage.stageKala);
     }

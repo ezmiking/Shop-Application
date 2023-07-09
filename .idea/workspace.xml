@@ -4,24 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="database problems v0.1">
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/AddKalaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/KalaPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/addKala.fxml" afterDir="false" />
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="AHhhhhh">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/KalaPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/KalaPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/OneKalaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/OneKalaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/Controller/KalaPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/KalaPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/kalaPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/kalaPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/oneKala.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/shopPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Good.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/Good.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/shopPanel.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/shopPanel.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +60,7 @@
       <module name="ShopApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.Controller.*" />
+          <option name="PATTERN" value="view.shop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -126,7 +112,7 @@
       <module name="ShopApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.Controller.*" />
+          <option name="PATTERN" value="view.shop.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -356,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1688890224502</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="AHhhhhh">
+      <created>1688898310457</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1688898310457</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +391,7 @@
     <MESSAGE value="kalaPage + Cartkala" />
     <MESSAGE value="database problems" />
     <MESSAGE value="database problems v0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="database problems v0.1" />
+    <MESSAGE value="AHhhhhh" />
+    <option name="LAST_COMMIT_MESSAGE" value="AHhhhhh" />
   </component>
 </project>
