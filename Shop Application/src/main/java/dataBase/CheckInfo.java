@@ -7,6 +7,8 @@ package dataBase;
 
 import view.login.LoginController;
 
+import java.sql.SQLException;
+
 public class CheckInfo {
     DataBase dataBase = new DataBase();
     Admin admin;
@@ -42,12 +44,12 @@ public class CheckInfo {
         }
     }
 
-    public void signUpAdmin(String userName, String password, String firstName, String lastName, String email) {
+    public void signUpAdmin(String userName, String password, String firstName, String lastName, String email) throws SQLException {
         this.admin = new Admin(userName, password, firstName, lastName, email);
         this.dataBase.insertInfoAdmin(userName, password, firstName, lastName, email);
     }
 
-    public void signUpCustomer(String userName, String password, String firstName, String lastName, String email) {
+    public void signUpCustomer(String userName, String password, String firstName, String lastName, String email) throws SQLException {
         this.customer = new Customer(userName, password, firstName, lastName, email);
         this.dataBase.insertInfoCustomer(userName, password, firstName, lastName, email);
     }

@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="kalaPage + Cartkala">
+    <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="e 0.156">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/CartPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/resources/fxml/cartPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/fxml/cartPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/fxml/cartPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/CheckInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/login/SignupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/CartPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +57,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-  </component>
-  <component name="RunManager" selected="Application.CartPage">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.LoginMenu">
     <configuration name="CartPage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="view.shop.CartPage" />
       <module name="ShopApplication" />
@@ -132,8 +130,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CartPage" />
         <item itemvalue="Application.LoginMenu" />
+        <item itemvalue="Application.CartPage" />
         <item itemvalue="Application.ShopPanel" />
         <item itemvalue="Application.Portalpage" />
         <item itemvalue="Application.PaymentPage" />
@@ -161,6 +159,7 @@
       <workItem from="1688731834870" duration="1633000" />
       <workItem from="1688793210512" duration="5418000" />
       <workItem from="1688817445367" duration="3964000" />
+      <workItem from="1688887265502" duration="1511000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>

@@ -16,10 +16,7 @@ public class DataBase {
     Statement statement;
 
 
-    public static void main(String[] args) {
-        DataBase dataBase = new DataBase();
-    }
-    ResultSet resultSetAdmin;
+   ResultSet resultSetAdmin;
     ResultSet resultSetCustomer;
     ResultSet resultSetGood;
 
@@ -71,6 +68,7 @@ public class DataBase {
         Customer newCustomer = new Customer(userName);
         return customerArrayList.contains(newCustomer);
     }
+    /*
     public void insertInfoCustomer(String userName, String password, String firstName, String lastName, String email){
 
         Customer newCustomer = new Customer(userName, password, firstName, lastName, email);
@@ -90,7 +88,30 @@ public class DataBase {
         }
         customerArrayList.add(newCustomer);
     }
-    public void insertInfoCustomer(Customer customer){
+
+     */
+    /*
+    public void insertInfoCustomer(String userName, String password, String firstName, String lastName, String email) throws SQLException {
+        Customer newCustomer = new Customer(userName, password, firstName, lastName, email);
+        int money = newCustomer.getMoney();
+        statement.executeUpdate("INSERT INTO 'customer'(userNameF, passwordF, firstNameF, lastNameF, moneyF,emailF) VALUE ('"+userName+"','"+password+"','"+firstName+"','"+lastName+"','"+money+"','"+email+"') ");
+    }
+
+     */
+    public void insertInfoCustomer(String userName, String password, String firstName, String lastName, String email) throws SQLException {
+        Customer newCustomer = new Customer(userName, password, firstName, lastName, email);
+        int money = newCustomer.getMoney();
+        PreparedStatement preparedStatement = database.prepareStatement("INSERT INTO customer (userNameF, passwordF, firstNameF, lastNameF, moneyF,emailF) VALUES (?,?,?,?,?,?)");
+        preparedStatement.setString(1,userName);
+        preparedStatement.setString(2,password);
+        preparedStatement.setString(3,firstName);
+        preparedStatement.setString(4,lastName);
+        preparedStatement.setInt(5,money);
+        preparedStatement.setString(6,email);
+        preparedStatement.executeUpdate();
+    }
+
+        public void insertInfoCustomer(Customer customer) throws SQLException {
         String userName = customer.getUserName();
         String password = customer.getPassword();
         String firstName = customer.getFirstName();
@@ -281,6 +302,7 @@ public class DataBase {
         Admin newAdmin = new Admin(userName);
         return adminArrayList.contains(newAdmin);
     }
+    /*
     public void insertInfoAdmin(String userName, String password, String firstName, String lastName, String email){
 
         Admin newAdmin = new Admin(userName, password, firstName, lastName, email);
@@ -298,10 +320,23 @@ public class DataBase {
                     "VALUES (userName,password,firstName,lastName,email)");
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }*/
+        }
         adminArrayList.add(newAdmin);
     }
-    public void insertInfoAdmin(Admin admin){
+    */
+
+    public void insertInfoAdmin(String userName, String password, String firstName, String lastName, String email) throws SQLException {
+
+        Admin newAdmin = new Admin(userName, password, firstName, lastName, email);
+        PreparedStatement preparedStatement = database.prepareStatement("INSERT INTO admin (userNameF,passwordF,firstNameF,lastNameF,emailF) VALUES (?,?,?,?,?)");
+        preparedStatement.setString(1,userName);
+        preparedStatement.setString(2,password);
+        preparedStatement.setString(3,firstName);
+        preparedStatement.setString(4,lastName);
+        preparedStatement.setString(5,email);
+        preparedStatement.executeUpdate();
+    }
+        public void insertInfoAdmin(Admin admin) throws SQLException {
         String userName = admin.getUserName();
         String password = admin.getPassword();
         String firstName = admin.getFirstName();

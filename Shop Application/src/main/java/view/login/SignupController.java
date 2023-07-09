@@ -8,6 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 
+import java.sql.SQLException;
+
 public class SignupController extends LoginController {
 
     CheckInfo checkInfo = new CheckInfo();
@@ -106,7 +108,7 @@ public class SignupController extends LoginController {
     public void terms(MouseEvent mouseEvent) {
     }
 
-    public void create(MouseEvent mouseEvent) {
+    public void create(MouseEvent mouseEvent) throws SQLException {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("ERROR");
         alert.setHeaderText("Error in Information");
