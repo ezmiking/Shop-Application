@@ -16,7 +16,6 @@ import java.net.URL;
 public class ShopPanel extends Application {
     public static Stage stage;
     public DataBase dataBase = new DataBase();
-    public Good good = new Good( "nameGood", "companyName", 85, 0, 3, "imageAddressGood");
     @Override
     public void start(Stage stage) throws Exception {
         ShopPanel.stage = stage;
@@ -27,7 +26,6 @@ public class ShopPanel extends Application {
 
         URL urlkala = ShopPanel.class.getResource("/fxml/oneKala.fxml");
         AnchorPane anchorPane = FXMLLoader.load(urlkala);
-
 
         {
             int i = 0, j = 0;

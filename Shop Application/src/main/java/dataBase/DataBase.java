@@ -524,13 +524,14 @@ public class DataBase {
         try {
             resultSetGood = statement.executeQuery("SELECT * FROM good");
             while (resultSetGood.next()){
-                Good good = new Good(resultSetGood.getString("nameGoodF"),resultSetGood.getString("companyNameF"),
+                Good good = new Good(resultSetGood.getString("nameGoodF") ,resultSetGood.getInt("priceGoodF"),resultSetGood.getString("companyNameF"),
                         resultSetGood.getInt("inventoryGoodF"),resultSetGood.getInt("discountGoodF"),
                         resultSetGood.getInt("pointGoodF"),resultSetGood.getString("imageAddressGoodF"));
                 good.setCodeGood(resultSetGood.getInt("codeGoodF"));
 
 
                 goodArrayList.add(good.getCodeGood()-1,good);
+                System.out.println(good.getPriceGood());
             }
 
         } catch (SQLException e){

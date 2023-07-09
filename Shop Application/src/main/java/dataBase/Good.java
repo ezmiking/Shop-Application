@@ -12,9 +12,10 @@ public class Good implements Serializable {
     private int pointGood;
     private String imageAddressGood;
 
-    public Good(String nameGood, String companyName, int inventoryGood, int discountGood, int pointGood, String imageAddressGood){
+    public Good(String nameGood,int priceGood, String companyName, int inventoryGood, int discountGood, int pointGood, String imageAddressGood){
         setNameGood(nameGood);
         setCompanyName(companyName);
+        setPriceGood(priceGood);
         setInventoryGood(inventoryGood);
         setDiscountGood(discountGood);
         setPointGood(pointGood);

@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e002a54b-b128-4beb-abb8-3c0b9d457d81" name="Changes" comment="database problems v0.1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/DataBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Good.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/dataBase/Good.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/src/main/java/view/shop/ShopPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/dataBase/DataBase.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/Shop Application/target/classes/view/shop/ShopPanel.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +159,7 @@
       <workItem from="1688731834870" duration="1633000" />
       <workItem from="1688793210512" duration="5418000" />
       <workItem from="1688817445367" duration="3964000" />
-      <workItem from="1688887265502" duration="2765000" />
+      <workItem from="1688887265502" duration="4477000" />
     </task>
     <task id="LOCAL-00001" summary="testting git v02">
       <created>1688302440225</created>
@@ -332,7 +336,21 @@
       <option name="project" value="LOCAL" />
       <updated>1688889442693</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="database problems v0.1">
+      <created>1688890172734</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1688890172734</updated>
+    </task>
+    <task id="LOCAL-00027" summary="database problems v0.1">
+      <created>1688890224502</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1688890224502</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
