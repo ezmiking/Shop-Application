@@ -526,7 +526,7 @@ public class DataBase {
             while (resultSetGood.next()){
                 Good good = new Good(resultSetGood.getString("nameGoodF"),resultSetGood.getString("companyNameF"),
                         resultSetGood.getInt("inventoryGoodF"),resultSetGood.getInt("discountGoodF"),
-                        resultSetGood.getInt("pointGoodF"),resultSetGood.getString("imageAddressGood"));
+                        resultSetGood.getInt("pointGoodF"),resultSetGood.getString("imageAddressGoodF"));
                 good.setCodeGood(resultSetGood.getInt("codeGoodF"));
 
 
