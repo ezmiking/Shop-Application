@@ -11,6 +11,7 @@ public class Admin implements Serializable {
         setFirstName(firstName);
         setLastName(lastName);
         setEmail(email);
+        setMoney(0);
     }
 
     public Admin(String userName){
@@ -24,6 +25,7 @@ public class Admin implements Serializable {
     private String lastName;
     private String email;
     private String phoneNumber;
+    private int money;
 
     public String getUserName() {
         return userName;
@@ -78,6 +80,14 @@ public class Admin implements Serializable {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public int getMoney() {
+        return money;
+    }
+
+    public void setMoney(int money) {
+        this.money = money;
     }
 }
 

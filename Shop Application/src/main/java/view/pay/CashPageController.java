@@ -11,6 +11,7 @@ public class CashPageController {
 
     public static int previousPage = 1; //cashpage --> 2
     public TextField cash;
+    public static int cashValue;
     public RadioButton mellat;
     public RadioButton melli;
 
@@ -37,6 +38,7 @@ public class CashPageController {
             alert.showAndWait();
         }
         else {
+            cashValue = Integer.parseInt(cash.getText());
         previousPage = 2;
         new Portalpage().start(CashPage.stageChash);
         }

@@ -173,14 +173,14 @@
                         </Label>
                         <HBox prefHeight="45.0" prefWidth="184.0">
                            <children>
-                              <Label fx:id="cash" alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="10000 $" textFill="#229724">
+                              <Label fx:id="cash" alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="10000" textFill="#229724">
                                  <font>
                                     <Font size="21.0" />
                                  </font>
                                  <HBox.margin>
                                     <Insets left="5.0" />
                                  </HBox.margin></Label>
-                              <Button mnemonicParsing="false" onMouseClicked="#inventoryIncrease" alignment="CENTER" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="+" textFill="#23750f">
+                              <Button alignment="CENTER" mnemonicParsing="false" onMouseClicked="#inventoryIncrease" prefHeight="42.0" prefWidth="148.0" style="-fx-background-radius: 25; -fx-background-color: rgba(143,141,141,0.72);" text="+" textFill="#23750f">
                                  <HBox.margin>
                                     <Insets right="5.0" top="2.0" />
                                  </HBox.margin>

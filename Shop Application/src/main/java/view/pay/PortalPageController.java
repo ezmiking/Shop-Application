@@ -10,6 +10,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import view.profile.ProfileMenu;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -93,6 +94,13 @@ public class PortalPageController {
         }
 
         if (captchaCodeChecked == true) {
+
+            try {
+                new ProfileMenu().start(Portalpage.stagePortal);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
+            }
+            /*
             System.out.println("enter in end page");
             URL urlEndPortal = PortalPageController.class.getResource("/fxml/endPortal.fxml");
             AnchorPane anchorPane = FXMLLoader.load(urlEndPortal);
@@ -101,6 +109,8 @@ public class PortalPageController {
             Portalpage.stagePortal.setScene(sceneEnd);
             Portalpage.stagePortal.show();
 
+
+             */
         }
     }
 

@@ -380,12 +380,14 @@ public class DataBase {
     public void insertInfoAdmin(String userName, String password, String firstName, String lastName, String email) throws SQLException {
 
         Admin newAdmin = new Admin(userName, password, firstName, lastName, email);
-        PreparedStatement preparedStatement = database.prepareStatement("INSERT INTO admin (userNameF,passwordF,firstNameF,lastNameF,emailF) VALUES (?,?,?,?,?)");
+        PreparedStatement preparedStatement = database.prepareStatement("INSERT INTO admin (userNameF,passwordF,firstNameF,lastNameF,emailF,moneyF) VALUES (?,?,?,?,?,?)");
+        int money = newAdmin.getMoney();
         preparedStatement.setString(1,userName);
         preparedStatement.setString(2,password);
         preparedStatement.setString(3,firstName);
         preparedStatement.setString(4,lastName);
         preparedStatement.setString(5,email);
+        preparedStatement.setInt(6,money);
         preparedStatement.executeUpdate();
     }
         public void insertInfoAdmin(Admin admin) throws SQLException {
@@ -401,7 +403,7 @@ public class DataBase {
 
 
 
-    public void updateInfoAdmin( String userName,String newUserName, String password, String firstName, String lastName, String email) throws SQLException {
+    public void updateInfoAdmin( String userName,String newUserName, String password, String firstName, String lastName, String email,int money) throws SQLException {
         Admin admin = new Admin(userName);
         int index = adminArrayList.indexOf(admin);
         Admin changeAdmin = adminArrayList.get(index);
@@ -547,7 +549,14 @@ public class DataBase {
                 throw new RuntimeException(e);
             }*/
         }
-
+        if(money!=0){
+            PreparedStatement preparedStatement = database.prepareStatement("UPDATE admin SET moneyF = ? WHERE userNameF = ?");
+            preparedStatement.setInt(1,money);
+            preparedStatement.setString(2,userName);
+            preparedStatement.executeUpdate();
+            changeAdmin.setMoney(money);
+            adminArrayList.set(index, changeAdmin);
+        }
 
         /*
         if(newUserName!=null){
@@ -606,9 +615,9 @@ public class DataBase {
         String password = newAdmin.getPassword();
         String firstName = newAdmin.getFirstName();
         String lastName = newAdmin.getLastName();
-
+        int money = newAdmin.getMoney();
         String email = newAdmin.getEmail();
-        updateInfoAdmin(userName,newUserName,password,firstName,lastName,email);
+        updateInfoAdmin(userName,newUserName,password,firstName,lastName,email,money);
     }
 
     public void deleteInfoAdmin(String userName){
